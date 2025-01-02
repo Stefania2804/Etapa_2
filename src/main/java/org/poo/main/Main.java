@@ -3,9 +3,17 @@ package org.poo.main;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectWriter;
 import com.fasterxml.jackson.databind.node.ArrayNode;
+import org.poo.bank.Exchange;
+import org.poo.bank.InfoBank;
+import org.poo.bank.User;
 import org.poo.checker.Checker;
 import org.poo.checker.CheckerConstants;
+import org.poo.commands.Invoker;
+import org.poo.fileio.CommandInput;
+import org.poo.fileio.ExchangeInput;
 import org.poo.fileio.ObjectInput;
+import org.poo.fileio.UserInput;
+import org.poo.utils.Utils;
 
 import java.io.File;
 import java.io.IOException;
@@ -73,26 +81,27 @@ public final class Main {
         ObjectInput inputData = objectMapper.readValue(file, ObjectInput.class);
 
         ArrayNode output = objectMapper.createArrayNode();
-
-        /*
-         * TODO Implement your function here
-         *
-         * How to add output to the output array?
-         * There are multiple ways to do this, here is one example:
-         *
-         * ObjectMapper mapper = new ObjectMapper();
-         *
-         * ObjectNode objectNode = mapper.createObjectNode();
-         * objectNode.put("field_name", "field_value");
-         *
-         * ArrayNode arrayNode = mapper.createArrayNode();
-         * arrayNode.add(objectNode);
-         *
-         * output.add(arrayNode);
-         * output.add(objectNode);
-         *
-         */
-
+        Utils.resetRandom();
+        InfoBank infoBank = new InfoBank();
+        UserInput[] users = inputData.getUsers();
+        ExchangeInput[] exchangeRates = inputData.getExchangeRates();
+        for (int i = 0; i < users.length; i++) {
+            User user = new User(users[i].getFirstName(),
+                    users[i].getLastName(), users[i].getEmail());
+            infoBank.addUser(user);
+        }
+        for (int i = 0; i < exchangeRates.length; i++) {
+            Exchange exchange = new Exchange(exchangeRates[i].getFrom(), exchangeRates[i].getTo(),
+                    exchangeRates[i].getRate(), exchangeRates[i].getTimestamp());
+            infoBank.addExchange(exchange);
+        }
+        CommandInput[] commands = inputData.getCommands();
+        for (int i = 0; i < commands.length; i++) {
+            if (commands[i] != null) {
+                Invoker invoker = new Invoker();
+                invoker.executeCommand(commands[i], infoBank, objectMapper, output);
+            }
+        }
         ObjectWriter objectWriter = objectMapper.writerWithDefaultPrettyPrinter();
         objectWriter.writeValue(new File(filePath2), output);
     }
@@ -104,9 +113,8 @@ public final class Main {
      * @return the extracted numbers
      */
     public static int fileConsumer(final File file) {
-        return Integer.parseInt(
-                file.getName()
-                        .replaceAll(CheckerConstants.DIGIT_REGEX, CheckerConstants.EMPTY_STR)
-        );
+        String fileName = file.getName()
+                .replaceAll(CheckerConstants.DIGIT_REGEX, CheckerConstants.EMPTY_STR);
+        return Integer.parseInt(fileName.substring(0, 2));
     }
 }
