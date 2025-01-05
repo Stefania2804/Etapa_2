@@ -1,4 +1,39 @@
 [ {
+  "command" : "cashWithdrawal",
+  "output" : {
+    "timestamp" : 55,
+    "description" : "Card not found"
+  },
+  "timestamp" : 55
+}, {
+  "command" : "cashWithdrawal",
+  "output" : {
+    "timestamp" : 56,
+    "description" : "Card not found"
+  },
+  "timestamp" : 56
+}, {
+  "command" : "cashWithdrawal",
+  "output" : {
+    "timestamp" : 57,
+    "description" : "Card not found"
+  },
+  "timestamp" : 57
+}, {
+  "command" : "cashWithdrawal",
+  "output" : {
+    "timestamp" : 58,
+    "description" : "Card not found"
+  },
+  "timestamp" : 58
+}, {
+  "command" : "cashWithdrawal",
+  "output" : {
+    "timestamp" : 59,
+    "description" : "Card not found"
+  },
+  "timestamp" : 59
+}, {
   "command" : "deleteAccount",
   "output" : {
     "success" : "Account deleted",
@@ -336,7 +371,7 @@
     "email" : "Valerie_Rocher@outlook.fr",
     "accounts" : [ {
       "IBAN" : "RO69POOB6209498372540635",
-      "balance" : 3348.0,
+      "balance" : 3324.19,
       "currency" : "EUR",
       "type" : "savings",
       "cards" : [ ]
@@ -626,7 +661,7 @@
     "email" : "Valerie_Rocher@outlook.fr",
     "accounts" : [ {
       "IBAN" : "RO69POOB6209498372540635",
-      "balance" : 3348.0,
+      "balance" : 3324.19,
       "currency" : "EUR",
       "type" : "savings",
       "cards" : [ ]
@@ -686,7 +721,7 @@
   "command" : "report",
   "output" : {
     "IBAN" : "RO69POOB6209498372540635",
-    "balance" : 5457.24,
+    "balance" : 5418.429700000001,
     "currency" : "EUR",
     "transactions" : [ {
       "timestamp" : 1,
@@ -694,6 +729,9 @@
     }, {
       "timestamp" : 220,
       "description" : "Account couldn't be deleted - there are funds remaining"
+    }, {
+      "timestamp" : 224,
+      "description" : "The user already has the silver plan."
     }, {
       "timestamp" : 233,
       "description" : "Interest rate of the account changed to 0.63"
@@ -709,25 +747,23 @@
     "timestamp" : 21,
     "description" : "New account created"
   }, {
+    "timestamp" : 60,
+    "description" : "You do not have a classic account."
+  }, {
+    "timestamp" : 63,
+    "description" : "You do not have a classic account."
+  }, {
     "timestamp" : 194,
     "description" : "New account created"
   }, {
+    "timestamp" : 205,
+    "description" : "You don't have the minimum age required."
+  }, {
+    "timestamp" : 208,
+    "description" : "You do not have a classic account."
+  }, {
     "timestamp" : 220,
     "description" : "Account couldn't be deleted - there are funds remaining"
-  }, {
-    "timestamp" : 237,
-    "description" : "Split payment of 2695.00 EUR",
-    "currency" : "EUR",
-    "amount" : 673.75,
-    "involvedAccounts" : [ "RO58POOB7344468893732422", "RO69POOB6209498372540635", "RO90POOB5450777208072365", "RO65POOB8944016386845896" ],
-    "error" : "Account RO90POOB5450777208072365 has insufficient funds for a split payment."
-  }, {
-    "timestamp" : 237,
-    "description" : "Split payment of 2695.00 EUR",
-    "currency" : "EUR",
-    "amount" : 673.75,
-    "involvedAccounts" : [ "RO58POOB7344468893732422", "RO69POOB6209498372540635", "RO90POOB5450777208072365", "RO65POOB8944016386845896" ],
-    "error" : "Account RO90POOB5450777208072365 has insufficient funds for a split payment."
   } ],
   "timestamp" : 238
 }, {
@@ -739,21 +775,39 @@
     "timestamp" : 21,
     "description" : "New account created"
   }, {
+    "timestamp" : 61,
+    "description" : "You do not have a classic account."
+  }, {
+    "timestamp" : 64,
+    "description" : "You do not have a classic account."
+  }, {
     "timestamp" : 194,
     "description" : "New account created"
+  }, {
+    "timestamp" : 206,
+    "description" : "You do not have a classic account."
+  }, {
+    "timestamp" : 209,
+    "description" : "You do not have a classic account."
   }, {
     "timestamp" : 220,
     "description" : "Account couldn't be deleted - there are funds remaining"
   }, {
+    "timestamp" : 222,
+    "description" : "Upgrade plan",
+    "accountIBAN" : "RO69POOB6209498372540635",
+    "newPlanType" : "silver"
+  }, {
+    "timestamp" : 224,
+    "description" : "The user already has the silver plan."
+  }, {
     "timestamp" : 233,
     "description" : "Interest rate of the account changed to 0.63"
   }, {
-    "timestamp" : 237,
-    "description" : "Split payment of 2695.00 EUR",
-    "currency" : "EUR",
-    "amount" : 673.75,
-    "involvedAccounts" : [ "RO58POOB7344468893732422", "RO69POOB6209498372540635", "RO90POOB5450777208072365", "RO65POOB8944016386845896" ],
-    "error" : "Account RO90POOB5450777208072365 has insufficient funds for a split payment."
+    "timestamp" : 234,
+    "description" : "Interest rate income",
+    "amount" : 2094.2397,
+    "currency" : "EUR"
   } ],
   "timestamp" : 238
 }, {
@@ -762,18 +816,17 @@
     "timestamp" : 13,
     "description" : "New account created"
   }, {
+    "timestamp" : 62,
+    "description" : "You do not have a classic account."
+  }, {
     "timestamp" : 166,
     "description" : "New account created"
   }, {
+    "timestamp" : 207,
+    "description" : "You do not have a classic account."
+  }, {
     "timestamp" : 218,
     "description" : "Account couldn't be deleted - there are funds remaining"
-  }, {
-    "timestamp" : 237,
-    "description" : "Split payment of 2695.00 EUR",
-    "currency" : "EUR",
-    "amount" : 673.75,
-    "involvedAccounts" : [ "RO58POOB7344468893732422", "RO69POOB6209498372540635", "RO90POOB5450777208072365", "RO65POOB8944016386845896" ],
-    "error" : "Account RO90POOB5450777208072365 has insufficient funds for a split payment."
   } ],
   "timestamp" : 239
 }, {
@@ -785,25 +838,23 @@
     "timestamp" : 21,
     "description" : "New account created"
   }, {
+    "timestamp" : 60,
+    "description" : "You do not have a classic account."
+  }, {
+    "timestamp" : 63,
+    "description" : "You do not have a classic account."
+  }, {
     "timestamp" : 194,
     "description" : "New account created"
   }, {
+    "timestamp" : 205,
+    "description" : "You don't have the minimum age required."
+  }, {
+    "timestamp" : 208,
+    "description" : "You do not have a classic account."
+  }, {
     "timestamp" : 220,
     "description" : "Account couldn't be deleted - there are funds remaining"
-  }, {
-    "timestamp" : 237,
-    "description" : "Split payment of 2695.00 EUR",
-    "currency" : "EUR",
-    "amount" : 673.75,
-    "involvedAccounts" : [ "RO58POOB7344468893732422", "RO69POOB6209498372540635", "RO90POOB5450777208072365", "RO65POOB8944016386845896" ],
-    "error" : "Account RO90POOB5450777208072365 has insufficient funds for a split payment."
-  }, {
-    "timestamp" : 237,
-    "description" : "Split payment of 2695.00 EUR",
-    "currency" : "EUR",
-    "amount" : 673.75,
-    "involvedAccounts" : [ "RO58POOB7344468893732422", "RO69POOB6209498372540635", "RO90POOB5450777208072365", "RO65POOB8944016386845896" ],
-    "error" : "Account RO90POOB5450777208072365 has insufficient funds for a split payment."
   } ],
   "timestamp" : 240
 }, {
@@ -815,21 +866,39 @@
     "timestamp" : 21,
     "description" : "New account created"
   }, {
+    "timestamp" : 61,
+    "description" : "You do not have a classic account."
+  }, {
+    "timestamp" : 64,
+    "description" : "You do not have a classic account."
+  }, {
     "timestamp" : 194,
     "description" : "New account created"
+  }, {
+    "timestamp" : 206,
+    "description" : "You do not have a classic account."
+  }, {
+    "timestamp" : 209,
+    "description" : "You do not have a classic account."
   }, {
     "timestamp" : 220,
     "description" : "Account couldn't be deleted - there are funds remaining"
   }, {
+    "timestamp" : 222,
+    "description" : "Upgrade plan",
+    "accountIBAN" : "RO69POOB6209498372540635",
+    "newPlanType" : "silver"
+  }, {
+    "timestamp" : 224,
+    "description" : "The user already has the silver plan."
+  }, {
     "timestamp" : 233,
     "description" : "Interest rate of the account changed to 0.63"
   }, {
-    "timestamp" : 237,
-    "description" : "Split payment of 2695.00 EUR",
-    "currency" : "EUR",
-    "amount" : 673.75,
-    "involvedAccounts" : [ "RO58POOB7344468893732422", "RO69POOB6209498372540635", "RO90POOB5450777208072365", "RO65POOB8944016386845896" ],
-    "error" : "Account RO90POOB5450777208072365 has insufficient funds for a split payment."
+    "timestamp" : 234,
+    "description" : "Interest rate income",
+    "amount" : 2094.2397,
+    "currency" : "EUR"
   } ],
   "timestamp" : 240
 }, {
@@ -883,25 +952,23 @@
     "timestamp" : 21,
     "description" : "New account created"
   }, {
+    "timestamp" : 60,
+    "description" : "You do not have a classic account."
+  }, {
+    "timestamp" : 63,
+    "description" : "You do not have a classic account."
+  }, {
     "timestamp" : 194,
     "description" : "New account created"
   }, {
+    "timestamp" : 205,
+    "description" : "You don't have the minimum age required."
+  }, {
+    "timestamp" : 208,
+    "description" : "You do not have a classic account."
+  }, {
     "timestamp" : 220,
     "description" : "Account couldn't be deleted - there are funds remaining"
-  }, {
-    "timestamp" : 237,
-    "description" : "Split payment of 2695.00 EUR",
-    "currency" : "EUR",
-    "amount" : 673.75,
-    "involvedAccounts" : [ "RO58POOB7344468893732422", "RO69POOB6209498372540635", "RO90POOB5450777208072365", "RO65POOB8944016386845896" ],
-    "error" : "Account RO90POOB5450777208072365 has insufficient funds for a split payment."
-  }, {
-    "timestamp" : 237,
-    "description" : "Split payment of 2695.00 EUR",
-    "currency" : "EUR",
-    "amount" : 673.75,
-    "involvedAccounts" : [ "RO58POOB7344468893732422", "RO69POOB6209498372540635", "RO90POOB5450777208072365", "RO65POOB8944016386845896" ],
-    "error" : "Account RO90POOB5450777208072365 has insufficient funds for a split payment."
   } ],
   "timestamp" : 247
 }, {
@@ -913,21 +980,39 @@
     "timestamp" : 21,
     "description" : "New account created"
   }, {
+    "timestamp" : 61,
+    "description" : "You do not have a classic account."
+  }, {
+    "timestamp" : 64,
+    "description" : "You do not have a classic account."
+  }, {
     "timestamp" : 194,
     "description" : "New account created"
+  }, {
+    "timestamp" : 206,
+    "description" : "You do not have a classic account."
+  }, {
+    "timestamp" : 209,
+    "description" : "You do not have a classic account."
   }, {
     "timestamp" : 220,
     "description" : "Account couldn't be deleted - there are funds remaining"
   }, {
+    "timestamp" : 222,
+    "description" : "Upgrade plan",
+    "accountIBAN" : "RO69POOB6209498372540635",
+    "newPlanType" : "silver"
+  }, {
+    "timestamp" : 224,
+    "description" : "The user already has the silver plan."
+  }, {
     "timestamp" : 233,
     "description" : "Interest rate of the account changed to 0.63"
   }, {
-    "timestamp" : 237,
-    "description" : "Split payment of 2695.00 EUR",
-    "currency" : "EUR",
-    "amount" : 673.75,
-    "involvedAccounts" : [ "RO58POOB7344468893732422", "RO69POOB6209498372540635", "RO90POOB5450777208072365", "RO65POOB8944016386845896" ],
-    "error" : "Account RO90POOB5450777208072365 has insufficient funds for a split payment."
+    "timestamp" : 234,
+    "description" : "Interest rate income",
+    "amount" : 2094.2397,
+    "currency" : "EUR"
   } ],
   "timestamp" : 247
 }, {
@@ -936,18 +1021,17 @@
     "timestamp" : 13,
     "description" : "New account created"
   }, {
+    "timestamp" : 62,
+    "description" : "You do not have a classic account."
+  }, {
     "timestamp" : 166,
     "description" : "New account created"
   }, {
+    "timestamp" : 207,
+    "description" : "You do not have a classic account."
+  }, {
     "timestamp" : 218,
     "description" : "Account couldn't be deleted - there are funds remaining"
-  }, {
-    "timestamp" : 237,
-    "description" : "Split payment of 2695.00 EUR",
-    "currency" : "EUR",
-    "amount" : 673.75,
-    "involvedAccounts" : [ "RO58POOB7344468893732422", "RO69POOB6209498372540635", "RO90POOB5450777208072365", "RO65POOB8944016386845896" ],
-    "error" : "Account RO90POOB5450777208072365 has insufficient funds for a split payment."
   } ],
   "timestamp" : 248
 }, {
@@ -959,25 +1043,23 @@
     "timestamp" : 21,
     "description" : "New account created"
   }, {
+    "timestamp" : 60,
+    "description" : "You do not have a classic account."
+  }, {
+    "timestamp" : 63,
+    "description" : "You do not have a classic account."
+  }, {
     "timestamp" : 194,
     "description" : "New account created"
   }, {
+    "timestamp" : 205,
+    "description" : "You don't have the minimum age required."
+  }, {
+    "timestamp" : 208,
+    "description" : "You do not have a classic account."
+  }, {
     "timestamp" : 220,
     "description" : "Account couldn't be deleted - there are funds remaining"
-  }, {
-    "timestamp" : 237,
-    "description" : "Split payment of 2695.00 EUR",
-    "currency" : "EUR",
-    "amount" : 673.75,
-    "involvedAccounts" : [ "RO58POOB7344468893732422", "RO69POOB6209498372540635", "RO90POOB5450777208072365", "RO65POOB8944016386845896" ],
-    "error" : "Account RO90POOB5450777208072365 has insufficient funds for a split payment."
-  }, {
-    "timestamp" : 237,
-    "description" : "Split payment of 2695.00 EUR",
-    "currency" : "EUR",
-    "amount" : 673.75,
-    "involvedAccounts" : [ "RO58POOB7344468893732422", "RO69POOB6209498372540635", "RO90POOB5450777208072365", "RO65POOB8944016386845896" ],
-    "error" : "Account RO90POOB5450777208072365 has insufficient funds for a split payment."
   } ],
   "timestamp" : 249
 }, {
@@ -989,21 +1071,39 @@
     "timestamp" : 21,
     "description" : "New account created"
   }, {
+    "timestamp" : 61,
+    "description" : "You do not have a classic account."
+  }, {
+    "timestamp" : 64,
+    "description" : "You do not have a classic account."
+  }, {
     "timestamp" : 194,
     "description" : "New account created"
+  }, {
+    "timestamp" : 206,
+    "description" : "You do not have a classic account."
+  }, {
+    "timestamp" : 209,
+    "description" : "You do not have a classic account."
   }, {
     "timestamp" : 220,
     "description" : "Account couldn't be deleted - there are funds remaining"
   }, {
+    "timestamp" : 222,
+    "description" : "Upgrade plan",
+    "accountIBAN" : "RO69POOB6209498372540635",
+    "newPlanType" : "silver"
+  }, {
+    "timestamp" : 224,
+    "description" : "The user already has the silver plan."
+  }, {
     "timestamp" : 233,
     "description" : "Interest rate of the account changed to 0.63"
   }, {
-    "timestamp" : 237,
-    "description" : "Split payment of 2695.00 EUR",
-    "currency" : "EUR",
-    "amount" : 673.75,
-    "involvedAccounts" : [ "RO58POOB7344468893732422", "RO69POOB6209498372540635", "RO90POOB5450777208072365", "RO65POOB8944016386845896" ],
-    "error" : "Account RO90POOB5450777208072365 has insufficient funds for a split payment."
+    "timestamp" : 234,
+    "description" : "Interest rate income",
+    "amount" : 2094.2397,
+    "currency" : "EUR"
   } ],
   "timestamp" : 249
 }, {
@@ -1076,6 +1176,13 @@
     "description" : "Card not found"
   },
   "timestamp" : 256
+}, {
+  "command" : "sendMoney",
+  "output" : {
+    "timestamp" : 258,
+    "description" : "User not found"
+  },
+  "timestamp" : 258
 }, {
   "command" : "printUsers",
   "output" : [ {
@@ -1281,7 +1388,7 @@
     "email" : "Valerie_Rocher@outlook.fr",
     "accounts" : [ {
       "IBAN" : "RO69POOB6209498372540635",
-      "balance" : 5457.24,
+      "balance" : 5418.429700000001,
       "currency" : "EUR",
       "type" : "savings",
       "cards" : [ ]
@@ -1570,7 +1677,7 @@
     "email" : "Valerie_Rocher@outlook.fr",
     "accounts" : [ {
       "IBAN" : "RO69POOB6209498372540635",
-      "balance" : 5457.24,
+      "balance" : 5418.429700000001,
       "currency" : "EUR",
       "type" : "savings",
       "cards" : [ ]
@@ -1861,7 +1968,7 @@
     "email" : "Valerie_Rocher@outlook.fr",
     "accounts" : [ {
       "IBAN" : "RO69POOB6209498372540635",
-      "balance" : 5457.24,
+      "balance" : 5418.429700000001,
       "currency" : "EUR",
       "type" : "savings",
       "cards" : [ ]
@@ -2140,7 +2247,7 @@
     "email" : "Valerie_Rocher@outlook.fr",
     "accounts" : [ {
       "IBAN" : "RO69POOB6209498372540635",
-      "balance" : 5457.24,
+      "balance" : 5418.429700000001,
       "currency" : "EUR",
       "type" : "savings",
       "cards" : [ ]
@@ -2468,7 +2575,7 @@
     "email" : "Valerie_Rocher@outlook.fr",
     "accounts" : [ {
       "IBAN" : "RO69POOB6209498372540635",
-      "balance" : 5457.24,
+      "balance" : 5418.429700000001,
       "currency" : "EUR",
       "type" : "savings",
       "cards" : [ ]
@@ -2518,6 +2625,13 @@
     "accounts" : [ ]
   } ],
   "timestamp" : 517
+}, {
+  "command" : "sendMoney",
+  "output" : {
+    "timestamp" : 635,
+    "description" : "User not found"
+  },
+  "timestamp" : 635
 }, {
   "command" : "payOnline",
   "output" : {
@@ -2796,7 +2910,7 @@
     "email" : "Valerie_Rocher@outlook.fr",
     "accounts" : [ {
       "IBAN" : "RO69POOB6209498372540635",
-      "balance" : 5457.24,
+      "balance" : 5418.429700000001,
       "currency" : "EUR",
       "type" : "savings",
       "cards" : [ ]
@@ -2847,25 +2961,38 @@
   } ],
   "timestamp" : 644
 }, {
+  "command" : "cashWithdrawal",
+  "output" : {
+    "timestamp" : 647,
+    "description" : "Card not found"
+  },
+  "timestamp" : 647
+}, {
   "command" : "printTransactions",
   "output" : [ {
     "timestamp" : 13,
     "description" : "New account created"
   }, {
+    "timestamp" : 62,
+    "description" : "You do not have a classic account."
+  }, {
     "timestamp" : 166,
     "description" : "New account created"
   }, {
+    "timestamp" : 207,
+    "description" : "You do not have a classic account."
+  }, {
     "timestamp" : 218,
     "description" : "Account couldn't be deleted - there are funds remaining"
-  }, {
-    "timestamp" : 237,
-    "description" : "Split payment of 2695.00 EUR",
-    "currency" : "EUR",
-    "amount" : 673.75,
-    "involvedAccounts" : [ "RO58POOB7344468893732422", "RO69POOB6209498372540635", "RO90POOB5450777208072365", "RO65POOB8944016386845896" ],
-    "error" : "Account RO90POOB5450777208072365 has insufficient funds for a split payment."
   } ],
   "timestamp" : 648
+}, {
+  "command" : "cashWithdrawal",
+  "output" : {
+    "timestamp" : 650,
+    "description" : "Card not found"
+  },
+  "timestamp" : 650
 }, {
   "command" : "printTransactions",
   "output" : [ {
@@ -2901,6 +3028,13 @@
     "description" : "Account couldn't be deleted - there are funds remaining"
   } ],
   "timestamp" : 651
+}, {
+  "command" : "cashWithdrawal",
+  "output" : {
+    "timestamp" : 653,
+    "description" : "Card not found"
+  },
+  "timestamp" : 653
 }, {
   "command" : "printTransactions",
   "output" : [ {
@@ -3165,7 +3299,7 @@
     "email" : "Valerie_Rocher@outlook.fr",
     "accounts" : [ {
       "IBAN" : "RO69POOB6209498372540635",
-      "balance" : 5629.24,
+      "balance" : 5590.429700000001,
       "currency" : "EUR",
       "type" : "savings",
       "cards" : [ ]

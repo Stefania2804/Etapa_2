@@ -127,6 +127,9 @@
     "timestamp" : 4,
     "description" : "New account created"
   }, {
+    "timestamp" : 6,
+    "description" : "You don't have the minimum age required."
+  }, {
     "timestamp" : 9,
     "description" : "Electricity and gas bills",
     "senderIBAN" : "RO69POOB6209498372540635",
@@ -248,6 +251,9 @@
   }, {
     "timestamp" : 4,
     "description" : "New account created"
+  }, {
+    "timestamp" : 6,
+    "description" : "You don't have the minimum age required."
   }, {
     "timestamp" : 9,
     "description" : "Electricity and gas bills",

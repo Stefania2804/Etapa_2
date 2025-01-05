@@ -19,4 +19,11 @@
     "description" : "Card not found"
   },
   "timestamp" : 45
+}, {
+  "command" : "sendMoney",
+  "output" : {
+    "timestamp" : 48,
+    "description" : "User not found"
+  },
+  "timestamp" : 48
 } ]

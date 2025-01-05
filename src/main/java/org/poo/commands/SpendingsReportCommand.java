@@ -22,7 +22,7 @@ public final class SpendingsReportCommand implements Command {
         int found = 0;
         int savings = 0;
         Account accountFound = new Account(null, 0.0,
-                null, null);
+                null, null, null);
         for (Account account : infoBank.getAccounts()) {
             if (account.getIban().equals(commandInput.getAccount())) {
                 found = 1;

@@ -3,16 +3,17 @@ package org.poo.main;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectWriter;
 import com.fasterxml.jackson.databind.node.ArrayNode;
+import org.poo.account.ClothesCommerciant;
+import org.poo.account.Commerciant;
+import org.poo.account.FoodCommerciant;
+import org.poo.account.TechCommerciant;
 import org.poo.bank.Exchange;
 import org.poo.bank.InfoBank;
 import org.poo.bank.User;
 import org.poo.checker.Checker;
 import org.poo.checker.CheckerConstants;
 import org.poo.commands.Invoker;
-import org.poo.fileio.CommandInput;
-import org.poo.fileio.ExchangeInput;
-import org.poo.fileio.ObjectInput;
-import org.poo.fileio.UserInput;
+import org.poo.fileio.*;
 import org.poo.utils.Utils;
 
 import java.io.File;
@@ -85,15 +86,36 @@ public final class Main {
         InfoBank infoBank = new InfoBank();
         UserInput[] users = inputData.getUsers();
         ExchangeInput[] exchangeRates = inputData.getExchangeRates();
+        CommerciantInput[] commerciants = inputData.getCommerciants();
         for (int i = 0; i < users.length; i++) {
             User user = new User(users[i].getFirstName(),
-                    users[i].getLastName(), users[i].getEmail());
+                    users[i].getLastName(), users[i].getEmail(), users[i].getBirthDate(), users[i].getOccupation());
             infoBank.addUser(user);
         }
         for (int i = 0; i < exchangeRates.length; i++) {
             Exchange exchange = new Exchange(exchangeRates[i].getFrom(), exchangeRates[i].getTo(),
                     exchangeRates[i].getRate(), exchangeRates[i].getTimestamp());
             infoBank.addExchange(exchange);
+        }
+        for (int i = 0; i < commerciants.length; i++) {
+            Commerciant commerciant = null;
+            if (commerciants[i].getType().equals("Food")) {
+                commerciant = new FoodCommerciant(0.0, commerciants[i].getCommerciant(),
+                        commerciants[i].getCashbackStrategy(),
+                        commerciants[i].getType(), commerciants[i].getId(),
+                        commerciants[i].getAccount());
+            } else if (commerciants[i].getType().equals("Clothes")) {
+                commerciant = new ClothesCommerciant(0.0, commerciants[i].getCommerciant(),
+                        commerciants[i].getCashbackStrategy(),
+                        commerciants[i].getType(), commerciants[i].getId(),
+                        commerciants[i].getAccount());
+            } else {
+                commerciant = new TechCommerciant(0.0, commerciants[i].getCommerciant(),
+                        commerciants[i].getCashbackStrategy(),
+                        commerciants[i].getType(), commerciants[i].getId(),
+                        commerciants[i].getAccount());
+            }
+            infoBank.addCommerciant(commerciant);
         }
         CommandInput[] commands = inputData.getCommands();
         for (int i = 0; i < commands.length; i++) {

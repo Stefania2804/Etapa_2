@@ -10,6 +10,10 @@ import org.poo.bank.User;
 import org.poo.fileio.CommandInput;
 import org.poo.transactions.Transaction;
 
+import java.util.Comparator;
+import java.util.List;
+import java.util.stream.Collectors;
+
 public abstract class JsonOutput {
     /**
      * Printeaza utilizatorii.
@@ -72,7 +76,11 @@ public abstract class JsonOutput {
         commandNode.put("command", "printTransactions");
 
         ArrayNode transactionsArray = objectMapper.createArrayNode();
-        for (Transaction transaction : user.getTransactions()) {
+        List<Transaction> sortedTransactions = user.getTransactions().stream()
+                .sorted(Comparator.comparing(Transaction::getTimestamp))
+                .collect(Collectors.toList());
+
+        for (Transaction transaction : sortedTransactions) {
             transactionsArray.add(objectMapper.valueToTree(transaction));
         }
 
@@ -172,9 +180,11 @@ public abstract class JsonOutput {
             }
         }
         for (Commerciant commerciant : account.getCommerciants()) {
-            if (commerciant.getPayOnlineTimestamp() >= commandInput.getStartTimestamp()
-                    && commerciant.getPayOnlineTimestamp() <= commandInput.getEndTimestamp()) {
-                commerciantsArray.add(objectMapper.valueToTree(commerciant));
+            for (Integer time : commerciant.getPayOnlineTimestamps()) {
+                if (time >= commandInput.getStartTimestamp() && time <= commandInput.getEndTimestamp()) {
+                    commerciantsArray.add(objectMapper.valueToTree(commerciant));
+                    break;
+                }
             }
         }
         outputNode.set("transactions", transactionsArray);
@@ -185,9 +195,11 @@ public abstract class JsonOutput {
 
         output.add(commandNode);
         for (Commerciant commerciant : account.getCommerciants()) {
-            if (commerciant.getPayOnlineTimestamp() >= commandInput.getStartTimestamp()
-                    && commerciant.getPayOnlineTimestamp() <= commandInput.getEndTimestamp()) {
-                commerciant.setAmount(0.0);
+            for (Integer time : commerciant.getPayOnlineTimestamps()) {
+                if (time >= commandInput.getStartTimestamp() && time <= commandInput.getEndTimestamp()) {
+                    commerciant.setAmount(0.0);
+                    break;
+                }
             }
         }
     }
@@ -221,6 +233,32 @@ public abstract class JsonOutput {
 
         ObjectNode outputNode = objectMapper.createObjectNode();
         outputNode.put("error", "This kind of report is not supported for a saving account");
+
+        commandNode.set("output", outputNode);
+        commandNode.put("timestamp", commandInput.getTimestamp());
+        output.add(commandNode);
+    }
+    public static void errorCashWithdrawal(final CommandInput commandInput,
+                                           final ObjectMapper objectMapper,
+                                           final ArrayNode output) {
+        ObjectNode commandNode = objectMapper.createObjectNode();
+        commandNode.put("command", commandInput.getCommand());
+        ObjectNode outputNode = objectMapper.createObjectNode();
+        outputNode.put("timestamp", commandInput.getTimestamp());
+        outputNode.put("description", "Insufficient funds");
+
+        commandNode.set("output", outputNode);
+        commandNode.put("timestamp", commandInput.getTimestamp());
+        output.add(commandNode);
+    }
+    public static void errorUser(final CommandInput commandInput,
+                                    final ObjectMapper objectMapper,
+                                    final ArrayNode output) {
+        ObjectNode commandNode = objectMapper.createObjectNode();
+        commandNode.put("command", commandInput.getCommand());
+        ObjectNode outputNode = objectMapper.createObjectNode();
+        outputNode.put("timestamp", commandInput.getTimestamp());
+        outputNode.put("description", "User not found");
 
         commandNode.set("output", outputNode);
         commandNode.put("timestamp", commandInput.getTimestamp());

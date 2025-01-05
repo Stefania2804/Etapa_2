@@ -3,6 +3,7 @@ package org.poo.commands;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ArrayNode;
 import org.poo.account.Account;
+import org.poo.main.JsonOutput;
 import org.poo.strategy.BankTransfer;
 import org.poo.bank.InfoBank;
 import org.poo.strategy.PaymentContext;
@@ -28,13 +29,13 @@ public class SendMoneyCommand implements Command {
         String senderCurrency = new String();
         String receiverCurrency = new String();
         Account senderAccount = new Account(null, 0.0,
-                null, null);
+                null, null, null);
         Account receiverAccount = new Account(null, 0.0,
-                null, null);
+                null, null, null);
         User userSender = new User(null,
-                null, null);
+                null, null, null, null);
         User userReceiver = new User(null,
-                null, null);
+                null, null, null, null);
         for (User user : infoBank.getUsers()) {
             for (Account account : user.getAccounts()) {
                 if (account.getIban().equals(sender)) {
@@ -54,6 +55,7 @@ public class SendMoneyCommand implements Command {
             }
         }
         if (senderFound == 0 || receiverFound == 0) {
+            JsonOutput.errorUser(commandInput, objectMapper, output);
             return;
         }
         if (senderAccount.getBalance() < commandInput.getAmount()) {
@@ -66,8 +68,9 @@ public class SendMoneyCommand implements Command {
         }
         double amount = infoBank.exchange(senderCurrency,
                 receiverCurrency, commandInput.getAmount());
+        double exchangedAm = infoBank.exchange(senderCurrency, "RON", commandInput.getAmount());
         PayStrategy bankTransfer = new BankTransfer(receiverAccount,
-                amount);
+                amount, exchangedAm);
         PaymentContext context = new PaymentContext(bankTransfer);
         context.executePayment(senderAccount, commandInput.getAmount());
         Transaction transactionSent = new SendMoneyTransaction(

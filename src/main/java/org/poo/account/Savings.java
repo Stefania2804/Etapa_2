@@ -10,8 +10,9 @@ public final class Savings extends Account {
     public Savings(final String iban, final double balance,
                    final String currency,
                    final String type,
-                   final double interestRate) {
-        super(iban, balance, currency, type);
+                   final double interestRate,
+                   final String plan) {
+        super(iban, balance, currency, type, plan);
         this.interestRate = interestRate;
     }
 

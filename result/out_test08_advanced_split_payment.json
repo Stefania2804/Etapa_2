@@ -4,13 +4,6 @@
     "timestamp" : 2,
     "description" : "New account created"
   }, {
-    "timestamp" : 21,
-    "description" : "Split payment of 6069.00 EUR",
-    "currency" : "EUR",
-    "amount" : 1213.8,
-    "involvedAccounts" : [ "RO90POOB5450777208072365", "RO69POOB6209498372540635", "RO65POOB8944016386845896", "RO58POOB2721178218599590", "RO58POOB7344468893732422" ],
-    "error" : "Account RO58POOB2721178218599590 has insufficient funds for a split payment."
-  }, {
     "timestamp" : 23,
     "description" : "Shopping at the local Monoprix",
     "senderIBAN" : "RO58POOB7344468893732422",
@@ -31,13 +24,6 @@
   "output" : [ {
     "timestamp" : 3,
     "description" : "New account created"
-  }, {
-    "timestamp" : 21,
-    "description" : "Split payment of 6069.00 EUR",
-    "currency" : "EUR",
-    "amount" : 1213.8,
-    "involvedAccounts" : [ "RO90POOB5450777208072365", "RO69POOB6209498372540635", "RO65POOB8944016386845896", "RO58POOB2721178218599590", "RO58POOB7344468893732422" ],
-    "error" : "Account RO58POOB2721178218599590 has insufficient funds for a split payment."
   } ],
   "timestamp" : 27
 }, {
@@ -48,7 +34,7 @@
     "email" : "Celina_Picard@gmail.fr",
     "accounts" : [ {
       "IBAN" : "RO58POOB7344468893732422",
-      "balance" : 1497.0,
+      "balance" : 1495.9,
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ ]
@@ -155,17 +141,17 @@
   } ],
   "timestamp" : 44
 }, {
+  "command" : "cashWithdrawal",
+  "output" : {
+    "timestamp" : 45,
+    "description" : "Card not found"
+  },
+  "timestamp" : 45
+}, {
   "command" : "printTransactions",
   "output" : [ {
     "timestamp" : 7,
     "description" : "New account created"
-  }, {
-    "timestamp" : 28,
-    "description" : "Split payment of 2032.00 USD",
-    "currency" : "USD",
-    "amount" : 677.3333333333334,
-    "involvedAccounts" : [ "RO37POOB7013767509830666", "RO69POOB6209498372540635", "RO76POOB4035116042454483" ],
-    "error" : "Account RO76POOB4035116042454483 has insufficient funds for a split payment."
   }, {
     "timestamp" : 57,
     "description" : "Black Friday shopping spree",
@@ -183,10 +169,10 @@
   }, {
     "timestamp" : 21,
     "description" : "Split payment of 6069.00 EUR",
+    "splitPaymentType" : "custom",
     "currency" : "EUR",
-    "amount" : 1213.8,
-    "involvedAccounts" : [ "RO90POOB5450777208072365", "RO69POOB6209498372540635", "RO65POOB8944016386845896", "RO58POOB2721178218599590", "RO58POOB7344468893732422" ],
-    "error" : "Account RO58POOB2721178218599590 has insufficient funds for a split payment."
+    "amountForUsers" : [ 1197.0, 1269.0, 1694.0, 420.0, 1489.0 ],
+    "involvedAccounts" : [ "RO90POOB5450777208072365", "RO69POOB6209498372540635", "RO65POOB8944016386845896", "RO58POOB2721178218599590", "RO58POOB7344468893732422" ]
   }, {
     "timestamp" : 23,
     "description" : "Shopping at the local Monoprix",
@@ -204,10 +190,10 @@
   }, {
     "timestamp" : 21,
     "description" : "Split payment of 6069.00 EUR",
+    "splitPaymentType" : "custom",
     "currency" : "EUR",
-    "amount" : 1213.8,
-    "involvedAccounts" : [ "RO90POOB5450777208072365", "RO69POOB6209498372540635", "RO65POOB8944016386845896", "RO58POOB2721178218599590", "RO58POOB7344468893732422" ],
-    "error" : "Account RO58POOB2721178218599590 has insufficient funds for a split payment."
+    "amountForUsers" : [ 1197.0, 1269.0, 1694.0, 420.0, 1489.0 ],
+    "involvedAccounts" : [ "RO90POOB5450777208072365", "RO69POOB6209498372540635", "RO65POOB8944016386845896", "RO58POOB2721178218599590", "RO58POOB7344468893732422" ]
   }, {
     "timestamp" : 23,
     "description" : "Shopping at the local Monoprix",
@@ -215,13 +201,6 @@
     "receiverIBAN" : "RO69POOB6209498372540635",
     "amount" : "550.0 EUR",
     "transferType" : "received"
-  }, {
-    "timestamp" : 28,
-    "description" : "Split payment of 2032.00 USD",
-    "currency" : "USD",
-    "amount" : 677.3333333333334,
-    "involvedAccounts" : [ "RO37POOB7013767509830666", "RO69POOB6209498372540635", "RO76POOB4035116042454483" ],
-    "error" : "Account RO76POOB4035116042454483 has insufficient funds for a split payment."
   } ],
   "timestamp" : 73
 }, {
@@ -232,10 +211,10 @@
   }, {
     "timestamp" : 21,
     "description" : "Split payment of 6069.00 EUR",
+    "splitPaymentType" : "custom",
     "currency" : "EUR",
-    "amount" : 1213.8,
-    "involvedAccounts" : [ "RO90POOB5450777208072365", "RO69POOB6209498372540635", "RO65POOB8944016386845896", "RO58POOB2721178218599590", "RO58POOB7344468893732422" ],
-    "error" : "Account RO58POOB2721178218599590 has insufficient funds for a split payment."
+    "amountForUsers" : [ 1197.0, 1269.0, 1694.0, 420.0, 1489.0 ],
+    "involvedAccounts" : [ "RO90POOB5450777208072365", "RO69POOB6209498372540635", "RO65POOB8944016386845896", "RO58POOB2721178218599590", "RO58POOB7344468893732422" ]
   }, {
     "timestamp" : 57,
     "description" : "Black Friday shopping spree",
@@ -253,10 +232,10 @@
   }, {
     "timestamp" : 21,
     "description" : "Split payment of 6069.00 EUR",
+    "splitPaymentType" : "custom",
     "currency" : "EUR",
-    "amount" : 1213.8,
-    "involvedAccounts" : [ "RO90POOB5450777208072365", "RO69POOB6209498372540635", "RO65POOB8944016386845896", "RO58POOB2721178218599590", "RO58POOB7344468893732422" ],
-    "error" : "Account RO58POOB2721178218599590 has insufficient funds for a split payment."
+    "amountForUsers" : [ 1197.0, 1269.0, 1694.0, 420.0, 1489.0 ],
+    "involvedAccounts" : [ "RO90POOB5450777208072365", "RO69POOB6209498372540635", "RO65POOB8944016386845896", "RO58POOB2721178218599590", "RO58POOB7344468893732422" ]
   } ],
   "timestamp" : 75
 }, {
@@ -267,10 +246,10 @@
   }, {
     "timestamp" : 21,
     "description" : "Split payment of 6069.00 EUR",
+    "splitPaymentType" : "custom",
     "currency" : "EUR",
-    "amount" : 1213.8,
-    "involvedAccounts" : [ "RO90POOB5450777208072365", "RO69POOB6209498372540635", "RO65POOB8944016386845896", "RO58POOB2721178218599590", "RO58POOB7344468893732422" ],
-    "error" : "Account RO58POOB2721178218599590 has insufficient funds for a split payment."
+    "amountForUsers" : [ 1197.0, 1269.0, 1694.0, 420.0, 1489.0 ],
+    "involvedAccounts" : [ "RO90POOB5450777208072365", "RO69POOB6209498372540635", "RO65POOB8944016386845896", "RO58POOB2721178218599590", "RO58POOB7344468893732422" ]
   } ],
   "timestamp" : 76
 }, {
@@ -278,13 +257,6 @@
   "output" : [ {
     "timestamp" : 7,
     "description" : "New account created"
-  }, {
-    "timestamp" : 28,
-    "description" : "Split payment of 2032.00 USD",
-    "currency" : "USD",
-    "amount" : 677.3333333333334,
-    "involvedAccounts" : [ "RO37POOB7013767509830666", "RO69POOB6209498372540635", "RO76POOB4035116042454483" ],
-    "error" : "Account RO76POOB4035116042454483 has insufficient funds for a split payment."
   }, {
     "timestamp" : 57,
     "description" : "Black Friday shopping spree",
@@ -316,7 +288,7 @@
     "email" : "Celina_Picard@gmail.fr",
     "accounts" : [ {
       "IBAN" : "RO58POOB7344468893732422",
-      "balance" : 3282.0,
+      "balance" : 2083.9,
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ ]
@@ -327,7 +299,7 @@
     "email" : "Pierre_Philippe@yahoo.fr",
     "accounts" : [ {
       "IBAN" : "RO69POOB6209498372540635",
-      "balance" : 3866.0,
+      "balance" : 2597.0,
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ ]
@@ -338,7 +310,7 @@
     "email" : "Anais_Richard@gmail.fr",
     "accounts" : [ {
       "IBAN" : "RO90POOB5450777208072365",
-      "balance" : 6946.4,
+      "balance" : 5252.4,
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ ]
@@ -349,7 +321,7 @@
     "email" : "Gerard_Lambert@yahoo.fr",
     "accounts" : [ {
       "IBAN" : "RO65POOB8944016386845896",
-      "balance" : 3151.0,
+      "balance" : 2731.0,
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ ]
@@ -360,7 +332,7 @@
     "email" : "Mariana_Tudor@yahoo.ro",
     "accounts" : [ {
       "IBAN" : "RO58POOB2721178218599590",
-      "balance" : 3358.0,
+      "balance" : -4087.0,
       "currency" : "RON",
       "type" : "classic",
       "cards" : [ ]
@@ -479,10 +451,10 @@
   }, {
     "timestamp" : 21,
     "description" : "Split payment of 6069.00 EUR",
+    "splitPaymentType" : "custom",
     "currency" : "EUR",
-    "amount" : 1213.8,
-    "involvedAccounts" : [ "RO90POOB5450777208072365", "RO69POOB6209498372540635", "RO65POOB8944016386845896", "RO58POOB2721178218599590", "RO58POOB7344468893732422" ],
-    "error" : "Account RO58POOB2721178218599590 has insufficient funds for a split payment."
+    "amountForUsers" : [ 1197.0, 1269.0, 1694.0, 420.0, 1489.0 ],
+    "involvedAccounts" : [ "RO90POOB5450777208072365", "RO69POOB6209498372540635", "RO65POOB8944016386845896", "RO58POOB2721178218599590", "RO58POOB7344468893732422" ]
   }, {
     "timestamp" : 23,
     "description" : "Shopping at the local Monoprix",
@@ -500,10 +472,10 @@
   }, {
     "timestamp" : 21,
     "description" : "Split payment of 6069.00 EUR",
+    "splitPaymentType" : "custom",
     "currency" : "EUR",
-    "amount" : 1213.8,
-    "involvedAccounts" : [ "RO90POOB5450777208072365", "RO69POOB6209498372540635", "RO65POOB8944016386845896", "RO58POOB2721178218599590", "RO58POOB7344468893732422" ],
-    "error" : "Account RO58POOB2721178218599590 has insufficient funds for a split payment."
+    "amountForUsers" : [ 1197.0, 1269.0, 1694.0, 420.0, 1489.0 ],
+    "involvedAccounts" : [ "RO90POOB5450777208072365", "RO69POOB6209498372540635", "RO65POOB8944016386845896", "RO58POOB2721178218599590", "RO58POOB7344468893732422" ]
   }, {
     "timestamp" : 23,
     "description" : "Shopping at the local Monoprix",
@@ -511,13 +483,6 @@
     "receiverIBAN" : "RO69POOB6209498372540635",
     "amount" : "550.0 EUR",
     "transferType" : "received"
-  }, {
-    "timestamp" : 28,
-    "description" : "Split payment of 2032.00 USD",
-    "currency" : "USD",
-    "amount" : 677.3333333333334,
-    "involvedAccounts" : [ "RO37POOB7013767509830666", "RO69POOB6209498372540635", "RO76POOB4035116042454483" ],
-    "error" : "Account RO76POOB4035116042454483 has insufficient funds for a split payment."
   } ],
   "timestamp" : 155
 }, {
@@ -528,10 +493,10 @@
   }, {
     "timestamp" : 21,
     "description" : "Split payment of 6069.00 EUR",
+    "splitPaymentType" : "custom",
     "currency" : "EUR",
-    "amount" : 1213.8,
-    "involvedAccounts" : [ "RO90POOB5450777208072365", "RO69POOB6209498372540635", "RO65POOB8944016386845896", "RO58POOB2721178218599590", "RO58POOB7344468893732422" ],
-    "error" : "Account RO58POOB2721178218599590 has insufficient funds for a split payment."
+    "amountForUsers" : [ 1197.0, 1269.0, 1694.0, 420.0, 1489.0 ],
+    "involvedAccounts" : [ "RO90POOB5450777208072365", "RO69POOB6209498372540635", "RO65POOB8944016386845896", "RO58POOB2721178218599590", "RO58POOB7344468893732422" ]
   }, {
     "timestamp" : 57,
     "description" : "Black Friday shopping spree",
@@ -549,10 +514,10 @@
   }, {
     "timestamp" : 21,
     "description" : "Split payment of 6069.00 EUR",
+    "splitPaymentType" : "custom",
     "currency" : "EUR",
-    "amount" : 1213.8,
-    "involvedAccounts" : [ "RO90POOB5450777208072365", "RO69POOB6209498372540635", "RO65POOB8944016386845896", "RO58POOB2721178218599590", "RO58POOB7344468893732422" ],
-    "error" : "Account RO58POOB2721178218599590 has insufficient funds for a split payment."
+    "amountForUsers" : [ 1197.0, 1269.0, 1694.0, 420.0, 1489.0 ],
+    "involvedAccounts" : [ "RO90POOB5450777208072365", "RO69POOB6209498372540635", "RO65POOB8944016386845896", "RO58POOB2721178218599590", "RO58POOB7344468893732422" ]
   } ],
   "timestamp" : 157
 }, {
@@ -563,10 +528,10 @@
   }, {
     "timestamp" : 21,
     "description" : "Split payment of 6069.00 EUR",
+    "splitPaymentType" : "custom",
     "currency" : "EUR",
-    "amount" : 1213.8,
-    "involvedAccounts" : [ "RO90POOB5450777208072365", "RO69POOB6209498372540635", "RO65POOB8944016386845896", "RO58POOB2721178218599590", "RO58POOB7344468893732422" ],
-    "error" : "Account RO58POOB2721178218599590 has insufficient funds for a split payment."
+    "amountForUsers" : [ 1197.0, 1269.0, 1694.0, 420.0, 1489.0 ],
+    "involvedAccounts" : [ "RO90POOB5450777208072365", "RO69POOB6209498372540635", "RO65POOB8944016386845896", "RO58POOB2721178218599590", "RO58POOB7344468893732422" ]
   } ],
   "timestamp" : 158
 }, {
@@ -574,13 +539,6 @@
   "output" : [ {
     "timestamp" : 6,
     "description" : "New account created"
-  }, {
-    "timestamp" : 28,
-    "description" : "Split payment of 2032.00 USD",
-    "currency" : "USD",
-    "amount" : 677.3333333333334,
-    "involvedAccounts" : [ "RO37POOB7013767509830666", "RO69POOB6209498372540635", "RO76POOB4035116042454483" ],
-    "error" : "Account RO76POOB4035116042454483 has insufficient funds for a split payment."
   } ],
   "timestamp" : 159
 }, {
@@ -588,13 +546,6 @@
   "output" : [ {
     "timestamp" : 7,
     "description" : "New account created"
-  }, {
-    "timestamp" : 28,
-    "description" : "Split payment of 2032.00 USD",
-    "currency" : "USD",
-    "amount" : 677.3333333333334,
-    "involvedAccounts" : [ "RO37POOB7013767509830666", "RO69POOB6209498372540635", "RO76POOB4035116042454483" ],
-    "error" : "Account RO76POOB4035116042454483 has insufficient funds for a split payment."
   }, {
     "timestamp" : 57,
     "description" : "Black Friday shopping spree",
@@ -612,7 +563,7 @@
     "email" : "Celina_Picard@gmail.fr",
     "accounts" : [ {
       "IBAN" : "RO58POOB7344468893732422",
-      "balance" : 3282.0,
+      "balance" : 2083.9,
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ ]
@@ -623,7 +574,7 @@
     "email" : "Pierre_Philippe@yahoo.fr",
     "accounts" : [ {
       "IBAN" : "RO69POOB6209498372540635",
-      "balance" : 3866.0,
+      "balance" : 2597.0,
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ ]
@@ -634,7 +585,7 @@
     "email" : "Anais_Richard@gmail.fr",
     "accounts" : [ {
       "IBAN" : "RO90POOB5450777208072365",
-      "balance" : 6946.4,
+      "balance" : 5252.4,
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ ]
@@ -645,7 +596,7 @@
     "email" : "Gerard_Lambert@yahoo.fr",
     "accounts" : [ {
       "IBAN" : "RO65POOB8944016386845896",
-      "balance" : 3151.0,
+      "balance" : 2731.0,
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ ]
@@ -656,7 +607,7 @@
     "email" : "Mariana_Tudor@yahoo.ro",
     "accounts" : [ {
       "IBAN" : "RO58POOB2721178218599590",
-      "balance" : 3358.0,
+      "balance" : -4087.0,
       "currency" : "RON",
       "type" : "classic",
       "cards" : [ ]

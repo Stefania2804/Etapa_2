@@ -30,15 +30,39 @@ public final class AddAccountCommand implements Command {
                 String iban = Utils.generateIBAN();
                 switch (type) {
                     case "classic":
-                        Account classic = new Classic(iban, 0.0, currency, type);
+                        String plan = null;
+                        if (user.getAccounts() != null && !user.getAccounts().isEmpty()) {
+                            plan = user.getAccounts().get(0).getPlan();
+                        } else {
+                            if (user.getOccupation() != null) {
+                                if (user.getOccupation().equals("student")) {
+                                    plan = "student";
+                                } else {
+                                    plan = "standard";
+                                }
+                            }
+                        }
+                        Account classic = new Classic(iban, 0.0, currency, type, plan);
                         user.addClassic((Classic) classic);
                         user.addAccounts(classic);
                         infoBank.addAccount(classic);
                         classic.addTransaction(transaction);
                         break;
                     case "savings":
+                        String plan_savings = null;
+                        if (user.getAccounts() != null && !user.getAccounts().isEmpty()) {
+                            plan_savings = user.getAccounts().get(0).getPlan();
+                        } else {
+                            if (user.getOccupation() != null) {
+                                if (user.getOccupation().equals("student")) {
+                                    plan_savings = "student";
+                                } else {
+                                    plan_savings = "standard";
+                                }
+                            }
+                        }
                         Account savings = new Savings(iban, 0.0, currency, type,
-                                commandInput.getInterestRate());
+                                commandInput.getInterestRate(), plan_savings);
                         user.addSavings((Savings) savings);
                         user.addAccounts(savings);
                         infoBank.addAccount(savings);

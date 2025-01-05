@@ -34,6 +34,34 @@
   },
   "timestamp" : 857
 }, {
+  "command" : "cashWithdrawal",
+  "output" : {
+    "timestamp" : 873,
+    "description" : "Card not found"
+  },
+  "timestamp" : 873
+}, {
+  "command" : "cashWithdrawal",
+  "output" : {
+    "timestamp" : 879,
+    "description" : "Card not found"
+  },
+  "timestamp" : 879
+}, {
+  "command" : "cashWithdrawal",
+  "output" : {
+    "timestamp" : 894,
+    "description" : "Card not found"
+  },
+  "timestamp" : 894
+}, {
+  "command" : "cashWithdrawal",
+  "output" : {
+    "timestamp" : 912,
+    "description" : "Card not found"
+  },
+  "timestamp" : 912
+}, {
   "command" : "printTransactions",
   "output" : [ {
     "timestamp" : 100,
@@ -1108,7 +1136,7 @@
     "email" : "Paraschiva_Stanescu@gmail.ro",
     "accounts" : [ {
       "IBAN" : "RO58POOB7344468893732422",
-      "balance" : 1312.0,
+      "balance" : 1212.0,
       "currency" : "RON",
       "type" : "classic",
       "cards" : [ ]
@@ -1143,7 +1171,7 @@
     "email" : "Gloria_Phelps@hotmail.us",
     "accounts" : [ {
       "IBAN" : "RO58POOB2721178218599590",
-      "balance" : 2239.33,
+      "balance" : 1906.0,
       "currency" : "USD",
       "type" : "classic",
       "cards" : [ ]
@@ -1172,7 +1200,7 @@
     "email" : "Wayne_Hansen@yahoo.us",
     "accounts" : [ {
       "IBAN" : "RO30POOB9523423715747796",
-      "balance" : 1781.81,
+      "balance" : 1448.48,
       "currency" : "USD",
       "type" : "classic",
       "cards" : [ ]
@@ -1195,7 +1223,7 @@
     "email" : "Carlos_Johnson@outlook.us",
     "accounts" : [ {
       "IBAN" : "RO00POOB5687892910835215",
-      "balance" : 1872.81,
+      "balance" : 1539.48,
       "currency" : "USD",
       "type" : "classic",
       "cards" : [ ]
@@ -1212,7 +1240,7 @@
     "email" : "Mary_Bennett@hotmail.us",
     "accounts" : [ {
       "IBAN" : "RO33POOB4049920806186500",
-      "balance" : 1420.81,
+      "balance" : 1087.48,
       "currency" : "USD",
       "type" : "classic",
       "cards" : [ ]
@@ -1229,7 +1257,7 @@
     "email" : "Loredana_Stan@gmail.ro",
     "accounts" : [ {
       "IBAN" : "RO69POOB9846198978826791",
-      "balance" : 1666.81,
+      "balance" : 1566.81,
       "currency" : "RON",
       "type" : "classic",
       "cards" : [ ]
@@ -1252,7 +1280,7 @@
     "email" : "Michelle_de_Peron@outlook.fr",
     "accounts" : [ {
       "IBAN" : "RO32POOB0130532963818359",
-      "balance" : 1939.33,
+      "balance" : 1672.66,
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ ]
@@ -1269,7 +1297,7 @@
     "email" : "Benjamin_Da_Silva_de_la_Gautier@hotmail.fr",
     "accounts" : [ {
       "IBAN" : "RO68POOB1848616931405475",
-      "balance" : 2270.33,
+      "balance" : 2003.66,
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ ]
@@ -1298,7 +1326,7 @@
     "email" : "Barbara_Vaughn@gmail.us",
     "accounts" : [ {
       "IBAN" : "RO53POOB7122855990652257",
-      "balance" : 1907.33,
+      "balance" : 1574.0,
       "currency" : "USD",
       "type" : "classic",
       "cards" : [ ]
@@ -1315,7 +1343,7 @@
     "email" : "Bertrand_Maillet@gmail.fr",
     "accounts" : [ {
       "IBAN" : "RO09POOB4346339013848470",
-      "balance" : 1144.0,
+      "balance" : 877.33,
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ ]
@@ -1344,7 +1372,7 @@
     "email" : "Joseph_Cain@gmail.us",
     "accounts" : [ {
       "IBAN" : "RO46POOB9051076190383154",
-      "balance" : 1755.33,
+      "balance" : 1422.0,
       "currency" : "USD",
       "type" : "classic",
       "cards" : [ ]
@@ -1355,7 +1383,7 @@
     "email" : "Gloria_Phelps@hotmail.us",
     "accounts" : [ {
       "IBAN" : "RO76POOB4035116042454483",
-      "balance" : 1716.33,
+      "balance" : 1383.0,
       "currency" : "USD",
       "type" : "classic",
       "cards" : [ ]
@@ -1384,7 +1412,7 @@
     "email" : "Bertrand_Maillet@gmail.fr",
     "accounts" : [ {
       "IBAN" : "RO50POOB3913194831046423",
-      "balance" : 1606.0,
+      "balance" : 1339.33,
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ ]
@@ -1430,7 +1458,7 @@
     "email" : "Kevin_Pratt@outlook.us",
     "accounts" : [ {
       "IBAN" : "RO15POOB0048706387164463",
-      "balance" : 457.33,
+      "balance" : 124.0,
       "currency" : "USD",
       "type" : "classic",
       "cards" : [ ]
@@ -1447,7 +1475,7 @@
     "email" : "Paraschiva_Stanescu@gmail.ro",
     "accounts" : [ {
       "IBAN" : "RO69POOB6209498372540635",
-      "balance" : 1564.0,
+      "balance" : 1464.0,
       "currency" : "RON",
       "type" : "classic",
       "cards" : [ ]
@@ -1517,7 +1545,7 @@
     "email" : "Loredana_Stan@gmail.ro",
     "accounts" : [ {
       "IBAN" : "RO98POOB8412955460158769",
-      "balance" : 2051.33,
+      "balance" : 1951.33,
       "currency" : "RON",
       "type" : "classic",
       "cards" : [ ]
@@ -1540,7 +1568,7 @@
     "email" : "Barbara_Vaughn@gmail.us",
     "accounts" : [ {
       "IBAN" : "RO71POOB1634969878734749",
-      "balance" : 1109.0,
+      "balance" : 775.67,
       "currency" : "USD",
       "type" : "classic",
       "cards" : [ ]
@@ -1557,7 +1585,7 @@
     "email" : "Carlos_Johnson@outlook.us",
     "accounts" : [ {
       "IBAN" : "RO96POOB6738272785416988",
-      "balance" : 1973.33,
+      "balance" : 1640.0,
       "currency" : "USD",
       "type" : "classic",
       "cards" : [ ]
@@ -1574,7 +1602,7 @@
     "email" : "Benjamin_Da_Silva_de_la_Gautier@hotmail.fr",
     "accounts" : [ {
       "IBAN" : "RO10POOB4354933866366881",
-      "balance" : 1631.81,
+      "balance" : 1365.14,
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ ]
@@ -1603,7 +1631,7 @@
     "email" : "Wayne_Hansen@yahoo.us",
     "accounts" : [ {
       "IBAN" : "RO79POOB3616857825600958",
-      "balance" : 1291.81,
+      "balance" : 958.48,
       "currency" : "USD",
       "type" : "classic",
       "cards" : [ ]
@@ -1687,7 +1715,7 @@
     "email" : "Paraschiva_Stanescu@gmail.ro",
     "accounts" : [ {
       "IBAN" : "RO58POOB7344468893732422",
-      "balance" : 1312.0,
+      "balance" : 1212.0,
       "currency" : "RON",
       "type" : "classic",
       "cards" : [ ]
@@ -1722,7 +1750,7 @@
     "email" : "Gloria_Phelps@hotmail.us",
     "accounts" : [ {
       "IBAN" : "RO58POOB2721178218599590",
-      "balance" : 2239.33,
+      "balance" : 1906.0,
       "currency" : "USD",
       "type" : "classic",
       "cards" : [ ]
@@ -1751,7 +1779,7 @@
     "email" : "Wayne_Hansen@yahoo.us",
     "accounts" : [ {
       "IBAN" : "RO30POOB9523423715747796",
-      "balance" : 1781.81,
+      "balance" : 1448.48,
       "currency" : "USD",
       "type" : "classic",
       "cards" : [ ]
@@ -1774,7 +1802,7 @@
     "email" : "Carlos_Johnson@outlook.us",
     "accounts" : [ {
       "IBAN" : "RO00POOB5687892910835215",
-      "balance" : 1872.81,
+      "balance" : 1539.48,
       "currency" : "USD",
       "type" : "classic",
       "cards" : [ ]
@@ -1791,7 +1819,7 @@
     "email" : "Mary_Bennett@hotmail.us",
     "accounts" : [ {
       "IBAN" : "RO33POOB4049920806186500",
-      "balance" : 1420.81,
+      "balance" : 1087.48,
       "currency" : "USD",
       "type" : "classic",
       "cards" : [ ]
@@ -1808,7 +1836,7 @@
     "email" : "Loredana_Stan@gmail.ro",
     "accounts" : [ {
       "IBAN" : "RO69POOB9846198978826791",
-      "balance" : 1666.81,
+      "balance" : 1566.81,
       "currency" : "RON",
       "type" : "classic",
       "cards" : [ ]
@@ -1831,7 +1859,7 @@
     "email" : "Michelle_de_Peron@outlook.fr",
     "accounts" : [ {
       "IBAN" : "RO32POOB0130532963818359",
-      "balance" : 1939.33,
+      "balance" : 1672.66,
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ ]
@@ -1848,7 +1876,7 @@
     "email" : "Benjamin_Da_Silva_de_la_Gautier@hotmail.fr",
     "accounts" : [ {
       "IBAN" : "RO68POOB1848616931405475",
-      "balance" : 2270.33,
+      "balance" : 2003.66,
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ ]
@@ -1877,7 +1905,7 @@
     "email" : "Barbara_Vaughn@gmail.us",
     "accounts" : [ {
       "IBAN" : "RO53POOB7122855990652257",
-      "balance" : 1907.33,
+      "balance" : 1574.0,
       "currency" : "USD",
       "type" : "classic",
       "cards" : [ ]
@@ -1894,7 +1922,7 @@
     "email" : "Bertrand_Maillet@gmail.fr",
     "accounts" : [ {
       "IBAN" : "RO09POOB4346339013848470",
-      "balance" : 1144.0,
+      "balance" : 877.33,
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ ]
@@ -1941,7 +1969,7 @@
     "email" : "Joseph_Cain@gmail.us",
     "accounts" : [ {
       "IBAN" : "RO46POOB9051076190383154",
-      "balance" : 1755.33,
+      "balance" : 1422.0,
       "currency" : "USD",
       "type" : "classic",
       "cards" : [ ]
@@ -1952,7 +1980,7 @@
     "email" : "Gloria_Phelps@hotmail.us",
     "accounts" : [ {
       "IBAN" : "RO76POOB4035116042454483",
-      "balance" : 1716.33,
+      "balance" : 1383.0,
       "currency" : "USD",
       "type" : "classic",
       "cards" : [ ]
@@ -1981,7 +2009,7 @@
     "email" : "Bertrand_Maillet@gmail.fr",
     "accounts" : [ {
       "IBAN" : "RO50POOB3913194831046423",
-      "balance" : 1606.0,
+      "balance" : 1339.33,
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ ]
@@ -2045,7 +2073,7 @@
     "email" : "Kevin_Pratt@outlook.us",
     "accounts" : [ {
       "IBAN" : "RO15POOB0048706387164463",
-      "balance" : 457.33,
+      "balance" : 124.0,
       "currency" : "USD",
       "type" : "classic",
       "cards" : [ ]
@@ -2062,7 +2090,7 @@
     "email" : "Paraschiva_Stanescu@gmail.ro",
     "accounts" : [ {
       "IBAN" : "RO69POOB6209498372540635",
-      "balance" : 1564.0,
+      "balance" : 1464.0,
       "currency" : "RON",
       "type" : "classic",
       "cards" : [ ]
@@ -2132,7 +2160,7 @@
     "email" : "Loredana_Stan@gmail.ro",
     "accounts" : [ {
       "IBAN" : "RO98POOB8412955460158769",
-      "balance" : 2051.33,
+      "balance" : 1951.33,
       "currency" : "RON",
       "type" : "classic",
       "cards" : [ ]
@@ -2155,7 +2183,7 @@
     "email" : "Barbara_Vaughn@gmail.us",
     "accounts" : [ {
       "IBAN" : "RO71POOB1634969878734749",
-      "balance" : 1109.0,
+      "balance" : 775.67,
       "currency" : "USD",
       "type" : "classic",
       "cards" : [ ]
@@ -2172,7 +2200,7 @@
     "email" : "Carlos_Johnson@outlook.us",
     "accounts" : [ {
       "IBAN" : "RO96POOB6738272785416988",
-      "balance" : 1973.33,
+      "balance" : 1640.0,
       "currency" : "USD",
       "type" : "classic",
       "cards" : [ ]
@@ -2189,7 +2217,7 @@
     "email" : "Benjamin_Da_Silva_de_la_Gautier@hotmail.fr",
     "accounts" : [ {
       "IBAN" : "RO10POOB4354933866366881",
-      "balance" : 1631.81,
+      "balance" : 1365.14,
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ ]
@@ -2218,7 +2246,7 @@
     "email" : "Wayne_Hansen@yahoo.us",
     "accounts" : [ {
       "IBAN" : "RO79POOB3616857825600958",
-      "balance" : 1291.81,
+      "balance" : 958.48,
       "currency" : "USD",
       "type" : "classic",
       "cards" : [ ]
@@ -2330,7 +2358,7 @@
     "email" : "Paraschiva_Stanescu@gmail.ro",
     "accounts" : [ {
       "IBAN" : "RO58POOB7344468893732422",
-      "balance" : 1312.0,
+      "balance" : 1212.0,
       "currency" : "RON",
       "type" : "classic",
       "cards" : [ ]
@@ -2365,7 +2393,7 @@
     "email" : "Gloria_Phelps@hotmail.us",
     "accounts" : [ {
       "IBAN" : "RO58POOB2721178218599590",
-      "balance" : 2239.33,
+      "balance" : 1906.0,
       "currency" : "USD",
       "type" : "classic",
       "cards" : [ ]
@@ -2394,7 +2422,7 @@
     "email" : "Wayne_Hansen@yahoo.us",
     "accounts" : [ {
       "IBAN" : "RO30POOB9523423715747796",
-      "balance" : 1781.81,
+      "balance" : 1448.48,
       "currency" : "USD",
       "type" : "classic",
       "cards" : [ ]
@@ -2417,7 +2445,7 @@
     "email" : "Carlos_Johnson@outlook.us",
     "accounts" : [ {
       "IBAN" : "RO00POOB5687892910835215",
-      "balance" : 1872.81,
+      "balance" : 1539.48,
       "currency" : "USD",
       "type" : "classic",
       "cards" : [ ]
@@ -2434,7 +2462,7 @@
     "email" : "Mary_Bennett@hotmail.us",
     "accounts" : [ {
       "IBAN" : "RO33POOB4049920806186500",
-      "balance" : 1420.81,
+      "balance" : 1087.48,
       "currency" : "USD",
       "type" : "classic",
       "cards" : [ ]
@@ -2451,7 +2479,7 @@
     "email" : "Loredana_Stan@gmail.ro",
     "accounts" : [ {
       "IBAN" : "RO69POOB9846198978826791",
-      "balance" : 1666.81,
+      "balance" : 1566.81,
       "currency" : "RON",
       "type" : "classic",
       "cards" : [ ]
@@ -2474,7 +2502,7 @@
     "email" : "Michelle_de_Peron@outlook.fr",
     "accounts" : [ {
       "IBAN" : "RO32POOB0130532963818359",
-      "balance" : 1939.33,
+      "balance" : 1672.66,
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ ]
@@ -2491,7 +2519,7 @@
     "email" : "Benjamin_Da_Silva_de_la_Gautier@hotmail.fr",
     "accounts" : [ {
       "IBAN" : "RO68POOB1848616931405475",
-      "balance" : 2270.33,
+      "balance" : 2003.66,
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ ]
@@ -2520,7 +2548,7 @@
     "email" : "Barbara_Vaughn@gmail.us",
     "accounts" : [ {
       "IBAN" : "RO53POOB7122855990652257",
-      "balance" : 1907.33,
+      "balance" : 1574.0,
       "currency" : "USD",
       "type" : "classic",
       "cards" : [ ]
@@ -2537,7 +2565,7 @@
     "email" : "Bertrand_Maillet@gmail.fr",
     "accounts" : [ {
       "IBAN" : "RO09POOB4346339013848470",
-      "balance" : 1144.0,
+      "balance" : 877.33,
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ ]
@@ -2584,7 +2612,7 @@
     "email" : "Joseph_Cain@gmail.us",
     "accounts" : [ {
       "IBAN" : "RO46POOB9051076190383154",
-      "balance" : 1755.33,
+      "balance" : 1422.0,
       "currency" : "USD",
       "type" : "classic",
       "cards" : [ ]
@@ -2595,7 +2623,7 @@
     "email" : "Gloria_Phelps@hotmail.us",
     "accounts" : [ {
       "IBAN" : "RO76POOB4035116042454483",
-      "balance" : 1716.33,
+      "balance" : 1383.0,
       "currency" : "USD",
       "type" : "classic",
       "cards" : [ ]
@@ -2624,7 +2652,7 @@
     "email" : "Bertrand_Maillet@gmail.fr",
     "accounts" : [ {
       "IBAN" : "RO50POOB3913194831046423",
-      "balance" : 1606.0,
+      "balance" : 1339.33,
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ ]
@@ -2688,7 +2716,7 @@
     "email" : "Kevin_Pratt@outlook.us",
     "accounts" : [ {
       "IBAN" : "RO15POOB0048706387164463",
-      "balance" : 457.33,
+      "balance" : 124.0,
       "currency" : "USD",
       "type" : "classic",
       "cards" : [ ]
@@ -2705,7 +2733,7 @@
     "email" : "Paraschiva_Stanescu@gmail.ro",
     "accounts" : [ {
       "IBAN" : "RO69POOB6209498372540635",
-      "balance" : 1564.0,
+      "balance" : 1464.0,
       "currency" : "RON",
       "type" : "classic",
       "cards" : [ ]
@@ -2775,7 +2803,7 @@
     "email" : "Loredana_Stan@gmail.ro",
     "accounts" : [ {
       "IBAN" : "RO98POOB8412955460158769",
-      "balance" : 2051.33,
+      "balance" : 1951.33,
       "currency" : "RON",
       "type" : "classic",
       "cards" : [ ]
@@ -2798,7 +2826,7 @@
     "email" : "Barbara_Vaughn@gmail.us",
     "accounts" : [ {
       "IBAN" : "RO71POOB1634969878734749",
-      "balance" : 1109.0,
+      "balance" : 775.67,
       "currency" : "USD",
       "type" : "classic",
       "cards" : [ ]
@@ -2815,7 +2843,7 @@
     "email" : "Carlos_Johnson@outlook.us",
     "accounts" : [ {
       "IBAN" : "RO96POOB6738272785416988",
-      "balance" : 1973.33,
+      "balance" : 1640.0,
       "currency" : "USD",
       "type" : "classic",
       "cards" : [ ]
@@ -2832,7 +2860,7 @@
     "email" : "Benjamin_Da_Silva_de_la_Gautier@hotmail.fr",
     "accounts" : [ {
       "IBAN" : "RO10POOB4354933866366881",
-      "balance" : 1631.81,
+      "balance" : 1365.14,
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ ]
@@ -2861,7 +2889,7 @@
     "email" : "Wayne_Hansen@yahoo.us",
     "accounts" : [ {
       "IBAN" : "RO79POOB3616857825600958",
-      "balance" : 1291.81,
+      "balance" : 958.48,
       "currency" : "USD",
       "type" : "classic",
       "cards" : [ ]
@@ -2938,6 +2966,13 @@
   } ],
   "timestamp" : 1096
 }, {
+  "command" : "cashWithdrawal",
+  "output" : {
+    "timestamp" : 1098,
+    "description" : "User not found"
+  },
+  "timestamp" : 1098
+}, {
   "command" : "printUsers",
   "output" : [ {
     "firstName" : "Paraschiva",
@@ -2945,7 +2980,7 @@
     "email" : "Paraschiva_Stanescu@gmail.ro",
     "accounts" : [ {
       "IBAN" : "RO58POOB7344468893732422",
-      "balance" : 1312.0,
+      "balance" : 1212.0,
       "currency" : "RON",
       "type" : "classic",
       "cards" : [ ]
@@ -2980,7 +3015,7 @@
     "email" : "Gloria_Phelps@hotmail.us",
     "accounts" : [ {
       "IBAN" : "RO58POOB2721178218599590",
-      "balance" : 2239.33,
+      "balance" : 1906.0,
       "currency" : "USD",
       "type" : "classic",
       "cards" : [ ]
@@ -3009,7 +3044,7 @@
     "email" : "Wayne_Hansen@yahoo.us",
     "accounts" : [ {
       "IBAN" : "RO30POOB9523423715747796",
-      "balance" : 1781.81,
+      "balance" : 1448.48,
       "currency" : "USD",
       "type" : "classic",
       "cards" : [ ]
@@ -3032,7 +3067,7 @@
     "email" : "Carlos_Johnson@outlook.us",
     "accounts" : [ {
       "IBAN" : "RO00POOB5687892910835215",
-      "balance" : 1872.81,
+      "balance" : 1539.48,
       "currency" : "USD",
       "type" : "classic",
       "cards" : [ ]
@@ -3049,7 +3084,7 @@
     "email" : "Mary_Bennett@hotmail.us",
     "accounts" : [ {
       "IBAN" : "RO33POOB4049920806186500",
-      "balance" : 1420.81,
+      "balance" : 1087.48,
       "currency" : "USD",
       "type" : "classic",
       "cards" : [ ]
@@ -3066,7 +3101,7 @@
     "email" : "Loredana_Stan@gmail.ro",
     "accounts" : [ {
       "IBAN" : "RO69POOB9846198978826791",
-      "balance" : 1666.81,
+      "balance" : 1566.81,
       "currency" : "RON",
       "type" : "classic",
       "cards" : [ ]
@@ -3089,7 +3124,7 @@
     "email" : "Michelle_de_Peron@outlook.fr",
     "accounts" : [ {
       "IBAN" : "RO32POOB0130532963818359",
-      "balance" : 1939.33,
+      "balance" : 1672.66,
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ ]
@@ -3106,7 +3141,7 @@
     "email" : "Benjamin_Da_Silva_de_la_Gautier@hotmail.fr",
     "accounts" : [ {
       "IBAN" : "RO68POOB1848616931405475",
-      "balance" : 2270.33,
+      "balance" : 2003.66,
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ ]
@@ -3135,7 +3170,7 @@
     "email" : "Barbara_Vaughn@gmail.us",
     "accounts" : [ {
       "IBAN" : "RO53POOB7122855990652257",
-      "balance" : 1907.33,
+      "balance" : 1574.0,
       "currency" : "USD",
       "type" : "classic",
       "cards" : [ ]
@@ -3152,7 +3187,7 @@
     "email" : "Bertrand_Maillet@gmail.fr",
     "accounts" : [ {
       "IBAN" : "RO09POOB4346339013848470",
-      "balance" : 1144.0,
+      "balance" : 877.33,
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ ]
@@ -3199,7 +3234,7 @@
     "email" : "Joseph_Cain@gmail.us",
     "accounts" : [ {
       "IBAN" : "RO46POOB9051076190383154",
-      "balance" : 1755.33,
+      "balance" : 1422.0,
       "currency" : "USD",
       "type" : "classic",
       "cards" : [ ]
@@ -3210,7 +3245,7 @@
     "email" : "Gloria_Phelps@hotmail.us",
     "accounts" : [ {
       "IBAN" : "RO76POOB4035116042454483",
-      "balance" : 1716.33,
+      "balance" : 1383.0,
       "currency" : "USD",
       "type" : "classic",
       "cards" : [ ]
@@ -3239,7 +3274,7 @@
     "email" : "Bertrand_Maillet@gmail.fr",
     "accounts" : [ {
       "IBAN" : "RO50POOB3913194831046423",
-      "balance" : 1606.0,
+      "balance" : 1339.33,
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ ]
@@ -3303,7 +3338,7 @@
     "email" : "Kevin_Pratt@outlook.us",
     "accounts" : [ {
       "IBAN" : "RO15POOB0048706387164463",
-      "balance" : 457.33,
+      "balance" : 124.0,
       "currency" : "USD",
       "type" : "classic",
       "cards" : [ ]
@@ -3320,7 +3355,7 @@
     "email" : "Paraschiva_Stanescu@gmail.ro",
     "accounts" : [ {
       "IBAN" : "RO69POOB6209498372540635",
-      "balance" : 1564.0,
+      "balance" : 1464.0,
       "currency" : "RON",
       "type" : "classic",
       "cards" : [ ]
@@ -3390,7 +3425,7 @@
     "email" : "Loredana_Stan@gmail.ro",
     "accounts" : [ {
       "IBAN" : "RO98POOB8412955460158769",
-      "balance" : 2051.33,
+      "balance" : 1951.33,
       "currency" : "RON",
       "type" : "classic",
       "cards" : [ ]
@@ -3413,7 +3448,7 @@
     "email" : "Barbara_Vaughn@gmail.us",
     "accounts" : [ {
       "IBAN" : "RO71POOB1634969878734749",
-      "balance" : 1109.0,
+      "balance" : 775.67,
       "currency" : "USD",
       "type" : "classic",
       "cards" : [ ]
@@ -3430,7 +3465,7 @@
     "email" : "Carlos_Johnson@outlook.us",
     "accounts" : [ {
       "IBAN" : "RO96POOB6738272785416988",
-      "balance" : 1973.33,
+      "balance" : 1640.0,
       "currency" : "USD",
       "type" : "classic",
       "cards" : [ ]
@@ -3447,7 +3482,7 @@
     "email" : "Benjamin_Da_Silva_de_la_Gautier@hotmail.fr",
     "accounts" : [ {
       "IBAN" : "RO10POOB4354933866366881",
-      "balance" : 1631.81,
+      "balance" : 1365.14,
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ ]
@@ -3476,7 +3511,7 @@
     "email" : "Wayne_Hansen@yahoo.us",
     "accounts" : [ {
       "IBAN" : "RO79POOB3616857825600958",
-      "balance" : 1291.81,
+      "balance" : 958.48,
       "currency" : "USD",
       "type" : "classic",
       "cards" : [ ]
@@ -3567,7 +3602,7 @@
     "email" : "Paraschiva_Stanescu@gmail.ro",
     "accounts" : [ {
       "IBAN" : "RO58POOB7344468893732422",
-      "balance" : 1312.0,
+      "balance" : 1212.0,
       "currency" : "RON",
       "type" : "classic",
       "cards" : [ ]
@@ -3602,7 +3637,7 @@
     "email" : "Gloria_Phelps@hotmail.us",
     "accounts" : [ {
       "IBAN" : "RO58POOB2721178218599590",
-      "balance" : 2239.33,
+      "balance" : 1906.0,
       "currency" : "USD",
       "type" : "classic",
       "cards" : [ ]
@@ -3631,7 +3666,7 @@
     "email" : "Wayne_Hansen@yahoo.us",
     "accounts" : [ {
       "IBAN" : "RO30POOB9523423715747796",
-      "balance" : 1781.81,
+      "balance" : 1448.48,
       "currency" : "USD",
       "type" : "classic",
       "cards" : [ ]
@@ -3654,7 +3689,7 @@
     "email" : "Carlos_Johnson@outlook.us",
     "accounts" : [ {
       "IBAN" : "RO00POOB5687892910835215",
-      "balance" : 1872.81,
+      "balance" : 1539.48,
       "currency" : "USD",
       "type" : "classic",
       "cards" : [ ]
@@ -3671,7 +3706,7 @@
     "email" : "Mary_Bennett@hotmail.us",
     "accounts" : [ {
       "IBAN" : "RO33POOB4049920806186500",
-      "balance" : 1420.81,
+      "balance" : 1087.48,
       "currency" : "USD",
       "type" : "classic",
       "cards" : [ ]
@@ -3688,7 +3723,7 @@
     "email" : "Loredana_Stan@gmail.ro",
     "accounts" : [ {
       "IBAN" : "RO69POOB9846198978826791",
-      "balance" : 1666.81,
+      "balance" : 1566.81,
       "currency" : "RON",
       "type" : "classic",
       "cards" : [ ]
@@ -3711,7 +3746,7 @@
     "email" : "Michelle_de_Peron@outlook.fr",
     "accounts" : [ {
       "IBAN" : "RO32POOB0130532963818359",
-      "balance" : 1939.33,
+      "balance" : 1672.66,
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ ]
@@ -3728,7 +3763,7 @@
     "email" : "Benjamin_Da_Silva_de_la_Gautier@hotmail.fr",
     "accounts" : [ {
       "IBAN" : "RO68POOB1848616931405475",
-      "balance" : 2270.33,
+      "balance" : 2003.66,
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ ]
@@ -3757,7 +3792,7 @@
     "email" : "Barbara_Vaughn@gmail.us",
     "accounts" : [ {
       "IBAN" : "RO53POOB7122855990652257",
-      "balance" : 1907.33,
+      "balance" : 1574.0,
       "currency" : "USD",
       "type" : "classic",
       "cards" : [ ]
@@ -3774,7 +3809,7 @@
     "email" : "Bertrand_Maillet@gmail.fr",
     "accounts" : [ {
       "IBAN" : "RO09POOB4346339013848470",
-      "balance" : 1144.0,
+      "balance" : 877.33,
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ ]
@@ -3827,7 +3862,7 @@
     "email" : "Joseph_Cain@gmail.us",
     "accounts" : [ {
       "IBAN" : "RO46POOB9051076190383154",
-      "balance" : 1755.33,
+      "balance" : 1422.0,
       "currency" : "USD",
       "type" : "classic",
       "cards" : [ ]
@@ -3838,7 +3873,7 @@
     "email" : "Gloria_Phelps@hotmail.us",
     "accounts" : [ {
       "IBAN" : "RO76POOB4035116042454483",
-      "balance" : 1716.33,
+      "balance" : 1383.0,
       "currency" : "USD",
       "type" : "classic",
       "cards" : [ ]
@@ -3867,7 +3902,7 @@
     "email" : "Bertrand_Maillet@gmail.fr",
     "accounts" : [ {
       "IBAN" : "RO50POOB3913194831046423",
-      "balance" : 1606.0,
+      "balance" : 1339.33,
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ ]
@@ -3937,7 +3972,7 @@
     "email" : "Kevin_Pratt@outlook.us",
     "accounts" : [ {
       "IBAN" : "RO15POOB0048706387164463",
-      "balance" : 457.33,
+      "balance" : 124.0,
       "currency" : "USD",
       "type" : "classic",
       "cards" : [ ]
@@ -3954,7 +3989,7 @@
     "email" : "Paraschiva_Stanescu@gmail.ro",
     "accounts" : [ {
       "IBAN" : "RO69POOB6209498372540635",
-      "balance" : 1564.0,
+      "balance" : 1464.0,
       "currency" : "RON",
       "type" : "classic",
       "cards" : [ ]
@@ -4024,7 +4059,7 @@
     "email" : "Loredana_Stan@gmail.ro",
     "accounts" : [ {
       "IBAN" : "RO98POOB8412955460158769",
-      "balance" : 2051.33,
+      "balance" : 1951.33,
       "currency" : "RON",
       "type" : "classic",
       "cards" : [ ]
@@ -4047,7 +4082,7 @@
     "email" : "Barbara_Vaughn@gmail.us",
     "accounts" : [ {
       "IBAN" : "RO71POOB1634969878734749",
-      "balance" : 1109.0,
+      "balance" : 775.67,
       "currency" : "USD",
       "type" : "classic",
       "cards" : [ ]
@@ -4064,7 +4099,7 @@
     "email" : "Carlos_Johnson@outlook.us",
     "accounts" : [ {
       "IBAN" : "RO96POOB6738272785416988",
-      "balance" : 1973.33,
+      "balance" : 1640.0,
       "currency" : "USD",
       "type" : "classic",
       "cards" : [ ]
@@ -4081,7 +4116,7 @@
     "email" : "Benjamin_Da_Silva_de_la_Gautier@hotmail.fr",
     "accounts" : [ {
       "IBAN" : "RO10POOB4354933866366881",
-      "balance" : 1631.81,
+      "balance" : 1365.14,
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ ]
@@ -4110,7 +4145,7 @@
     "email" : "Wayne_Hansen@yahoo.us",
     "accounts" : [ {
       "IBAN" : "RO79POOB3616857825600958",
-      "balance" : 1291.81,
+      "balance" : 958.48,
       "currency" : "USD",
       "type" : "classic",
       "cards" : [ ]

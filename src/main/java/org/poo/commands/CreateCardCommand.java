@@ -21,7 +21,7 @@ public final class CreateCardCommand implements Command {
         int success = 0;
         String ibanAcc = commandInput.getAccount();
         String userEmail = commandInput.getEmail();
-        User userFound = new User(null, null, userEmail);
+        User userFound = new User(null, null, userEmail, null, null);
         for (User user : infoBank.getUsers()) {
             if (user.getEmail().equals(userEmail)) {
                 userFound = user;

@@ -7,6 +7,7 @@ import org.poo.account.card.Card;
 import org.poo.transactions.Transaction;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 @JsonPropertyOrder({"IBAN", "balance", "currency", "type", "cards"})
@@ -23,9 +24,17 @@ public class Account {
     private ArrayList<Transaction> transactions;
     @JsonIgnore
     private List<Commerciant> commerciants;
+    @JsonIgnore
+    private String plan;
+    @JsonIgnore
+    private boolean receivedFood;
+    @JsonIgnore
+    private boolean receivedClothes;
+    @JsonIgnore
+    private boolean receivedTech;
 
     public Account(final String iban, final double balance, final String currency,
-                   final String type) {
+                   final String type, final String plan) {
         this.iban = iban;
         this.balance = balance;
         this.currency = currency;
@@ -34,6 +43,10 @@ public class Account {
         minBalance = 0.0;
         transactions = new ArrayList<>();
         commerciants = new ArrayList<>();
+        this.plan = plan;
+        receivedFood = false;
+        receivedClothes = false;
+        receivedTech = false;
     }
     /**
      * Getter pentru iban.
@@ -155,6 +168,39 @@ public class Account {
     public void setMinBalance(final double minBalance) {
         this.minBalance = minBalance;
     }
+
+    public String getPlan() {
+        return plan;
+    }
+
+    public void setPlan(String plan) {
+        this.plan = plan;
+    }
+
+    public boolean isReceivedFood() {
+        return receivedFood;
+    }
+
+    public void setReceivedFood(boolean receivedFood) {
+        this.receivedFood = receivedFood;
+    }
+
+    public boolean isReceivedClothes() {
+        return receivedClothes;
+    }
+
+    public void setReceivedClothes(boolean receivedClothes) {
+        this.receivedClothes = receivedClothes;
+    }
+
+    public boolean isReceivedTech() {
+        return receivedTech;
+    }
+
+    public void setReceivedTech(boolean receivedTech) {
+        this.receivedTech = receivedTech;
+    }
+
     /**
      * Adauga un card in lista de carduri.
      *

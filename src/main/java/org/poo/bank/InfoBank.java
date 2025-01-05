@@ -1,6 +1,7 @@
 package org.poo.bank;
 
 import org.poo.account.Account;
+import org.poo.account.Commerciant;
 
 import java.math.BigDecimal;
 import java.math.MathContext;
@@ -10,13 +11,18 @@ public final class InfoBank {
     private List<User> users;
     private List<Account> accounts;
     private List<Exchange> exchanges;
+    private List<Commerciant> commerciants;
     private HashMap<String, String> hashMap;
+    private HashMap<String, Integer> map;
 
     public InfoBank() {
         users = new ArrayList<>();
         accounts = new ArrayList<>();
         exchanges = new ArrayList<>();
         hashMap = new HashMap<>();
+        map = new HashMap<>();
+        commerciants = new ArrayList<>();
+        setPlans();
     }
     public List<User> getUsers() {
         return users;
@@ -42,6 +48,18 @@ public final class InfoBank {
         this.exchanges = exchanges;
     }
 
+    public List<Commerciant> getCommerciants() {
+        return commerciants;
+    }
+
+    public void setCommerciants(List<Commerciant> commerciants) {
+        this.commerciants = commerciants;
+    }
+
+    public void setUsers(List<User> users) {
+        this.users = users;
+    }
+
     public HashMap<String, String> getHashMap() {
         return hashMap;
     }
@@ -49,6 +67,15 @@ public final class InfoBank {
     public void setHashMap(final HashMap<String, String> hashMap) {
         this.hashMap = hashMap;
     }
+
+    public HashMap<String, Integer> getMap() {
+        return map;
+    }
+
+    public void setMap(final HashMap<String, Integer> map) {
+        this.map = map;
+    }
+
     /**
      * Adauga un client nou al bancii.
      *
@@ -74,6 +101,10 @@ public final class InfoBank {
      * Sterge un cont deschis la banca.
      *
      */
+    public void addCommerciant(final Commerciant commerciant) {
+        commerciants.add(commerciant);
+    }
+
     public void deleteFromBank(final Account account) {
         accounts.remove(account);
     }
@@ -133,5 +164,11 @@ public final class InfoBank {
     public void setAlias(final String aliasName,
                          final String iban) {
         hashMap.put(aliasName, iban);
+    }
+    public void setPlans() {
+        map.put("standard", 1);
+        map.put("student", 1);
+        map.put("silver", 2);
+        map.put("gold", 3);
     }
 }

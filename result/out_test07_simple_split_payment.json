@@ -1,4 +1,11 @@
 [ {
+  "command" : "sendMoney",
+  "output" : {
+    "timestamp" : 6,
+    "description" : "User not found"
+  },
+  "timestamp" : 6
+}, {
   "command" : "printUsers",
   "output" : [ {
     "firstName" : "Julieta",
@@ -6,7 +13,7 @@
     "email" : "Julieta_Aane@outlook.ro",
     "accounts" : [ {
       "IBAN" : "RO58POOB7344468893732422",
-      "balance" : 1177.45,
+      "balance" : 1261.0,
       "currency" : "RON",
       "type" : "classic",
       "cards" : [ ]
@@ -17,7 +24,7 @@
     "email" : "Manuel_Lawrence@yahoo.us",
     "accounts" : [ {
       "IBAN" : "RO69POOB6209498372540635",
-      "balance" : 908.0964285714285,
+      "balance" : 926.0,
       "currency" : "USD",
       "type" : "classic",
       "cards" : [ ]
@@ -69,19 +76,13 @@
   "output" : [ {
     "timestamp" : 1,
     "description" : "New account created"
-  }, {
-    "timestamp" : 5,
-    "description" : "Split payment of 167.10 RON",
-    "currency" : "RON",
-    "amount" : 83.55,
-    "involvedAccounts" : [ "RO69POOB6209498372540635", "RO58POOB7344468893732422" ]
   } ],
   "timestamp" : 8
 }, {
   "command" : "spendingsReport",
   "output" : {
     "IBAN" : "RO58POOB7344468893732422",
-    "balance" : 1177.45,
+    "balance" : 1261.0,
     "currency" : "RON",
     "transactions" : [ ],
     "commerciants" : [ ]
@@ -99,12 +100,6 @@
   "output" : [ {
     "timestamp" : 2,
     "description" : "New account created"
-  }, {
-    "timestamp" : 5,
-    "description" : "Split payment of 167.10 RON",
-    "currency" : "RON",
-    "amount" : 83.55,
-    "involvedAccounts" : [ "RO69POOB6209498372540635", "RO58POOB7344468893732422" ]
   }, {
     "timestamp" : 13,
     "description" : "Insufficient funds"
@@ -125,7 +120,7 @@
     "email" : "Julieta_Aane@outlook.ro",
     "accounts" : [ {
       "IBAN" : "RO58POOB7344468893732422",
-      "balance" : 1177.45,
+      "balance" : 1261.0,
       "currency" : "RON",
       "type" : "classic",
       "cards" : [ ]
@@ -142,7 +137,7 @@
     "email" : "Manuel_Lawrence@yahoo.us",
     "accounts" : [ {
       "IBAN" : "RO69POOB6209498372540635",
-      "balance" : 908.0964285714285,
+      "balance" : 926.0,
       "currency" : "USD",
       "type" : "classic",
       "cards" : [ ]
@@ -210,8 +205,9 @@
   }, {
     "timestamp" : 5,
     "description" : "Split payment of 167.10 RON",
+    "splitPaymentType" : "custom",
     "currency" : "RON",
-    "amount" : 83.55,
+    "amountForUsers" : [ 89.1, 78.0 ],
     "involvedAccounts" : [ "RO69POOB6209498372540635", "RO58POOB7344468893732422" ]
   }, {
     "timestamp" : 10,
@@ -229,8 +225,9 @@
   }, {
     "timestamp" : 5,
     "description" : "Split payment of 167.10 RON",
+    "splitPaymentType" : "custom",
     "currency" : "RON",
-    "amount" : 83.55,
+    "amountForUsers" : [ 89.1, 78.0 ],
     "involvedAccounts" : [ "RO69POOB6209498372540635", "RO58POOB7344468893732422" ]
   }, {
     "timestamp" : 13,

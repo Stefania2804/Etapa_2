@@ -20,8 +20,16 @@ public final class User {
     private List<Account> accounts;
     @JsonIgnore
     private List<Transaction> transactions;
+    @JsonIgnore
+    private String birthDate;
+    @JsonIgnore
+    private String occupation;
+    @JsonIgnore
+    private List<SplitPayment> splitPayments;
 
-    public User(final String firstName, final String lastName, final String email) {
+    public User(final String firstName, final String lastName,
+                final String email, final String birthDate,
+                final String occupation) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
@@ -29,6 +37,9 @@ public final class User {
         savings = new ArrayList<>();
         accounts = new ArrayList<>();
         transactions = new ArrayList<>();
+        this.birthDate = birthDate;
+        this.occupation = occupation;
+        splitPayments = new ArrayList<>();
     }
 
     public String getFirstName() {
@@ -86,6 +97,31 @@ public final class User {
     public void setTransactions(final List<Transaction> transactions) {
         this.transactions = transactions;
     }
+
+    public String getBirthDate() {
+        return birthDate;
+    }
+
+    public void setBirthDate(String birthDate) {
+        this.birthDate = birthDate;
+    }
+
+    public String getOccupation() {
+        return occupation;
+    }
+
+    public void setOccupation(String occupation) {
+        this.occupation = occupation;
+    }
+
+    public List<SplitPayment> getSplitPayments() {
+        return splitPayments;
+    }
+
+    public void setSplitPayments(List<SplitPayment> splitPayments) {
+        this.splitPayments = splitPayments;
+    }
+
     /**
      * Adauga un cont clasic nou pentru utilizator.
      *
@@ -127,5 +163,8 @@ public final class User {
      */
     public void addTransaction(final Transaction transaction) {
         transactions.add(transaction);
+    }
+    public void addSplitPayment(final SplitPayment splitPayment) {
+        splitPayments.add(splitPayment);
     }
 }
