@@ -4,13 +4,11 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ArrayNode;
 import org.poo.account.Account;
 import org.poo.bank.InfoBank;
-import org.poo.bank.User;
+import org.poo.visitor.User;
 import org.poo.errorTransactions.UpgradePlanTransactionError;
 import org.poo.fileio.CommandInput;
 import org.poo.transactions.Transaction;
 import org.poo.transactions.UpgradePlanTransaction;
-
-import java.sql.SQLOutput;
 
 public class UpgradePlanCommand implements Command {
     public void execute(final CommandInput commandInput, final InfoBank infoBank,

@@ -1,36 +1,44 @@
 [ {
-  "command" : "payOnline",
+  "command" : "businessReportReport",
   "output" : {
-    "timestamp" : 117,
-    "description" : "Card not found"
+    "IBAN" : "RO58POOB2721178218599590",
+    "balance" : 9543.96,
+    "currency" : "EUR",
+    "spending limit" : 339.0,
+    "deposit limit" : 119.05,
+    "statistics type" : "transaction",
+    "managers" : [ {
+      "firstName" : "Artemisa",
+      "lastName" : "Diaconu",
+      "email" : "Artemisa_Diaconu@gmail.ro",
+      "accounts" : [ ],
+      "name" : "DiaconuArtemisa",
+      "spent" : 186.0,
+      "deposited" : 3357.0
+    }, {
+      "firstName" : "Christophe-Adrien",
+      "lastName" : "Coulon",
+      "email" : "Christophe-Adrien_Coulon@outlook.fr",
+      "accounts" : [ ],
+      "name" : "CoulonChristophe-Adrien",
+      "spent" : 214.0,
+      "deposited" : 3005.0
+    } ],
+    "employees" : [ {
+      "firstName" : "Antoine",
+      "lastName" : "Becker",
+      "email" : "Antoine_Becker@yahoo.fr",
+      "accounts" : [ ],
+      "spent" : 0.0,
+      "deposited" : 0.0
+    }, {
+      "firstName" : "John",
+      "lastName" : "Johnson",
+      "email" : "John_Johnson@outlook.us",
+      "accounts" : [ ],
+      "spent" : 0.0,
+      "deposited" : 0.0
+    } ]
   },
-  "timestamp" : 117
-}, {
-  "command" : "payOnline",
-  "output" : {
-    "timestamp" : 160,
-    "description" : "Card not found"
-  },
-  "timestamp" : 160
-}, {
-  "command" : "payOnline",
-  "output" : {
-    "timestamp" : 176,
-    "description" : "Card not found"
-  },
-  "timestamp" : 176
-}, {
-  "command" : "payOnline",
-  "output" : {
-    "timestamp" : 212,
-    "description" : "Card not found"
-  },
-  "timestamp" : 212
-}, {
-  "command" : "payOnline",
-  "output" : {
-    "timestamp" : 215,
-    "description" : "Card not found"
-  },
-  "timestamp" : 215
+  "timestamp" : 280
 } ]

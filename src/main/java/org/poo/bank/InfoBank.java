@@ -2,6 +2,7 @@ package org.poo.bank;
 
 import org.poo.account.Account;
 import org.poo.account.Commerciant;
+import org.poo.visitor.User;
 
 import java.math.BigDecimal;
 import java.math.MathContext;
@@ -129,6 +130,7 @@ public final class InfoBank {
 
                 double result = recursiveExchange(exchange.getTo(),
                         to, newAmount.doubleValue(), visited);
+                result = Math.round(result * 100.00) / 100.00;
                 if (result != -1) {
                     return result;
                 }
@@ -139,6 +141,7 @@ public final class InfoBank {
 
                 double result = recursiveExchange(exchange.getFrom(), to,
                         newAmount.doubleValue(), visited);
+                result = Math.round(result * 100.00) / 100.00;
                 if (result != -1) {
                     return result;
                 }
@@ -155,6 +158,7 @@ public final class InfoBank {
 
         HashSet<String> visited = new HashSet<>();
         double result = recursiveExchange(from, to, amount, visited);
+        result = Math.round(result * 100.00) / 100.00;
         return result;
     }
     /**

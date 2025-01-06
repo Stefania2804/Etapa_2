@@ -1,66 +1,83 @@
 [ {
-  "command" : "payOnline",
+  "command" : "businessReportReport",
   "output" : {
-    "timestamp" : 249,
-    "description" : "Card not found"
+    "IBAN" : "RO98POOB8412955460158769",
+    "balance" : 119.0,
+    "currency" : "USD",
+    "spending limit" : 280.0,
+    "deposit limit" : 107.14,
+    "statistics type" : "transaction",
+    "managers" : [ ],
+    "employees" : [ {
+      "firstName" : "Joe",
+      "lastName" : "Lee",
+      "email" : "Joe_Lee@yahoo.us",
+      "accounts" : [ ],
+      "spent" : 0.0,
+      "deposited" : 0.0
+    }, {
+      "firstName" : "Dida",
+      "lastName" : "Albu",
+      "email" : "Dida_Albu@outlook.ro",
+      "accounts" : [ ],
+      "spent" : 0.0,
+      "deposited" : 0.0
+    }, {
+      "firstName" : "Silvia",
+      "lastName" : "Marin",
+      "email" : "Silvia_Marin@hotmail.ro",
+      "accounts" : [ ],
+      "spent" : 0.0,
+      "deposited" : 0.0
+    } ]
   },
-  "timestamp" : 249
+  "timestamp" : 262
+}, {
+  "command" : "businessReportReport",
+  "output" : {
+    "IBAN" : "RO32POOB0130532963818359",
+    "balance" : 39.0,
+    "currency" : "USD",
+    "spending limit" : 896.0,
+    "deposit limit" : 107.14,
+    "statistics type" : "transaction",
+    "managers" : [ ],
+    "employees" : [ ]
+  },
+  "timestamp" : 263
+}, {
+  "command" : "businessReportReport",
+  "output" : {
+    "IBAN" : "RO68POOB1848616931405475",
+    "balance" : 749.0,
+    "currency" : "RON",
+    "spending limit" : 473.0,
+    "deposit limit" : 500.0,
+    "statistics type" : "transaction",
+    "managers" : [ ],
+    "employees" : [ ]
+  },
+  "timestamp" : 264
+}, {
+  "command" : "businessReportReport",
+  "output" : {
+    "IBAN" : "RO10POOB4354933866366881",
+    "balance" : 741.0,
+    "currency" : "RON",
+    "spending limit" : 500.0,
+    "deposit limit" : 500.0,
+    "statistics type" : "transaction",
+    "managers" : [ ],
+    "employees" : [ ]
+  },
+  "timestamp" : 265
 }, {
   "command" : "payOnline",
   "output" : {
-    "timestamp" : 255,
+    "timestamp" : 297,
     "description" : "Card not found"
   },
-  "timestamp" : 255
-}, {
-  "command" : "payOnline",
-  "output" : {
-    "timestamp" : 261,
-    "description" : "Card not found"
-  },
-  "timestamp" : 261
-}, {
-  "command" : "payOnline",
-  "output" : {
-    "timestamp" : 269,
-    "description" : "Card not found"
-  },
-  "timestamp" : 269
-}, {
-  "command" : "payOnline",
-  "output" : {
-    "timestamp" : 276,
-    "description" : "Card not found"
-  },
-  "timestamp" : 276
-}, {
-  "command" : "payOnline",
-  "output" : {
-    "timestamp" : 281,
-    "description" : "Card not found"
-  },
-  "timestamp" : 281
-}, {
-  "command" : "payOnline",
-  "output" : {
-    "timestamp" : 284,
-    "description" : "Card not found"
-  },
-  "timestamp" : 284
-}, {
-  "command" : "payOnline",
-  "output" : {
-    "timestamp" : 287,
-    "description" : "Card not found"
-  },
-  "timestamp" : 287
-}, {
-  "command" : "payOnline",
-  "output" : {
-    "timestamp" : 294,
-    "description" : "Card not found"
-  },
-  "timestamp" : 294
+  "timestamp" : 297
 }, {
   "command" : "payOnline",
   "output" : {
@@ -71,78 +88,694 @@
 }, {
   "command" : "payOnline",
   "output" : {
-    "timestamp" : 309,
+    "timestamp" : 305,
     "description" : "Card not found"
   },
-  "timestamp" : 309
+  "timestamp" : 305
 }, {
   "command" : "payOnline",
   "output" : {
-    "timestamp" : 314,
+    "timestamp" : 311,
     "description" : "Card not found"
   },
-  "timestamp" : 314
+  "timestamp" : 311
 }, {
   "command" : "payOnline",
   "output" : {
-    "timestamp" : 321,
+    "timestamp" : 317,
     "description" : "Card not found"
   },
-  "timestamp" : 321
+  "timestamp" : 317
 }, {
   "command" : "payOnline",
   "output" : {
-    "timestamp" : 324,
+    "timestamp" : 323,
     "description" : "Card not found"
   },
-  "timestamp" : 324
+  "timestamp" : 323
 }, {
   "command" : "payOnline",
   "output" : {
-    "timestamp" : 327,
+    "timestamp" : 328,
     "description" : "Card not found"
   },
-  "timestamp" : 327
+  "timestamp" : 328
 }, {
   "command" : "payOnline",
   "output" : {
-    "timestamp" : 331,
+    "timestamp" : 332,
     "description" : "Card not found"
   },
-  "timestamp" : 331
+  "timestamp" : 332
 }, {
   "command" : "payOnline",
   "output" : {
-    "timestamp" : 335,
+    "timestamp" : 340,
     "description" : "Card not found"
   },
-  "timestamp" : 335
+  "timestamp" : 340
 }, {
   "command" : "payOnline",
   "output" : {
-    "timestamp" : 342,
+    "timestamp" : 347,
     "description" : "Card not found"
   },
-  "timestamp" : 342
+  "timestamp" : 347
 }, {
   "command" : "payOnline",
   "output" : {
-    "timestamp" : 348,
+    "timestamp" : 353,
     "description" : "Card not found"
   },
-  "timestamp" : 348
+  "timestamp" : 353
 }, {
   "command" : "payOnline",
   "output" : {
-    "timestamp" : 351,
+    "timestamp" : 357,
     "description" : "Card not found"
   },
-  "timestamp" : 351
+  "timestamp" : 357
+}, {
+  "command" : "payOnline",
+  "output" : {
+    "timestamp" : 363,
+    "description" : "Card not found"
+  },
+  "timestamp" : 363
+}, {
+  "command" : "payOnline",
+  "output" : {
+    "timestamp" : 367,
+    "description" : "Card not found"
+  },
+  "timestamp" : 367
+}, {
+  "command" : "payOnline",
+  "output" : {
+    "timestamp" : 370,
+    "description" : "Card not found"
+  },
+  "timestamp" : 370
+}, {
+  "command" : "payOnline",
+  "output" : {
+    "timestamp" : 378,
+    "description" : "Card not found"
+  },
+  "timestamp" : 378
+}, {
+  "command" : "payOnline",
+  "output" : {
+    "timestamp" : 387,
+    "description" : "Card not found"
+  },
+  "timestamp" : 387
+}, {
+  "command" : "payOnline",
+  "output" : {
+    "timestamp" : 392,
+    "description" : "Card not found"
+  },
+  "timestamp" : 392
+}, {
+  "command" : "payOnline",
+  "output" : {
+    "timestamp" : 398,
+    "description" : "Card not found"
+  },
+  "timestamp" : 398
+}, {
+  "command" : "payOnline",
+  "output" : {
+    "timestamp" : 406,
+    "description" : "Card not found"
+  },
+  "timestamp" : 406
+}, {
+  "command" : "payOnline",
+  "output" : {
+    "timestamp" : 413,
+    "description" : "Card not found"
+  },
+  "timestamp" : 413
+}, {
+  "command" : "payOnline",
+  "output" : {
+    "timestamp" : 416,
+    "description" : "Card not found"
+  },
+  "timestamp" : 416
+}, {
+  "command" : "payOnline",
+  "output" : {
+    "timestamp" : 420,
+    "description" : "Card not found"
+  },
+  "timestamp" : 420
+}, {
+  "command" : "payOnline",
+  "output" : {
+    "timestamp" : 423,
+    "description" : "Card not found"
+  },
+  "timestamp" : 423
+}, {
+  "command" : "payOnline",
+  "output" : {
+    "timestamp" : 427,
+    "description" : "Card not found"
+  },
+  "timestamp" : 427
+}, {
+  "command" : "payOnline",
+  "output" : {
+    "timestamp" : 431,
+    "description" : "Card not found"
+  },
+  "timestamp" : 431
+}, {
+  "command" : "payOnline",
+  "output" : {
+    "timestamp" : 436,
+    "description" : "Card not found"
+  },
+  "timestamp" : 436
+}, {
+  "command" : "payOnline",
+  "output" : {
+    "timestamp" : 442,
+    "description" : "Card not found"
+  },
+  "timestamp" : 442
+}, {
+  "command" : "payOnline",
+  "output" : {
+    "timestamp" : 448,
+    "description" : "Card not found"
+  },
+  "timestamp" : 448
+}, {
+  "command" : "payOnline",
+  "output" : {
+    "timestamp" : 452,
+    "description" : "Card not found"
+  },
+  "timestamp" : 452
+}, {
+  "command" : "payOnline",
+  "output" : {
+    "timestamp" : 457,
+    "description" : "Card not found"
+  },
+  "timestamp" : 457
+}, {
+  "command" : "payOnline",
+  "output" : {
+    "timestamp" : 465,
+    "description" : "Card not found"
+  },
+  "timestamp" : 465
+}, {
+  "command" : "payOnline",
+  "output" : {
+    "timestamp" : 473,
+    "description" : "Card not found"
+  },
+  "timestamp" : 473
+}, {
+  "command" : "payOnline",
+  "output" : {
+    "timestamp" : 478,
+    "description" : "Card not found"
+  },
+  "timestamp" : 478
+}, {
+  "command" : "payOnline",
+  "output" : {
+    "timestamp" : 481,
+    "description" : "Card not found"
+  },
+  "timestamp" : 481
+}, {
+  "command" : "payOnline",
+  "output" : {
+    "timestamp" : 485,
+    "description" : "Card not found"
+  },
+  "timestamp" : 485
+}, {
+  "command" : "businessReportReport",
+  "output" : {
+    "IBAN" : "RO98POOB8412955460158769",
+    "balance" : 4675.0,
+    "currency" : "USD",
+    "spending limit" : 280.0,
+    "deposit limit" : 107.14,
+    "statistics type" : "transaction",
+    "managers" : [ {
+      "firstName" : "Dida",
+      "lastName" : "Albu",
+      "email" : "Dida_Albu@outlook.ro",
+      "accounts" : [ ],
+      "name" : "AlbuDida",
+      "spent" : 0.0,
+      "deposited" : 0.0
+    } ],
+    "employees" : [ {
+      "firstName" : "Joe",
+      "lastName" : "Lee",
+      "email" : "Joe_Lee@yahoo.us",
+      "accounts" : [ ],
+      "spent" : 0.0,
+      "deposited" : 301.0
+    }, {
+      "firstName" : "Dida",
+      "lastName" : "Albu",
+      "email" : "Dida_Albu@outlook.ro",
+      "accounts" : [ ],
+      "spent" : 0.0,
+      "deposited" : 163.0
+    }, {
+      "firstName" : "Silvia",
+      "lastName" : "Marin",
+      "email" : "Silvia_Marin@hotmail.ro",
+      "accounts" : [ ],
+      "spent" : 0.0,
+      "deposited" : 40.0
+    }, {
+      "firstName" : "Erica",
+      "lastName" : "Cristea",
+      "email" : "Erica_Cristea@outlook.ro",
+      "accounts" : [ ],
+      "spent" : 0.0,
+      "deposited" : 84.0
+    }, {
+      "firstName" : "Alexander",
+      "lastName" : "Ellis DDS",
+      "email" : "Alexander_Ellis_DDS@yahoo.us",
+      "accounts" : [ ],
+      "spent" : 0.0,
+      "deposited" : 281.0
+    }, {
+      "firstName" : "James",
+      "lastName" : "Booker",
+      "email" : "James_Booker@yahoo.us",
+      "accounts" : [ ],
+      "spent" : 0.0,
+      "deposited" : 132.0
+    }, {
+      "firstName" : "Carina",
+      "lastName" : "Dumitrescu",
+      "email" : "Carina_Dumitrescu@gmail.ro",
+      "accounts" : [ ],
+      "spent" : 0.0,
+      "deposited" : 219.0
+    } ]
+  },
+  "timestamp" : 493
+}, {
+  "command" : "businessReportReport",
+  "output" : {
+    "IBAN" : "RO32POOB0130532963818359",
+    "balance" : 571.0,
+    "currency" : "USD",
+    "spending limit" : 896.0,
+    "deposit limit" : 107.14,
+    "statistics type" : "transaction",
+    "managers" : [ {
+      "firstName" : "Dida",
+      "lastName" : "Albu",
+      "email" : "Dida_Albu@outlook.ro",
+      "accounts" : [ ],
+      "name" : "AlbuDida",
+      "spent" : 0.0,
+      "deposited" : 200.0
+    }, {
+      "firstName" : "Erica",
+      "lastName" : "Cristea",
+      "email" : "Erica_Cristea@outlook.ro",
+      "accounts" : [ ],
+      "name" : "CristeaErica",
+      "spent" : 0.0,
+      "deposited" : 165.0
+    }, {
+      "firstName" : "James",
+      "lastName" : "Booker",
+      "email" : "James_Booker@yahoo.us",
+      "accounts" : [ ],
+      "name" : "BookerJames",
+      "spent" : 0.0,
+      "deposited" : 167.0
+    } ],
+    "employees" : [ {
+      "firstName" : "Alexander",
+      "lastName" : "Ellis DDS",
+      "email" : "Alexander_Ellis_DDS@yahoo.us",
+      "accounts" : [ ],
+      "spent" : 0.0,
+      "deposited" : 0.0
+    }, {
+      "firstName" : "Carina",
+      "lastName" : "Dumitrescu",
+      "email" : "Carina_Dumitrescu@gmail.ro",
+      "accounts" : [ ],
+      "spent" : 0.0,
+      "deposited" : 0.0
+    } ]
+  },
+  "timestamp" : 494
+}, {
+  "command" : "businessReportReport",
+  "output" : {
+    "IBAN" : "RO68POOB1848616931405475",
+    "balance" : 2399.0,
+    "currency" : "RON",
+    "spending limit" : 473.0,
+    "deposit limit" : 500.0,
+    "statistics type" : "transaction",
+    "managers" : [ {
+      "firstName" : "Alexander",
+      "lastName" : "Ellis DDS",
+      "email" : "Alexander_Ellis_DDS@yahoo.us",
+      "accounts" : [ ],
+      "name" : "Ellis DDSAlexander",
+      "spent" : 0.0,
+      "deposited" : 152.0
+    }, {
+      "firstName" : "James",
+      "lastName" : "Booker",
+      "email" : "James_Booker@yahoo.us",
+      "accounts" : [ ],
+      "name" : "BookerJames",
+      "spent" : 0.0,
+      "deposited" : 110.0
+    }, {
+      "firstName" : "Carina",
+      "lastName" : "Dumitrescu",
+      "email" : "Carina_Dumitrescu@gmail.ro",
+      "accounts" : [ ],
+      "name" : "DumitrescuCarina",
+      "spent" : 0.0,
+      "deposited" : 116.0
+    } ],
+    "employees" : [ {
+      "firstName" : "Dida",
+      "lastName" : "Albu",
+      "email" : "Dida_Albu@outlook.ro",
+      "accounts" : [ ],
+      "spent" : 0.0,
+      "deposited" : 216.0
+    }, {
+      "firstName" : "Erica",
+      "lastName" : "Cristea",
+      "email" : "Erica_Cristea@outlook.ro",
+      "accounts" : [ ],
+      "spent" : 0.0,
+      "deposited" : 420.0
+    } ]
+  },
+  "timestamp" : 495
+}, {
+  "command" : "businessReportReport",
+  "output" : {
+    "IBAN" : "RO10POOB4354933866366881",
+    "balance" : 1322.0,
+    "currency" : "RON",
+    "spending limit" : 500.0,
+    "deposit limit" : 500.0,
+    "statistics type" : "transaction",
+    "managers" : [ {
+      "firstName" : "Dida",
+      "lastName" : "Albu",
+      "email" : "Dida_Albu@outlook.ro",
+      "accounts" : [ ],
+      "name" : "AlbuDida",
+      "spent" : 0.0,
+      "deposited" : 124.0
+    }, {
+      "firstName" : "Erica",
+      "lastName" : "Cristea",
+      "email" : "Erica_Cristea@outlook.ro",
+      "accounts" : [ ],
+      "name" : "CristeaErica",
+      "spent" : 0.0,
+      "deposited" : 136.0
+    }, {
+      "firstName" : "Alexander",
+      "lastName" : "Ellis DDS",
+      "email" : "Alexander_Ellis_DDS@yahoo.us",
+      "accounts" : [ ],
+      "name" : "Ellis DDSAlexander",
+      "spent" : 0.0,
+      "deposited" : 146.0
+    }, {
+      "firstName" : "Carina",
+      "lastName" : "Dumitrescu",
+      "email" : "Carina_Dumitrescu@gmail.ro",
+      "accounts" : [ ],
+      "name" : "DumitrescuCarina",
+      "spent" : 0.0,
+      "deposited" : 175.0
+    } ],
+    "employees" : [ {
+      "firstName" : "James",
+      "lastName" : "Booker",
+      "email" : "James_Booker@yahoo.us",
+      "accounts" : [ ],
+      "spent" : 0.0,
+      "deposited" : 0.0
+    } ]
+  },
+  "timestamp" : 496
 }, {
   "command" : "sendMoney",
   "output" : {
-    "timestamp" : 362,
+    "timestamp" : 498,
     "description" : "User not found"
   },
-  "timestamp" : 362
+  "timestamp" : 498
+}, {
+  "command" : "businessReportReport",
+  "output" : {
+    "IBAN" : "RO98POOB8412955460158769",
+    "balance" : 5994.0,
+    "currency" : "USD",
+    "spending limit" : 280.0,
+    "deposit limit" : 107.14,
+    "statistics type" : "commerciant",
+    "managers" : [ {
+      "firstName" : "Dida",
+      "lastName" : "Albu",
+      "email" : "Dida_Albu@outlook.ro",
+      "accounts" : [ ],
+      "name" : "AlbuDida",
+      "spent" : 0.0,
+      "deposited" : 0.0
+    } ],
+    "employees" : [ {
+      "firstName" : "Joe",
+      "lastName" : "Lee",
+      "email" : "Joe_Lee@yahoo.us",
+      "accounts" : [ ],
+      "spent" : 0.0,
+      "deposited" : 301.0
+    }, {
+      "firstName" : "Dida",
+      "lastName" : "Albu",
+      "email" : "Dida_Albu@outlook.ro",
+      "accounts" : [ ],
+      "spent" : 0.0,
+      "deposited" : 163.0
+    }, {
+      "firstName" : "Silvia",
+      "lastName" : "Marin",
+      "email" : "Silvia_Marin@hotmail.ro",
+      "accounts" : [ ],
+      "spent" : 0.0,
+      "deposited" : 40.0
+    }, {
+      "firstName" : "Erica",
+      "lastName" : "Cristea",
+      "email" : "Erica_Cristea@outlook.ro",
+      "accounts" : [ ],
+      "spent" : 0.0,
+      "deposited" : 84.0
+    }, {
+      "firstName" : "Alexander",
+      "lastName" : "Ellis DDS",
+      "email" : "Alexander_Ellis_DDS@yahoo.us",
+      "accounts" : [ ],
+      "spent" : 0.0,
+      "deposited" : 281.0
+    }, {
+      "firstName" : "James",
+      "lastName" : "Booker",
+      "email" : "James_Booker@yahoo.us",
+      "accounts" : [ ],
+      "spent" : 0.0,
+      "deposited" : 132.0
+    }, {
+      "firstName" : "Carina",
+      "lastName" : "Dumitrescu",
+      "email" : "Carina_Dumitrescu@gmail.ro",
+      "accounts" : [ ],
+      "spent" : 0.0,
+      "deposited" : 219.0
+    } ]
+  },
+  "timestamp" : 499
+}, {
+  "command" : "businessReportReport",
+  "output" : {
+    "IBAN" : "RO32POOB0130532963818359",
+    "balance" : 571.0,
+    "currency" : "USD",
+    "spending limit" : 896.0,
+    "deposit limit" : 107.14,
+    "statistics type" : "commerciant",
+    "managers" : [ {
+      "firstName" : "Dida",
+      "lastName" : "Albu",
+      "email" : "Dida_Albu@outlook.ro",
+      "accounts" : [ ],
+      "name" : "AlbuDida",
+      "spent" : 0.0,
+      "deposited" : 200.0
+    }, {
+      "firstName" : "Erica",
+      "lastName" : "Cristea",
+      "email" : "Erica_Cristea@outlook.ro",
+      "accounts" : [ ],
+      "name" : "CristeaErica",
+      "spent" : 0.0,
+      "deposited" : 165.0
+    }, {
+      "firstName" : "James",
+      "lastName" : "Booker",
+      "email" : "James_Booker@yahoo.us",
+      "accounts" : [ ],
+      "name" : "BookerJames",
+      "spent" : 0.0,
+      "deposited" : 167.0
+    } ],
+    "employees" : [ {
+      "firstName" : "Alexander",
+      "lastName" : "Ellis DDS",
+      "email" : "Alexander_Ellis_DDS@yahoo.us",
+      "accounts" : [ ],
+      "spent" : 0.0,
+      "deposited" : 0.0
+    }, {
+      "firstName" : "Carina",
+      "lastName" : "Dumitrescu",
+      "email" : "Carina_Dumitrescu@gmail.ro",
+      "accounts" : [ ],
+      "spent" : 0.0,
+      "deposited" : 0.0
+    } ]
+  },
+  "timestamp" : 500
+}, {
+  "command" : "businessReportReport",
+  "output" : {
+    "IBAN" : "RO68POOB1848616931405475",
+    "balance" : 2399.0,
+    "currency" : "RON",
+    "spending limit" : 473.0,
+    "deposit limit" : 500.0,
+    "statistics type" : "commerciant",
+    "managers" : [ {
+      "firstName" : "Alexander",
+      "lastName" : "Ellis DDS",
+      "email" : "Alexander_Ellis_DDS@yahoo.us",
+      "accounts" : [ ],
+      "name" : "Ellis DDSAlexander",
+      "spent" : 0.0,
+      "deposited" : 152.0
+    }, {
+      "firstName" : "James",
+      "lastName" : "Booker",
+      "email" : "James_Booker@yahoo.us",
+      "accounts" : [ ],
+      "name" : "BookerJames",
+      "spent" : 0.0,
+      "deposited" : 110.0
+    }, {
+      "firstName" : "Carina",
+      "lastName" : "Dumitrescu",
+      "email" : "Carina_Dumitrescu@gmail.ro",
+      "accounts" : [ ],
+      "name" : "DumitrescuCarina",
+      "spent" : 0.0,
+      "deposited" : 116.0
+    } ],
+    "employees" : [ {
+      "firstName" : "Dida",
+      "lastName" : "Albu",
+      "email" : "Dida_Albu@outlook.ro",
+      "accounts" : [ ],
+      "spent" : 0.0,
+      "deposited" : 216.0
+    }, {
+      "firstName" : "Erica",
+      "lastName" : "Cristea",
+      "email" : "Erica_Cristea@outlook.ro",
+      "accounts" : [ ],
+      "spent" : 0.0,
+      "deposited" : 420.0
+    } ]
+  },
+  "timestamp" : 501
+}, {
+  "command" : "businessReportReport",
+  "output" : {
+    "IBAN" : "RO10POOB4354933866366881",
+    "balance" : 1322.0,
+    "currency" : "RON",
+    "spending limit" : 500.0,
+    "deposit limit" : 500.0,
+    "statistics type" : "commerciant",
+    "managers" : [ {
+      "firstName" : "Dida",
+      "lastName" : "Albu",
+      "email" : "Dida_Albu@outlook.ro",
+      "accounts" : [ ],
+      "name" : "AlbuDida",
+      "spent" : 0.0,
+      "deposited" : 124.0
+    }, {
+      "firstName" : "Erica",
+      "lastName" : "Cristea",
+      "email" : "Erica_Cristea@outlook.ro",
+      "accounts" : [ ],
+      "name" : "CristeaErica",
+      "spent" : 0.0,
+      "deposited" : 136.0
+    }, {
+      "firstName" : "Alexander",
+      "lastName" : "Ellis DDS",
+      "email" : "Alexander_Ellis_DDS@yahoo.us",
+      "accounts" : [ ],
+      "name" : "Ellis DDSAlexander",
+      "spent" : 0.0,
+      "deposited" : 146.0
+    }, {
+      "firstName" : "Carina",
+      "lastName" : "Dumitrescu",
+      "email" : "Carina_Dumitrescu@gmail.ro",
+      "accounts" : [ ],
+      "name" : "DumitrescuCarina",
+      "spent" : 0.0,
+      "deposited" : 175.0
+    } ],
+    "employees" : [ {
+      "firstName" : "James",
+      "lastName" : "Booker",
+      "email" : "James_Booker@yahoo.us",
+      "accounts" : [ ],
+      "spent" : 0.0,
+      "deposited" : 0.0
+    } ]
+  },
+  "timestamp" : 502
 } ]

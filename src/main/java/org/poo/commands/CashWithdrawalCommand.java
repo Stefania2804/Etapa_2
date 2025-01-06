@@ -5,7 +5,8 @@ import com.fasterxml.jackson.databind.node.ArrayNode;
 import org.poo.account.Account;
 import org.poo.account.card.Card;
 import org.poo.bank.InfoBank;
-import org.poo.bank.User;
+import org.poo.visitor.User;
+import org.poo.errorTransactions.ErrorPaymentTransaction;
 import org.poo.fileio.CommandInput;
 import org.poo.main.JsonOutput;
 import org.poo.strategy.CashWithdrawal;
@@ -34,6 +35,11 @@ public class CashWithdrawalCommand implements Command {
                                 context.executePayment(account, exchangedAmount);
                                 Transaction transaction = new CashWithdrawalTransaction(commandInput.getTimestamp(),
                                         toString(commandInput.getAmount()), commandInput.getAmount());
+                                user.addTransaction(transaction);
+                                account.addTransaction(transaction);
+                            } else {
+                                Transaction transaction = new ErrorPaymentTransaction(commandInput.getTimestamp(),
+                                        "Insufficient funds");
                                 user.addTransaction(transaction);
                                 account.addTransaction(transaction);
                             }

@@ -5,6 +5,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import org.poo.account.card.Card;
 import org.poo.transactions.Transaction;
+import org.poo.visitor.Employee;
+import org.poo.visitor.Manager;
+import org.poo.visitor.Owner;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -200,6 +203,7 @@ public class Account {
     public void setReceivedTech(boolean receivedTech) {
         this.receivedTech = receivedTech;
     }
+
 
     /**
      * Adauga un card in lista de carduri.

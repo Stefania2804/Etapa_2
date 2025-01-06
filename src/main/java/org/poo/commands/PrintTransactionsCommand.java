@@ -5,7 +5,7 @@ import com.fasterxml.jackson.databind.node.ArrayNode;
 import org.poo.fileio.CommandInput;
 import org.poo.bank.InfoBank;
 import org.poo.main.JsonOutput;
-import org.poo.bank.User;
+import org.poo.visitor.User;
 
 public final class PrintTransactionsCommand implements Command {
     /**

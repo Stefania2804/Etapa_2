@@ -4,9 +4,12 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import org.poo.account.Account;
+import org.poo.account.Business;
 import org.poo.account.Commerciant;
 import org.poo.bank.InfoBank;
-import org.poo.bank.User;
+import org.poo.visitor.Employee;
+import org.poo.visitor.Manager;
+import org.poo.visitor.User;
 import org.poo.fileio.CommandInput;
 import org.poo.transactions.Transaction;
 
@@ -262,6 +265,39 @@ public abstract class JsonOutput {
 
         commandNode.set("output", outputNode);
         commandNode.put("timestamp", commandInput.getTimestamp());
+        output.add(commandNode);
+    }
+    public static void printBusinessReport(final CommandInput commandInput,
+                                            final InfoBank infoBank,
+                                            final Account account,
+                                            final ObjectMapper objectMapper,
+                                            final ArrayNode output) {
+        ObjectNode commandNode = objectMapper.createObjectNode();
+        commandNode.put("command", "businessReportReport");
+        double exchanged = 0.0;
+        ObjectNode outputNode = objectMapper.createObjectNode();
+        outputNode.put("IBAN", account.getIban());
+        outputNode.put("balance", account.getBalance());
+        outputNode.put("currency", account.getCurrency());
+        exchanged = infoBank.exchange("RON", account.getCurrency(),((Business) account).getSpendingLimit());
+        outputNode.put("spending limit", exchanged);
+        exchanged = infoBank.exchange("RON", account.getCurrency(),((Business) account).getDepositLimit());
+        outputNode.put("deposit limit", exchanged);
+        outputNode.put("statistics type", commandInput.getType());
+        ArrayNode managersArray = objectMapper.createArrayNode();
+        ArrayNode employeesArray = objectMapper.createArrayNode();
+        for (Manager manager : ((Business) account).getManagers()) {
+                managersArray.add(objectMapper.valueToTree(manager));
+        }
+        for (Employee employee : ((Business) account).getEmployees()) {
+            employeesArray.add(objectMapper.valueToTree(employee));
+        }
+        outputNode.set("managers", managersArray);
+        outputNode.set("employees", employeesArray);
+
+        commandNode.set("output", outputNode);
+        commandNode.put("timestamp", commandInput.getTimestamp());
+
         output.add(commandNode);
     }
 }

@@ -7,7 +7,7 @@ import org.poo.errorTransactions.DeleteAccountErrorTransaction;
 import org.poo.fileio.CommandInput;
 import org.poo.bank.InfoBank;
 import org.poo.main.JsonOutput;
-import org.poo.bank.User;
+import org.poo.visitor.User;
 import org.poo.transactions.Transaction;
 
 public final class DeleteAccountCommand implements Command {

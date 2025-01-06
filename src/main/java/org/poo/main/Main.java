@@ -9,7 +9,7 @@ import org.poo.account.FoodCommerciant;
 import org.poo.account.TechCommerciant;
 import org.poo.bank.Exchange;
 import org.poo.bank.InfoBank;
-import org.poo.bank.User;
+import org.poo.visitor.User;
 import org.poo.checker.Checker;
 import org.poo.checker.CheckerConstants;
 import org.poo.commands.Invoker;
@@ -109,7 +109,7 @@ public final class Main {
                         commerciants[i].getCashbackStrategy(),
                         commerciants[i].getType(), commerciants[i].getId(),
                         commerciants[i].getAccount());
-            } else {
+            } else if (commerciants[i].getType().equals("Tech")){
                 commerciant = new TechCommerciant(0.0, commerciants[i].getCommerciant(),
                         commerciants[i].getCashbackStrategy(),
                         commerciants[i].getType(), commerciants[i].getId(),

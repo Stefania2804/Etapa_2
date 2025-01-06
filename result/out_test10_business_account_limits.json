@@ -1,29 +1,78 @@
 [ {
-  "command" : "payOnline",
+  "command" : "businessReportReport",
   "output" : {
-    "timestamp" : 40,
-    "description" : "Card not found"
+    "IBAN" : "RO65POOB8944016386845896",
+    "balance" : 128.0,
+    "currency" : "USD",
+    "spending limit" : 107.14,
+    "deposit limit" : 107.14,
+    "statistics type" : "transaction",
+    "managers" : [ {
+      "firstName" : "Zaharia",
+      "lastName" : "Pop",
+      "email" : "Zaharia_Pop@outlook.ro",
+      "accounts" : [ ],
+      "name" : "PopZaharia",
+      "spent" : 0.0,
+      "deposited" : 0.0
+    } ],
+    "employees" : [ {
+      "firstName" : "Aaron",
+      "lastName" : "Sharp",
+      "email" : "Aaron_Sharp@yahoo.us",
+      "accounts" : [ ],
+      "spent" : 0.0,
+      "deposited" : 0.0
+    } ]
   },
-  "timestamp" : 40
+  "timestamp" : 31
 }, {
   "command" : "payOnline",
   "output" : {
-    "timestamp" : 42,
+    "timestamp" : 33,
     "description" : "Card not found"
+  },
+  "timestamp" : 33
+}, {
+  "command" : "payOnline",
+  "output" : {
+    "timestamp" : 35,
+    "description" : "Card not found"
+  },
+  "timestamp" : 35
+}, {
+  "command" : "payOnline",
+  "output" : {
+    "timestamp" : 38,
+    "description" : "Card not found"
+  },
+  "timestamp" : 38
+}, {
+  "command" : "businessReportReport",
+  "output" : {
+    "IBAN" : "RO65POOB8944016386845896",
+    "balance" : 283.36,
+    "currency" : "USD",
+    "spending limit" : 564.0,
+    "deposit limit" : 107.14,
+    "statistics type" : "transaction",
+    "managers" : [ {
+      "firstName" : "Zaharia",
+      "lastName" : "Pop",
+      "email" : "Zaharia_Pop@outlook.ro",
+      "accounts" : [ ],
+      "name" : "PopZaharia",
+      "spent" : 0.0,
+      "deposited" : 3483.0
+    } ],
+    "employees" : [ {
+      "firstName" : "Aaron",
+      "lastName" : "Sharp",
+      "email" : "Aaron_Sharp@yahoo.us",
+      "accounts" : [ ],
+      "spent" : 0.0,
+      "deposited" : 0.0
+    } ]
   },
   "timestamp" : 42
-}, {
-  "command" : "payOnline",
-  "output" : {
-    "timestamp" : 45,
-    "description" : "Card not found"
-  },
-  "timestamp" : 45
-}, {
-  "command" : "sendMoney",
-  "output" : {
-    "timestamp" : 48,
-    "description" : "User not found"
-  },
-  "timestamp" : 48
 } ]

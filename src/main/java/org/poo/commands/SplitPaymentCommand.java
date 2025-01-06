@@ -4,14 +4,9 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ArrayNode;
 import org.poo.account.Account;
 import org.poo.bank.SplitPayment;
-import org.poo.errorTransactions.ErrorSplitPaymentTransaction;
 import org.poo.fileio.CommandInput;
 import org.poo.bank.InfoBank;
-import org.poo.bank.User;
-import org.poo.transactions.SplitPaymentTransaction;
-import org.poo.transactions.Transaction;
-
-import java.util.Locale;
+import org.poo.visitor.User;
 
 public final class SplitPaymentCommand implements Command {
     public void execute(final CommandInput commandInput,

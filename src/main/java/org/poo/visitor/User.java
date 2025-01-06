@@ -1,15 +1,21 @@
-package org.poo.bank;
+package org.poo.visitor;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.node.ArrayNode;
 import org.poo.account.Account;
+import org.poo.account.Business;
 import org.poo.account.Classic;
 import org.poo.account.Savings;
+import org.poo.bank.InfoBank;
+import org.poo.bank.SplitPayment;
+import org.poo.fileio.CommandInput;
 import org.poo.transactions.Transaction;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public final class User {
+public class User implements Visitable {
     private String firstName;
     private String lastName;
     private String email;
@@ -17,6 +23,8 @@ public final class User {
     private List<Classic> classics;
     @JsonIgnore
     private List<Savings> savings;
+    @JsonIgnore
+    private List<Business> businesses;
     private List<Account> accounts;
     @JsonIgnore
     private List<Transaction> transactions;
@@ -35,6 +43,7 @@ public final class User {
         this.email = email;
         classics = new ArrayList<>();
         savings = new ArrayList<>();
+        businesses = new ArrayList<>();
         accounts = new ArrayList<>();
         transactions = new ArrayList<>();
         this.birthDate = birthDate;
@@ -80,6 +89,14 @@ public final class User {
 
     public void setSavings(final List<Savings> savings) {
         this.savings = savings;
+    }
+
+    public List<Business> getBusinesses() {
+        return businesses;
+    }
+
+    public void setBusinesses(List<Business> businesses) {
+        this.businesses = businesses;
     }
 
     public List<Account> getAccounts() {
@@ -136,6 +153,9 @@ public final class User {
     public void addSavings(final Savings account) {
         savings.add(account);
     }
+    public void addBusiness(final Business business) {
+        businesses.add(business);
+    }
     /**
      * Adauga un cont oarecare.
      *
@@ -166,5 +186,8 @@ public final class User {
     }
     public void addSplitPayment(final SplitPayment splitPayment) {
         splitPayments.add(splitPayment);
+    }
+    public void accept(Visitor v, CommandInput commandInput, InfoBank infoBank, Account account, ObjectMapper objectMapper, ArrayNode output) {
+        return;
     }
 }

@@ -5,15 +5,14 @@ import com.fasterxml.jackson.databind.node.ArrayNode;
 import org.poo.account.Account;
 import org.poo.bank.InfoBank;
 import org.poo.bank.SplitPayment;
-import org.poo.bank.User;
+import org.poo.visitor.User;
 import org.poo.errorTransactions.ErrorSplitPaymentTransaction;
-import org.poo.fileio.CommandInput;
 import org.poo.transactions.SplitPaymentTransaction;
 import org.poo.transactions.Transaction;
 
 import java.util.Locale;
 
-public class ExecuteSplitPaymentCommand {
+public class ExecuteSplitPayment {
     /**
      * functia de executare a platii distribuite intre mai multe conturi.
      */
@@ -29,44 +28,66 @@ public class ExecuteSplitPaymentCommand {
             length = splitPayment.getAccounts().size();
         }
         String cardError = null;
+        double sumPerMember = 0.0;
+        double sumPerMemberExchanged = 0.0;
         if (splitPayment.getAmountForUsers() == null) {
-            System.out.println(splitPayment.getTimestamp());
-            System.out.println("aici");
-            return;
+            sumPerMember = splitPayment.getAmount() / length;
         }
         for (String ibanAccount : splitPayment.getAccounts()) {
             for (Account account : infoBank.getAccounts()) {
                 if (account.getIban().equals(ibanAccount)) {
-                    double sumPerMemberExchanged = infoBank.exchange(
-                            splitPayment.getCurrency(),
-                            account.getCurrency(), splitPayment.getAmountForUsers().get(indexSum));
+                    if (splitPayment.getSplitPaymentType().equals("equal")) {
+                        sumPerMemberExchanged = infoBank.exchange(
+                                splitPayment.getCurrency(),
+                                account.getCurrency(), sumPerMember);
+                    } else {
+                        sumPerMemberExchanged = infoBank.exchange(
+                                splitPayment.getCurrency(),
+                                account.getCurrency(), splitPayment.getAmountForUsers().get(indexSum));
+                    }
                     if (account.getBalance() >= sumPerMemberExchanged) {
                         cnt++;
                     } else {
                         cardError = account.getIban();
+                        break;
                     }
                     indexSum++;
                 }
             }
+            if (cardError != null) {
+                break;
+            }
         }
         if (cnt == length) {
-            System.out.println(splitPayment.getAccepts());
             indexSum = 0;
             for (User user : infoBank.getUsers()) {
                 for (Account account : user.getAccounts()) {
                     for (String ibanAccSplit : splitPayment.getAccounts()) {
                         if (account.getIban().equals(ibanAccSplit)) {
-                            double sumPerMemberExchanged = infoBank.exchange(
-                                    splitPayment.getCurrency(),
-                                    account.getCurrency(), splitPayment.getAmountForUsers().get(indexSum));
+                            if (splitPayment.getSplitPaymentType().equals("equal")) {
+                                sumPerMemberExchanged = infoBank.exchange(
+                                        splitPayment.getCurrency(),
+                                        account.getCurrency(), sumPerMember);
+                            } else {
+                                sumPerMemberExchanged = infoBank.exchange(
+                                        splitPayment.getCurrency(),
+                                        account.getCurrency(), splitPayment.getAmountForUsers().get(indexSum));
+                            }
                             account.setBalance(account.getBalance() - sumPerMemberExchanged);
                             String formattedValue = String.format(Locale.US, "%.2f", sum);
                             String description = splitPaymentToString(formattedValue,
                                     splitPayment.getCurrency());
+                            Double amount = null;
+
+                            if (splitPayment.getSplitPaymentType().equals("equal")) {
+                                amount = sumPerMember;
+                            } else {
+                                amount = null;
+                            }
                             Transaction transactionSplit = new SplitPaymentTransaction(
                                     splitPayment.getTimestamp(),
                                     description, splitPayment.getSplitPaymentType(),
-                                    splitPayment.getCurrency(), splitPayment.getAmount(),
+                                    splitPayment.getCurrency(), amount,
                                     splitPayment.getAmountForUsers(),
                                     splitPayment.getAccounts());
                             user.addTransaction(transactionSplit);
@@ -77,7 +98,6 @@ public class ExecuteSplitPaymentCommand {
                 }
             }
         } else {
-            System.out.println("aici intra");
             indexSum = 0;
             for (User user : infoBank.getUsers()) {
                 for (Account account : user.getAccounts()) {
@@ -88,10 +108,18 @@ public class ExecuteSplitPaymentCommand {
                             String description = splitPaymentToString(formattedValue,
                                     splitPayment.getCurrency());
                             String error = errorSplitPayment(cardError);
+
+                            Double amount = null;
+                            if (splitPayment.getSplitPaymentType().equals("equal")) {
+                                amount = sumPerMember;
+                            } else {
+                                amount = null;
+                            }
                             Transaction transactionErrorSplit = new ErrorSplitPaymentTransaction(
                                     splitPayment.getTimestamp(), description,
-                                    splitPayment.getCurrency(), splitPayment.getAmountForUsers().get(indexSum),
-                                    splitPayment.getAccounts(), error);
+                                    splitPayment.getCurrency(), amount,
+                                    splitPayment.getAccounts(), error, splitPayment.getSplitPaymentType(),
+                                    splitPayment.getAmountForUsers());
                             user.addTransaction(transactionErrorSplit);
                             account.addTransaction(transactionErrorSplit);
                             indexSum++;

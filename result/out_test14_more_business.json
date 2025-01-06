@@ -1,218 +1,284 @@
 [ {
-  "command" : "cashWithdrawal",
+  "command" : "businessReportReport",
   "output" : {
-    "timestamp" : 117,
-    "description" : "User not found"
+    "IBAN" : "RO69POOB6209498372540635",
+    "balance" : 1474.0,
+    "currency" : "RON",
+    "spending limit" : 500.0,
+    "deposit limit" : 500.0,
+    "statistics type" : "transaction",
+    "managers" : [ ],
+    "employees" : [ {
+      "firstName" : "Damian",
+      "lastName" : "Stanescu",
+      "email" : "Damian_Stanescu@gmail.ro",
+      "accounts" : [ ],
+      "spent" : 0.0,
+      "deposited" : 199.0
+    }, {
+      "firstName" : "Valentin",
+      "lastName" : "Voinea",
+      "email" : "Valentin_Voinea@hotmail.ro",
+      "accounts" : [ ],
+      "spent" : 0.0,
+      "deposited" : 183.0
+    }, {
+      "firstName" : "Pompilia",
+      "lastName" : "Albu",
+      "email" : "Pompilia_Albu@yahoo.ro",
+      "accounts" : [ ],
+      "spent" : 0.0,
+      "deposited" : 169.0
+    }, {
+      "firstName" : "Daniel",
+      "lastName" : "King",
+      "email" : "Daniel_King@outlook.us",
+      "accounts" : [ ],
+      "spent" : 0.0,
+      "deposited" : 186.0
+    } ]
   },
-  "timestamp" : 117
+  "timestamp" : 75
 }, {
   "command" : "cashWithdrawal",
   "output" : {
-    "timestamp" : 118,
+    "timestamp" : 79,
     "description" : "User not found"
   },
-  "timestamp" : 118
+  "timestamp" : 79
+}, {
+  "command" : "cashWithdrawal",
+  "output" : {
+    "timestamp" : 80,
+    "description" : "User not found"
+  },
+  "timestamp" : 80
+}, {
+  "command" : "businessReportReport",
+  "output" : {
+    "IBAN" : "RO69POOB6209498372540635",
+    "balance" : 4102.06,
+    "currency" : "RON",
+    "spending limit" : 500.0,
+    "deposit limit" : 500.0,
+    "statistics type" : "transaction",
+    "managers" : [ ],
+    "employees" : [ {
+      "firstName" : "Damian",
+      "lastName" : "Stanescu",
+      "email" : "Damian_Stanescu@gmail.ro",
+      "accounts" : [ ],
+      "spent" : 253.0,
+      "deposited" : 199.0
+    }, {
+      "firstName" : "Valentin",
+      "lastName" : "Voinea",
+      "email" : "Valentin_Voinea@hotmail.ro",
+      "accounts" : [ ],
+      "spent" : 342.0,
+      "deposited" : 183.0
+    }, {
+      "firstName" : "Pompilia",
+      "lastName" : "Albu",
+      "email" : "Pompilia_Albu@yahoo.ro",
+      "accounts" : [ ],
+      "spent" : 0.0,
+      "deposited" : 169.0
+    }, {
+      "firstName" : "Daniel",
+      "lastName" : "King",
+      "email" : "Daniel_King@outlook.us",
+      "accounts" : [ ],
+      "spent" : 0.0,
+      "deposited" : 186.0
+    } ]
+  },
+  "timestamp" : 84
 }, {
   "command" : "payOnline",
   "output" : {
-    "timestamp" : 119,
+    "timestamp" : 136,
     "description" : "Card not found"
   },
-  "timestamp" : 119
+  "timestamp" : 136
 }, {
   "command" : "payOnline",
   "output" : {
-    "timestamp" : 120,
+    "timestamp" : 137,
     "description" : "Card not found"
   },
-  "timestamp" : 120
+  "timestamp" : 137
 }, {
   "command" : "payOnline",
   "output" : {
-    "timestamp" : 121,
+    "timestamp" : 138,
     "description" : "Card not found"
   },
-  "timestamp" : 121
+  "timestamp" : 138
 }, {
   "command" : "payOnline",
   "output" : {
-    "timestamp" : 171,
+    "timestamp" : 142,
     "description" : "Card not found"
   },
-  "timestamp" : 171
+  "timestamp" : 142
 }, {
   "command" : "payOnline",
   "output" : {
-    "timestamp" : 172,
+    "timestamp" : 143,
     "description" : "Card not found"
   },
-  "timestamp" : 172
+  "timestamp" : 143
 }, {
   "command" : "payOnline",
   "output" : {
-    "timestamp" : 173,
+    "timestamp" : 148,
     "description" : "Card not found"
   },
-  "timestamp" : 173
-}, {
-  "command" : "checkCardStatus",
-  "output" : {
-    "timestamp" : 174,
-    "description" : "Card not found"
-  },
-  "timestamp" : 174
+  "timestamp" : 148
 }, {
   "command" : "payOnline",
   "output" : {
-    "timestamp" : 176,
+    "timestamp" : 153,
     "description" : "Card not found"
   },
-  "timestamp" : 176
+  "timestamp" : 153
 }, {
   "command" : "payOnline",
   "output" : {
-    "timestamp" : 177,
+    "timestamp" : 156,
     "description" : "Card not found"
   },
-  "timestamp" : 177
+  "timestamp" : 156
 }, {
   "command" : "payOnline",
   "output" : {
-    "timestamp" : 178,
+    "timestamp" : 158,
     "description" : "Card not found"
   },
-  "timestamp" : 178
+  "timestamp" : 158
 }, {
-  "command" : "checkCardStatus",
+  "command" : "businessReportReport",
   "output" : {
-    "timestamp" : 179,
-    "description" : "Card not found"
+    "IBAN" : "RO69POOB6209498372540635",
+    "balance" : 14797.49,
+    "currency" : "RON",
+    "spending limit" : 500.0,
+    "deposit limit" : 500.0,
+    "statistics type" : "transaction",
+    "managers" : [ ],
+    "employees" : [ {
+      "firstName" : "Damian",
+      "lastName" : "Stanescu",
+      "email" : "Damian_Stanescu@gmail.ro",
+      "accounts" : [ ],
+      "spent" : 253.0,
+      "deposited" : 199.0
+    }, {
+      "firstName" : "Valentin",
+      "lastName" : "Voinea",
+      "email" : "Valentin_Voinea@hotmail.ro",
+      "accounts" : [ ],
+      "spent" : 854.05,
+      "deposited" : 183.0
+    }, {
+      "firstName" : "Pompilia",
+      "lastName" : "Albu",
+      "email" : "Pompilia_Albu@yahoo.ro",
+      "accounts" : [ ],
+      "spent" : 0.0,
+      "deposited" : 169.0
+    }, {
+      "firstName" : "Daniel",
+      "lastName" : "King",
+      "email" : "Daniel_King@outlook.us",
+      "accounts" : [ ],
+      "spent" : 0.0,
+      "deposited" : 186.0
+    } ]
   },
-  "timestamp" : 179
+  "timestamp" : 161
 }, {
-  "command" : "payOnline",
+  "command" : "businessReportReport",
   "output" : {
-    "timestamp" : 181,
-    "description" : "Card not found"
+    "IBAN" : "RO69POOB6209498372540635",
+    "balance" : 14797.49,
+    "currency" : "RON",
+    "spending limit" : 500.0,
+    "deposit limit" : 500.0,
+    "statistics type" : "commerciant",
+    "managers" : [ ],
+    "employees" : [ {
+      "firstName" : "Damian",
+      "lastName" : "Stanescu",
+      "email" : "Damian_Stanescu@gmail.ro",
+      "accounts" : [ ],
+      "spent" : 253.0,
+      "deposited" : 199.0
+    }, {
+      "firstName" : "Valentin",
+      "lastName" : "Voinea",
+      "email" : "Valentin_Voinea@hotmail.ro",
+      "accounts" : [ ],
+      "spent" : 854.05,
+      "deposited" : 183.0
+    }, {
+      "firstName" : "Pompilia",
+      "lastName" : "Albu",
+      "email" : "Pompilia_Albu@yahoo.ro",
+      "accounts" : [ ],
+      "spent" : 0.0,
+      "deposited" : 169.0
+    }, {
+      "firstName" : "Daniel",
+      "lastName" : "King",
+      "email" : "Daniel_King@outlook.us",
+      "accounts" : [ ],
+      "spent" : 0.0,
+      "deposited" : 186.0
+    } ]
   },
-  "timestamp" : 181
-}, {
-  "command" : "payOnline",
-  "output" : {
-    "timestamp" : 182,
-    "description" : "Card not found"
-  },
-  "timestamp" : 182
-}, {
-  "command" : "payOnline",
-  "output" : {
-    "timestamp" : 183,
-    "description" : "Card not found"
-  },
-  "timestamp" : 183
-}, {
-  "command" : "checkCardStatus",
-  "output" : {
-    "timestamp" : 184,
-    "description" : "Card not found"
-  },
-  "timestamp" : 184
-}, {
-  "command" : "payOnline",
-  "output" : {
-    "timestamp" : 186,
-    "description" : "Card not found"
-  },
-  "timestamp" : 186
-}, {
-  "command" : "payOnline",
-  "output" : {
-    "timestamp" : 187,
-    "description" : "Card not found"
-  },
-  "timestamp" : 187
-}, {
-  "command" : "payOnline",
-  "output" : {
-    "timestamp" : 188,
-    "description" : "Card not found"
-  },
-  "timestamp" : 188
-}, {
-  "command" : "checkCardStatus",
-  "output" : {
-    "timestamp" : 189,
-    "description" : "Card not found"
-  },
-  "timestamp" : 189
-}, {
-  "command" : "payOnline",
-  "output" : {
-    "timestamp" : 191,
-    "description" : "Card not found"
-  },
-  "timestamp" : 191
-}, {
-  "command" : "payOnline",
-  "output" : {
-    "timestamp" : 192,
-    "description" : "Card not found"
-  },
-  "timestamp" : 192
-}, {
-  "command" : "payOnline",
-  "output" : {
-    "timestamp" : 193,
-    "description" : "Card not found"
-  },
-  "timestamp" : 193
-}, {
-  "command" : "checkCardStatus",
-  "output" : {
-    "timestamp" : 194,
-    "description" : "Card not found"
-  },
-  "timestamp" : 194
+  "timestamp" : 162
 }, {
   "command" : "sendMoney",
   "output" : {
-    "timestamp" : 253,
+    "timestamp" : 210,
     "description" : "User not found"
   },
-  "timestamp" : 253
+  "timestamp" : 210
 }, {
   "command" : "sendMoney",
   "output" : {
-    "timestamp" : 427,
+    "timestamp" : 395,
     "description" : "User not found"
   },
-  "timestamp" : 427
+  "timestamp" : 395
 }, {
   "command" : "sendMoney",
   "output" : {
-    "timestamp" : 429,
+    "timestamp" : 396,
     "description" : "User not found"
   },
-  "timestamp" : 429
+  "timestamp" : 396
 }, {
   "command" : "sendMoney",
   "output" : {
-    "timestamp" : 431,
+    "timestamp" : 398,
     "description" : "User not found"
   },
-  "timestamp" : 431
+  "timestamp" : 398
 }, {
   "command" : "sendMoney",
   "output" : {
-    "timestamp" : 433,
+    "timestamp" : 399,
     "description" : "User not found"
   },
-  "timestamp" : 433
+  "timestamp" : 399
 }, {
   "command" : "sendMoney",
   "output" : {
-    "timestamp" : 435,
+    "timestamp" : 400,
     "description" : "User not found"
   },
-  "timestamp" : 435
+  "timestamp" : 400
 } ]

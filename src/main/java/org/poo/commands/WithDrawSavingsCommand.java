@@ -8,7 +8,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ArrayNode;
 import org.poo.account.Account;
 import org.poo.bank.InfoBank;
-import org.poo.bank.User;
+import org.poo.visitor.User;
 import org.poo.errorTransactions.WithDrawSavingsErrorTransaction;
 import org.poo.fileio.CommandInput;
 import org.poo.transactions.Transaction;
@@ -34,6 +34,7 @@ public class WithDrawSavingsCommand implements Command {
                                 if (exchangedAmount <= acc.getBalance()) {
                                     account.setBalance(account.getBalance() - exchangedAmount);
                                     acc.setBalance(acc.getBalance() + commandInput.getAmount());
+                                    acc.setBalance(Math.round(acc.getBalance() * 100.0) / 100.0);
                                     account.setBalance(Math.round(account.getBalance() * 100.0) / 100.0);
                                     Transaction transaction = new WithDrawSavingsTransaction(commandInput.getTimestamp(), "Savings withdrawal");
                                     user.addTransaction(transaction);

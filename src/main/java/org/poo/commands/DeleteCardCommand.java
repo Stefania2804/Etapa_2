@@ -6,7 +6,7 @@ import org.poo.account.Account;
 import org.poo.account.card.Card;
 import org.poo.fileio.CommandInput;
 import org.poo.bank.InfoBank;
-import org.poo.bank.User;
+import org.poo.visitor.User;
 import org.poo.transactions.DeleteCardTransaction;
 import org.poo.transactions.Transaction;
 

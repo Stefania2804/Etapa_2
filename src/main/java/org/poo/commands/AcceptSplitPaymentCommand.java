@@ -5,7 +5,7 @@ import com.fasterxml.jackson.databind.node.ArrayNode;
 import org.poo.account.Account;
 import org.poo.bank.InfoBank;
 import org.poo.bank.SplitPayment;
-import org.poo.bank.User;
+import org.poo.visitor.User;
 import org.poo.fileio.CommandInput;
 
 public final class AcceptSplitPaymentCommand implements Command {
@@ -33,8 +33,7 @@ public final class AcceptSplitPaymentCommand implements Command {
                     }
                     user.getSplitPayments().get(0).setAccepts(user.getSplitPayments().get(0).getAccepts() + 1);
                     if (user.getSplitPayments().get(0).getAccepts() == user.getSplitPayments().get(0).getAccounts().size()) {
-                        System.out.println(user.getSplitPayments().get(0).getTimestamp());
-                        ExecuteSplitPaymentCommand executeSplitPaymentCommand = new ExecuteSplitPaymentCommand();
+                        ExecuteSplitPayment executeSplitPaymentCommand = new ExecuteSplitPayment();
                         executeSplitPaymentCommand.execute(user.getSplitPayments().get(0), infoBank, objectMapper, output);
                     }
                     user.getSplitPayments().remove(0);

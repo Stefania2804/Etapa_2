@@ -4,7 +4,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ArrayNode;
 import org.poo.account.Account;
 import org.poo.account.Savings;
-import org.poo.bank.User;
+import org.poo.visitor.User;
 import org.poo.fileio.CommandInput;
 import org.poo.bank.InfoBank;
 import org.poo.main.JsonOutput;
