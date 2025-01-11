@@ -37,6 +37,8 @@ public final class Invoker {
         commandMap.put("addNewBusinessAssociate", new AddNewBusinessAssociate());
         commandMap.put("businessReport", new BusinessReportCommand());
         commandMap.put("changeSpendingLimit", new ChangeSpendingLimit());
+        commandMap.put("rejectSplitPayment", new RejectSplitPaymentCommand());
+        commandMap.put("changeDepositLimit", new ChangeDepositLimit());
     }
     /**
      * functie pentru executarea comenzilor

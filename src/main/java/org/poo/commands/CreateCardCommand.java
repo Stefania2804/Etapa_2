@@ -25,7 +25,7 @@ public final class CreateCardCommand implements Command {
         for (User user : infoBank.getUsers()) {
             if (user.getEmail().equals(userEmail)) {
                 userFound = user;
-                for (Account accs : user.getAccounts()) {
+                for (Account accs : infoBank.getAccounts()) {
                     if (accs.getIban().equals(ibanAcc)) {
                         String cardNumber = Utils.generateCardNumber();
                         Card card = new NormalCard(cardNumber, "active");

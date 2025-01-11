@@ -4,24 +4,11 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ArrayNode;
 import org.poo.account.Account;
 import org.poo.account.Business;
-import org.poo.account.Commerciant;
 import org.poo.account.card.Card;
-import org.poo.account.card.OneTimeCard;
 import org.poo.bank.InfoBank;
-import org.poo.factory.CashBack;
-import org.poo.factory.CashBackFactory;
-import org.poo.strategy.OnlinePayment;
-import org.poo.strategy.PaymentContext;
 import org.poo.visitor.*;
-import org.poo.errorTransactions.ErrorPaymentTransaction;
 import org.poo.fileio.CommandInput;
 import org.poo.main.*;
-import org.poo.strategy.PayStrategy;
-import org.poo.transactions.DeleteCardTransaction;
-import org.poo.transactions.NewCardTransaction;
-import org.poo.transactions.OnlinePayTransaction;
-import org.poo.transactions.Transaction;
-import org.poo.utils.Utils;
 
 public final class PayOnlineCommand implements Command {
     /**
@@ -36,7 +23,7 @@ public final class PayOnlineCommand implements Command {
         String payOnlineEmail = commandInput.getEmail();
         for (User user : infoBank.getUsers()) {
             if (user.getEmail().equals(payOnlineEmail)) {
-                for (Account account : user.getAccounts()) {
+                for (Account account : infoBank.getAccounts()) {
                     if (account.getType().equals("business")
                             && !(((Business) account).getOwner().getEmail().equals(payOnlineEmail))) {
                         for (Card card : account.getCards()) {
@@ -70,6 +57,7 @@ public final class PayOnlineCommand implements Command {
             return;
         }
         if (businessFound == false) {
+            cardFound = false;
             for (User user : infoBank.getUsers()) {
                 if (user.getEmail().equals(payOnlineEmail)) {
                     for (Account account : user.getAccounts()) {

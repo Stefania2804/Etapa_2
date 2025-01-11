@@ -9,7 +9,7 @@ import com.fasterxml.jackson.databind.node.ArrayNode;
 import org.poo.account.Account;
 import org.poo.bank.InfoBank;
 import org.poo.visitor.User;
-import org.poo.errorTransactions.WithDrawSavingsErrorTransaction;
+import org.poo.errortransactions.WithDrawSavingsErrorTransaction;
 import org.poo.fileio.CommandInput;
 import org.poo.transactions.Transaction;
 import org.poo.transactions.WithDrawSavingsTransaction;
@@ -31,13 +31,13 @@ public class WithDrawSavingsCommand implements Command {
                             if (calculateAge(user)!= null && calculateAge(user).getYears() >= 21) {
                                 double exchangedAmount = infoBank.exchange(commandInput.getCurrency(),
                                         account.getCurrency(), commandInput.getAmount());
-                                if (exchangedAmount <= acc.getBalance()) {
+                                if (exchangedAmount <= account.getBalance()) {
                                     account.setBalance(account.getBalance() - exchangedAmount);
                                     acc.setBalance(acc.getBalance() + commandInput.getAmount());
-                                    acc.setBalance(Math.round(acc.getBalance() * 100.0) / 100.0);
-                                    account.setBalance(Math.round(account.getBalance() * 100.0) / 100.0);
-                                    Transaction transaction = new WithDrawSavingsTransaction(commandInput.getTimestamp(), "Savings withdrawal");
+                                    Transaction transaction = new WithDrawSavingsTransaction(commandInput.getTimestamp(), "Savings withdrawal",
+                                            account.getIban(), acc.getIban(), commandInput.getAmount());
                                     user.addTransaction(transaction);
+                                    user.addTransaction((transaction));
                                 } else {
                                     Transaction transaction = new WithDrawSavingsErrorTransaction(commandInput.getTimestamp(),
                                             "Insufficient funds");
@@ -53,6 +53,7 @@ public class WithDrawSavingsCommand implements Command {
                     if (classicFound == false) {
                         Transaction transaction = new WithDrawSavingsErrorTransaction(commandInput.getTimestamp(), "You do not have a classic account.");
                         user.addTransaction(transaction);
+                        account.addTransaction(transaction);
                     }
                 }
             }

@@ -1,4 +1,4 @@
-package org.poo.errorTransactions;
+package org.poo.errortransactions;
 
 import org.poo.transactions.Transaction;
 

@@ -8,6 +8,7 @@ import org.poo.account.Business;
 import org.poo.account.Classic;
 import org.poo.account.Savings;
 import org.poo.bank.InfoBank;
+import org.poo.bank.Payment;
 import org.poo.bank.SplitPayment;
 import org.poo.fileio.CommandInput;
 import org.poo.transactions.Transaction;
@@ -34,7 +35,8 @@ public class User implements Visitable {
     private String occupation;
     @JsonIgnore
     private List<SplitPayment> splitPayments;
-
+    @JsonIgnore
+    private List<Payment> payments;
     public User(final String firstName, final String lastName,
                 final String email, final String birthDate,
                 final String occupation) {
@@ -49,6 +51,7 @@ public class User implements Visitable {
         this.birthDate = birthDate;
         this.occupation = occupation;
         splitPayments = new ArrayList<>();
+        payments = new ArrayList<>();
     }
 
     public String getFirstName() {
@@ -139,6 +142,14 @@ public class User implements Visitable {
         this.splitPayments = splitPayments;
     }
 
+    public List<Payment> getPayments() {
+        return payments;
+    }
+
+    public void setPayments(List<Payment> payments) {
+        this.payments = payments;
+    }
+
     /**
      * Adauga un cont clasic nou pentru utilizator.
      *
@@ -190,4 +201,8 @@ public class User implements Visitable {
     public void accept(Visitor v, CommandInput commandInput, InfoBank infoBank, Account account, ObjectMapper objectMapper, ArrayNode output) {
         return;
     }
+    public void addPayment(final Payment payment) {
+        payments.add(payment);
+    }
+
 }

@@ -120,28 +120,19 @@ public final class InfoBank {
         if (from.equals(to)) {
             return amount;
         }
-
         visited.add(from);
-        MathContext precision = new MathContext(16);
         for (Exchange exchange : exchanges) {
             if (exchange.getFrom().equals(from) && !visited.contains(exchange.getTo())) {
-                BigDecimal rate = new BigDecimal(exchange.getRate(), precision);
-                BigDecimal newAmount = new BigDecimal(amount, precision).multiply(rate, precision);
 
                 double result = recursiveExchange(exchange.getTo(),
-                        to, newAmount.doubleValue(), visited);
-                result = Math.round(result * 100.00) / 100.00;
+                        to, amount * exchange.getRate(), visited);
                 if (result != -1) {
                     return result;
                 }
             }
             if (exchange.getTo().equals(from) && !visited.contains(exchange.getFrom())) {
-                BigDecimal rate = new BigDecimal(exchange.getRate(), precision);
-                BigDecimal newAmount = new BigDecimal(amount, precision).divide(rate, precision);
-
                 double result = recursiveExchange(exchange.getFrom(), to,
-                        newAmount.doubleValue(), visited);
-                result = Math.round(result * 100.00) / 100.00;
+                        amount / exchange.getRate(), visited);
                 if (result != -1) {
                     return result;
                 }
@@ -158,7 +149,6 @@ public final class InfoBank {
 
         HashSet<String> visited = new HashSet<>();
         double result = recursiveExchange(from, to, amount, visited);
-        result = Math.round(result * 100.00) / 100.00;
         return result;
     }
     /**

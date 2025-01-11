@@ -7,7 +7,8 @@ import org.poo.account.Commerciant;
 import org.poo.account.card.Card;
 import org.poo.account.card.OneTimeCard;
 import org.poo.bank.InfoBank;
-import org.poo.errorTransactions.ErrorPaymentTransaction;
+import org.poo.bank.Payment;
+import org.poo.errortransactions.ErrorPaymentTransaction;
 import org.poo.factory.CashBack;
 import org.poo.factory.CashBackFactory;
 import org.poo.fileio.CommandInput;
@@ -15,10 +16,7 @@ import org.poo.main.JsonOutput;
 import org.poo.strategy.OnlinePayment;
 import org.poo.strategy.PayStrategy;
 import org.poo.strategy.PaymentContext;
-import org.poo.transactions.DeleteCardTransaction;
-import org.poo.transactions.NewCardTransaction;
-import org.poo.transactions.OnlinePayTransaction;
-import org.poo.transactions.Transaction;
+import org.poo.transactions.*;
 import org.poo.utils.Utils;
 import org.poo.visitor.User;
 
@@ -33,7 +31,7 @@ public abstract class ExecuteOnlinePayment {
         String payOnlineCard = commandInput.getCardNumber();
         for (User user : infoBank.getUsers()) {
             if (user.getEmail().equals(payOnlineEmail)) {
-                for (Account account : user.getAccounts()) {
+                for (Account account : infoBank.getAccounts()) {
                         int comFound = 0;
                         for (Card card : account.getCards()) {
                             if (card.getCardNumber().equals(payOnlineCard)) {
@@ -63,7 +61,6 @@ public abstract class ExecuteOnlinePayment {
 
                                         user.addTransaction(transaction);
                                         account.addTransaction(transaction);
-
                                         if (card.getClass() == OneTimeCard.class) {
                                             Transaction deleteTransaction = new DeleteCardTransaction(
                                                     commandInput.getTimestamp(),
@@ -82,44 +79,74 @@ public abstract class ExecuteOnlinePayment {
                                             account.addTransaction(createTransaction);
                                         }
                                         for (Commerciant commerciant : account.getCommerciants()) {
-                                            if (commerciant.getName().equals(
-                                                    commandInput.getCommerciant())) {
+                                            if (commandInput.getCommerciant().equals(commerciant.getName())
+                                                    || commandInput.getCommerciant().equals(commerciant.getId())) {
                                                 comFound = 1;
                                                 if (commerciant.getCashBackType().equals("nrOfTransactions")) {
                                                     commerciant.setNrOfTransactions(commerciant.getNrOfTransactions() + 1);
+                                                    CashBack cashBack = CashBackFactory.getCashBack(commerciant.getCashBackType());
+                                                    cashBack.calculate(infoBank, account, amount, commerciant);
                                                 } else if (commerciant.getCashBackType().equals("spendingThreshold")) {
                                                     double exchangedAmount = infoBank.exchange(commandInput.getCurrency(), "RON", commandInput.getAmount());
                                                     commerciant.setMoneySpent(commerciant.getMoneySpent() + exchangedAmount);
-                                                    commerciant.setMoneySpent(Math.round(commerciant.getMoneySpent() * 100.0) / 100.0);
                                                     CashBack cashBackNew = CashBackFactory.getCashBack(commerciant.getCashBackType());
                                                     cashBackNew.calculate(infoBank, account, amount, commerciant);
+                                                    CashBack cashBackNrOfTransactions = CashBackFactory.getCashBack("nrOfTransactions");
+                                                    cashBackNrOfTransactions.calculate(infoBank, account, amount, commerciant);
                                                 }
                                                 commerciant.addTimestamp(commandInput.getTimestamp());
-                                                CashBack cashBack = CashBackFactory.getCashBack(commerciant.getCashBackType());
-                                                cashBack.calculate(infoBank, account, amount, commerciant);
                                             }
                                         }
                                         if (comFound == 0) {
                                             for (Commerciant commerciant : infoBank.getCommerciants()) {
-                                                if (commandInput.getCommerciant().equals(commerciant.getName())) {
+                                                if (commandInput.getCommerciant().equals(commerciant.getName())
+                                                        || commandInput.getCommerciant().equals(commerciant.getId())) {
+                                                    Commerciant copy = new Commerciant(commerciant);
                                                     if (commerciant.getCashBackType().equals("nrOfTransactions")) {
-                                                        commerciant.setNrOfTransactions(1);
+                                                        copy.setNrOfTransactions(1);
+                                                        copy.addTimestamp(commandInput.getTimestamp());
+                                                        account.addCommerciant(copy);
+                                                        CashBack cashBack = CashBackFactory.getCashBack(commerciant.getCashBackType());
+                                                        cashBack.calculate(infoBank, account, amount, copy);
                                                     } else if (commerciant.getCashBackType().equals("spendingThreshold")) {
                                                         double exchangedAmount = infoBank.exchange(commandInput.getCurrency(), "RON", commandInput.getAmount());
-                                                        commerciant.setMoneySpent(exchangedAmount);
-                                                        commerciant.setMoneySpent(Math.round(commerciant.getMoneySpent() * 100.0) / 100.0);
+                                                        copy.setMoneySpent(exchangedAmount);
+                                                        copy.addTimestamp(commandInput.getTimestamp());
+                                                        account.addCommerciant(copy);
                                                         CashBack cashBack = CashBackFactory.getCashBack(commerciant.getCashBackType());
-                                                        cashBack.calculate(infoBank, account, amount, commerciant);
+                                                        cashBack.calculate(infoBank, account, amount, copy);
+                                                        CashBack cashBackNrOfTransactions = CashBackFactory.getCashBack("nrOfTransactions");
+                                                        cashBackNrOfTransactions.calculate(infoBank, account, amount, copy);
                                                     }
-                                                    commerciant.addTimestamp(commandInput.getTimestamp());
-                                                    account.addCommerciant(commerciant);
-                                                    CashBack cashBack = CashBackFactory.getCashBack(commerciant.getCashBackType());
-                                                    cashBack.calculate(infoBank, account, amount, commerciant);
                                                 }
                                             }
                                         }
                                     }
+                                    if (account.getPlan().equals("silver")) {
+                                        double exchangedToRon = infoBank.exchange(commandInput.getCurrency(), "RON", commandInput.getAmount());
+                                        Payment payment = new Payment(exchangedToRon);
+                                        user.addPayment(payment);
+                                        int cnt = 0;
+                                        for (Payment payment1 : user.getPayments()) {
+                                            if (payment1.getAmount() >= 300) {
+                                                cnt++;
+                                            }
+                                        }
+                                        if (cnt >= 5) {
+                                            if (account.getIban().equals("RO00POOB5687892910835215")) {
+                                                System.out.println("Upgrade la " + account.getPlan() + " automat");
+                                            }
+                                            account.setPlan("gold");
+                                            for (Account acc : user.getAccounts()) {
+                                                acc.setPlan("gold");
+                                            }
+                                            Transaction transactionUpgrade = new UpgradePlanTransaction(commandInput.getTimestamp(),
+                                                    "Upgrade plan", account.getIban(), "gold");
+                                            user.addTransaction(transactionUpgrade);
+                                        }
+                                    }
                                 }
+
                                 if (enoughFunds == 0 && card.getStatus().equals("active")) {
                                     Transaction transaction = new ErrorPaymentTransaction(
                                             commandInput.getTimestamp(),

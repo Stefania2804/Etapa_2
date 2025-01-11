@@ -51,6 +51,6 @@ public class Manager extends User {
     }
 
     public String toString(User user) {
-        return user.getLastName() + user.getFirstName();
+        return user.getLastName() + " " + user.getFirstName();
     }
 }

@@ -1,4 +1,4 @@
-package org.poo.errorTransactions;
+package org.poo.errortransactions;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;

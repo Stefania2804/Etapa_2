@@ -6,7 +6,7 @@ import org.poo.account.Account;
 import org.poo.bank.InfoBank;
 import org.poo.bank.SplitPayment;
 import org.poo.visitor.User;
-import org.poo.errorTransactions.ErrorSplitPaymentTransaction;
+import org.poo.errortransactions.ErrorSplitPaymentTransaction;
 import org.poo.transactions.SplitPaymentTransaction;
 import org.poo.transactions.Transaction;
 
@@ -33,29 +33,31 @@ public class ExecuteSplitPayment {
         if (splitPayment.getAmountForUsers() == null) {
             sumPerMember = splitPayment.getAmount() / length;
         }
-        for (String ibanAccount : splitPayment.getAccounts()) {
-            for (Account account : infoBank.getAccounts()) {
-                if (account.getIban().equals(ibanAccount)) {
-                    if (splitPayment.getSplitPaymentType().equals("equal")) {
-                        sumPerMemberExchanged = infoBank.exchange(
-                                splitPayment.getCurrency(),
-                                account.getCurrency(), sumPerMember);
-                    } else {
-                        sumPerMemberExchanged = infoBank.exchange(
-                                splitPayment.getCurrency(),
-                                account.getCurrency(), splitPayment.getAmountForUsers().get(indexSum));
+        if (splitPayment.getRejects() == 0) {
+            for (String ibanAccount : splitPayment.getAccounts()) {
+                for (Account account : infoBank.getAccounts()) {
+                    if (account.getIban().equals(ibanAccount)) {
+                        if (splitPayment.getSplitPaymentType().equals("equal")) {
+                            sumPerMemberExchanged = infoBank.exchange(
+                                    splitPayment.getCurrency(),
+                                    account.getCurrency(), sumPerMember);
+                        } else {
+                            sumPerMemberExchanged = infoBank.exchange(
+                                    splitPayment.getCurrency(),
+                                    account.getCurrency(), splitPayment.getAmountForUsers().get(indexSum));
+                        }
+                        if (account.getBalance() >= sumPerMemberExchanged) {
+                            cnt++;
+                        } else {
+                            cardError = account.getIban();
+                            break;
+                        }
+                        indexSum++;
                     }
-                    if (account.getBalance() >= sumPerMemberExchanged) {
-                        cnt++;
-                    } else {
-                        cardError = account.getIban();
-                        break;
-                    }
-                    indexSum++;
                 }
-            }
-            if (cardError != null) {
-                break;
+                if (cardError != null) {
+                    break;
+                }
             }
         }
         if (cnt == length) {
@@ -98,7 +100,6 @@ public class ExecuteSplitPayment {
                 }
             }
         } else {
-            indexSum = 0;
             for (User user : infoBank.getUsers()) {
                 for (Account account : user.getAccounts()) {
                     for (String ibanAccSplit : splitPayment.getAccounts()) {
@@ -115,14 +116,22 @@ public class ExecuteSplitPayment {
                             } else {
                                 amount = null;
                             }
-                            Transaction transactionErrorSplit = new ErrorSplitPaymentTransaction(
-                                    splitPayment.getTimestamp(), description,
-                                    splitPayment.getCurrency(), amount,
-                                    splitPayment.getAccounts(), error, splitPayment.getSplitPaymentType(),
-                                    splitPayment.getAmountForUsers());
+                            Transaction transactionErrorSplit = null;
+                            if (splitPayment.getRejects() == 0) {
+                                transactionErrorSplit = new ErrorSplitPaymentTransaction(
+                                        splitPayment.getTimestamp(), description,
+                                        splitPayment.getCurrency(), amount,
+                                        splitPayment.getAccounts(), error, splitPayment.getSplitPaymentType(),
+                                        splitPayment.getAmountForUsers());
+                            } else {
+                                transactionErrorSplit = new ErrorSplitPaymentTransaction(
+                                        splitPayment.getTimestamp(), description,
+                                        splitPayment.getCurrency(), amount,
+                                        splitPayment.getAccounts(), "One user rejected the payment.", splitPayment.getSplitPaymentType(),
+                                        splitPayment.getAmountForUsers());
+                            }
                             user.addTransaction(transactionErrorSplit);
                             account.addTransaction(transactionErrorSplit);
-                            indexSum++;
                         }
                     }
                 }

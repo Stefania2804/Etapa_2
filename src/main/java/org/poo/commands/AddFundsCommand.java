@@ -39,13 +39,15 @@ public final class AddFundsCommand implements Command {
                                 manager.accept(commandVisitor, commandInput, infoBank, acc, objectMapper, output);
                             }
                         }
-                    }
-                    if (managerFound == false) {
-                        acc.setBalance(commandInput.getAmount() + acc.getBalance());
+                        if (managerFound == false) {
+                            acc.setBalance(commandInput.getAmount() + acc.getBalance());
+                        }
                     }
                 } else {
                     acc.setBalance(commandInput.getAmount() + acc.getBalance());
-                    acc.setBalance(Math.round(acc.getBalance() * 100.000) / 100.00);
+                    if (acc.getIban().equals("RO00POOB5687892910835215")) {
+                        System.out.println("adaugare fonduri de" + " " + commandInput.getAmount() + " rezulta balanta egala cu " + acc.getBalance());
+                    }
                 }
             }
         }

@@ -15,7 +15,9 @@ public class Business extends Account {
     private List<Employee> employees;
     @JsonIgnore
     private List<Manager> managers;
+    @JsonIgnore
     private double spendingLimit;
+    @JsonIgnore
     private double depositLimit;
 
     public Business(final String iban, final double balance,

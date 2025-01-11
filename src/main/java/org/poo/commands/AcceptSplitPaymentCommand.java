@@ -5,6 +5,7 @@ import com.fasterxml.jackson.databind.node.ArrayNode;
 import org.poo.account.Account;
 import org.poo.bank.InfoBank;
 import org.poo.bank.SplitPayment;
+import org.poo.main.JsonOutput;
 import org.poo.visitor.User;
 import org.poo.fileio.CommandInput;
 
@@ -13,8 +14,10 @@ public final class AcceptSplitPaymentCommand implements Command {
                         final InfoBank infoBank,
                         final ObjectMapper objectMapper,
                         final ArrayNode output) {
+        boolean userFound = false;
         for (User user : infoBank.getUsers()) {
             if (user.getEmail().equals(commandInput.getEmail())) {
+                userFound = true;
                 if (!user.getSplitPayments().isEmpty()) {
                     for (User user1 : infoBank.getUsers()) {
                         if (!user1.getEmail().equals(commandInput.getEmail())) {
@@ -39,6 +42,9 @@ public final class AcceptSplitPaymentCommand implements Command {
                     user.getSplitPayments().remove(0);
                 }
             }
+        }
+        if((userFound == false)) {
+            JsonOutput.errorUser(commandInput, objectMapper, output);
         }
     }
 }

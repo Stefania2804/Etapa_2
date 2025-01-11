@@ -19,6 +19,14 @@ public class Employee extends User {
         name = toString(user);
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
     public double getSpent() {
         return spent;
     }
@@ -41,6 +49,6 @@ public class Employee extends User {
         v.visitEmployee(this, commandInput, infoBank, account, objectMapper, output);
     }
     public String toString(User user) {
-        return user.getLastName() + user.getFirstName();
+        return user.getLastName() + " " + user.getFirstName();
     }
 }

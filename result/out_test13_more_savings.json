@@ -123,13 +123,13 @@
     "email" : "Nicolas_de_Leduc@hotmail.fr",
     "accounts" : [ {
       "IBAN" : "RO90POOB5450777208072365",
-      "balance" : 1126.0,
+      "balance" : 967.0,
       "currency" : "EUR",
       "type" : "savings",
       "cards" : [ ]
     }, {
       "IBAN" : "RO37POOB7013767509830666",
-      "balance" : 0.0,
+      "balance" : 159.0,
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ ]
@@ -170,13 +170,13 @@
     "email" : "Christina_Hudson@outlook.us",
     "accounts" : [ {
       "IBAN" : "RO58POOB7344468893732422",
-      "balance" : 1672.0,
+      "balance" : 1649.0,
       "currency" : "USD",
       "type" : "savings",
       "cards" : [ ]
     }, {
       "IBAN" : "RO69POOB9846198978826791",
-      "balance" : 0.0,
+      "balance" : 23.0,
       "currency" : "USD",
       "type" : "classic",
       "cards" : [ ]
@@ -187,13 +187,13 @@
     "email" : "Michael_Miles@hotmail.us",
     "accounts" : [ {
       "IBAN" : "RO58POOB2721178218599590",
-      "balance" : 1313.0,
+      "balance" : 938.0,
       "currency" : "USD",
       "type" : "savings",
       "cards" : [ ]
     }, {
       "IBAN" : "RO98POOB8412955460158769",
-      "balance" : 0.0,
+      "balance" : 375.0,
       "currency" : "USD",
       "type" : "classic",
       "cards" : [ ]
@@ -280,13 +280,13 @@
     "email" : "Nicolas_de_Leduc@hotmail.fr",
     "accounts" : [ {
       "IBAN" : "RO90POOB5450777208072365",
-      "balance" : 1126.0,
+      "balance" : 967.0,
       "currency" : "EUR",
       "type" : "savings",
       "cards" : [ ]
     }, {
       "IBAN" : "RO37POOB7013767509830666",
-      "balance" : 0.0,
+      "balance" : 159.0,
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ ]
@@ -327,13 +327,13 @@
     "email" : "Christina_Hudson@outlook.us",
     "accounts" : [ {
       "IBAN" : "RO58POOB7344468893732422",
-      "balance" : 1672.0,
+      "balance" : 1649.0,
       "currency" : "USD",
       "type" : "savings",
       "cards" : [ ]
     }, {
       "IBAN" : "RO69POOB9846198978826791",
-      "balance" : 0.0,
+      "balance" : 23.0,
       "currency" : "USD",
       "type" : "classic",
       "cards" : [ ]
@@ -344,13 +344,13 @@
     "email" : "Michael_Miles@hotmail.us",
     "accounts" : [ {
       "IBAN" : "RO58POOB2721178218599590",
-      "balance" : 1313.0,
+      "balance" : 938.0,
       "currency" : "USD",
       "type" : "savings",
       "cards" : [ ]
     }, {
       "IBAN" : "RO98POOB8412955460158769",
-      "balance" : 0.0,
+      "balance" : 375.0,
       "currency" : "USD",
       "type" : "classic",
       "cards" : [ ]
@@ -405,11 +405,27 @@
       "timestamp" : 55,
       "description" : "New account created"
     }, {
+      "timestamp" : 72,
+      "description" : "You do not have a classic account."
+    }, {
+      "timestamp" : 198,
+      "description" : "You do not have a classic account."
+    }, {
+      "timestamp" : 212,
+      "description" : "Upgrade plan",
+      "accountIBAN" : "RO65POOB8944016386845896",
+      "newPlanType" : "silver"
+    }, {
       "timestamp" : 214,
       "description" : "The user already has the silver plan."
     }, {
       "timestamp" : 223,
       "description" : "Interest rate of the account changed to 0.17"
+    }, {
+      "timestamp" : 224,
+      "description" : "Interest rate income",
+      "amount" : 586.6700000000001,
+      "currency" : "RON"
     } ]
   },
   "timestamp" : 226
@@ -426,7 +442,16 @@
     "description" : "New account created"
   }, {
     "timestamp" : 195,
-    "description" : "Insufficient funds"
+    "description" : "Savings withdrawal",
+    "savingsAccountIBAN" : "RO58POOB7344468893732422",
+    "classicAccountIBAN" : "RO69POOB9846198978826791",
+    "amount" : 23.0
+  }, {
+    "timestamp" : 195,
+    "description" : "Savings withdrawal",
+    "savingsAccountIBAN" : "RO58POOB7344468893732422",
+    "classicAccountIBAN" : "RO69POOB9846198978826791",
+    "amount" : 23.0
   }, {
     "timestamp" : 208,
     "description" : "Account couldn't be deleted - there are funds remaining"
@@ -458,7 +483,16 @@
     "description" : "New account created"
   }, {
     "timestamp" : 197,
-    "description" : "Insufficient funds"
+    "description" : "Savings withdrawal",
+    "savingsAccountIBAN" : "RO90POOB5450777208072365",
+    "classicAccountIBAN" : "RO37POOB7013767509830666",
+    "amount" : 159.0
+  }, {
+    "timestamp" : 197,
+    "description" : "Savings withdrawal",
+    "savingsAccountIBAN" : "RO90POOB5450777208072365",
+    "classicAccountIBAN" : "RO37POOB7013767509830666",
+    "amount" : 159.0
   }, {
     "timestamp" : 201,
     "description" : "Account couldn't be deleted - there are funds remaining"
@@ -506,7 +540,16 @@
     "description" : "New account created"
   }, {
     "timestamp" : 199,
-    "description" : "Insufficient funds"
+    "description" : "Savings withdrawal",
+    "savingsAccountIBAN" : "RO58POOB2721178218599590",
+    "classicAccountIBAN" : "RO98POOB8412955460158769",
+    "amount" : 375.0
+  }, {
+    "timestamp" : 199,
+    "description" : "Savings withdrawal",
+    "savingsAccountIBAN" : "RO58POOB2721178218599590",
+    "classicAccountIBAN" : "RO98POOB8412955460158769",
+    "amount" : 375.0
   }, {
     "timestamp" : 209,
     "description" : "Account couldn't be deleted - there are funds remaining"
@@ -525,7 +568,16 @@
     "description" : "New account created"
   }, {
     "timestamp" : 195,
-    "description" : "Insufficient funds"
+    "description" : "Savings withdrawal",
+    "savingsAccountIBAN" : "RO58POOB7344468893732422",
+    "classicAccountIBAN" : "RO69POOB9846198978826791",
+    "amount" : 23.0
+  }, {
+    "timestamp" : 195,
+    "description" : "Savings withdrawal",
+    "savingsAccountIBAN" : "RO58POOB7344468893732422",
+    "classicAccountIBAN" : "RO69POOB9846198978826791",
+    "amount" : 23.0
   }, {
     "timestamp" : 208,
     "description" : "Account couldn't be deleted - there are funds remaining"
@@ -571,7 +623,16 @@
     "description" : "New account created"
   }, {
     "timestamp" : 197,
-    "description" : "Insufficient funds"
+    "description" : "Savings withdrawal",
+    "savingsAccountIBAN" : "RO90POOB5450777208072365",
+    "classicAccountIBAN" : "RO37POOB7013767509830666",
+    "amount" : 159.0
+  }, {
+    "timestamp" : 197,
+    "description" : "Savings withdrawal",
+    "savingsAccountIBAN" : "RO90POOB5450777208072365",
+    "classicAccountIBAN" : "RO37POOB7013767509830666",
+    "amount" : 159.0
   }, {
     "timestamp" : 201,
     "description" : "Account couldn't be deleted - there are funds remaining"
@@ -626,7 +687,16 @@
     "description" : "New account created"
   }, {
     "timestamp" : 199,
-    "description" : "Insufficient funds"
+    "description" : "Savings withdrawal",
+    "savingsAccountIBAN" : "RO58POOB2721178218599590",
+    "classicAccountIBAN" : "RO98POOB8412955460158769",
+    "amount" : 375.0
+  }, {
+    "timestamp" : 199,
+    "description" : "Savings withdrawal",
+    "savingsAccountIBAN" : "RO58POOB2721178218599590",
+    "classicAccountIBAN" : "RO98POOB8412955460158769",
+    "amount" : 375.0
   }, {
     "timestamp" : 209,
     "description" : "Account couldn't be deleted - there are funds remaining"
@@ -668,13 +738,6 @@
   },
   "timestamp" : 246
 }, {
-  "command" : "sendMoney",
-  "output" : {
-    "timestamp" : 248,
-    "description" : "User not found"
-  },
-  "timestamp" : 248
-}, {
   "command" : "printUsers",
   "output" : [ {
     "firstName" : "Juliette-Gabrielle",
@@ -687,13 +750,13 @@
     "email" : "Nicolas_de_Leduc@hotmail.fr",
     "accounts" : [ {
       "IBAN" : "RO90POOB5450777208072365",
-      "balance" : 1126.0,
+      "balance" : 967.0,
       "currency" : "EUR",
       "type" : "savings",
       "cards" : [ ]
     }, {
       "IBAN" : "RO37POOB7013767509830666",
-      "balance" : 0.0,
+      "balance" : 159.0,
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ ]
@@ -734,13 +797,13 @@
     "email" : "Christina_Hudson@outlook.us",
     "accounts" : [ {
       "IBAN" : "RO58POOB7344468893732422",
-      "balance" : 1592.94,
+      "balance" : 1569.9444444444443,
       "currency" : "USD",
       "type" : "savings",
       "cards" : [ ]
     }, {
       "IBAN" : "RO69POOB9846198978826791",
-      "balance" : 0.0,
+      "balance" : 23.0,
       "currency" : "USD",
       "type" : "classic",
       "cards" : [ ]
@@ -751,13 +814,13 @@
     "email" : "Michael_Miles@hotmail.us",
     "accounts" : [ {
       "IBAN" : "RO58POOB2721178218599590",
-      "balance" : 1233.94,
+      "balance" : 858.9444444444445,
       "currency" : "USD",
       "type" : "savings",
       "cards" : [ ]
     }, {
       "IBAN" : "RO98POOB8412955460158769",
-      "balance" : 0.0,
+      "balance" : 375.0,
       "currency" : "USD",
       "type" : "classic",
       "cards" : [ ]
@@ -778,7 +841,7 @@
     "email" : "Barbu_Suciu@outlook.ro",
     "accounts" : [ {
       "IBAN" : "RO65POOB8944016386845896",
-      "balance" : 5730.92,
+      "balance" : 2981.96,
       "currency" : "RON",
       "type" : "savings",
       "cards" : [ ]
@@ -845,13 +908,13 @@
     "email" : "Nicolas_de_Leduc@hotmail.fr",
     "accounts" : [ {
       "IBAN" : "RO90POOB5450777208072365",
-      "balance" : 1126.0,
+      "balance" : 967.0,
       "currency" : "EUR",
       "type" : "savings",
       "cards" : [ ]
     }, {
       "IBAN" : "RO37POOB7013767509830666",
-      "balance" : 0.0,
+      "balance" : 159.0,
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ ]
@@ -892,13 +955,13 @@
     "email" : "Christina_Hudson@outlook.us",
     "accounts" : [ {
       "IBAN" : "RO58POOB7344468893732422",
-      "balance" : 1592.94,
+      "balance" : 1569.9444444444443,
       "currency" : "USD",
       "type" : "savings",
       "cards" : [ ]
     }, {
       "IBAN" : "RO69POOB9846198978826791",
-      "balance" : 0.0,
+      "balance" : 23.0,
       "currency" : "USD",
       "type" : "classic",
       "cards" : [ ]
@@ -909,13 +972,13 @@
     "email" : "Michael_Miles@hotmail.us",
     "accounts" : [ {
       "IBAN" : "RO58POOB2721178218599590",
-      "balance" : 1233.94,
+      "balance" : 858.9444444444445,
       "currency" : "USD",
       "type" : "savings",
       "cards" : [ ]
     }, {
       "IBAN" : "RO98POOB8412955460158769",
-      "balance" : 0.0,
+      "balance" : 375.0,
       "currency" : "USD",
       "type" : "classic",
       "cards" : [ ]
@@ -934,9 +997,7 @@
       "balance" : 210.0,
       "currency" : "USD",
       "type" : "business",
-      "cards" : [ ],
-      "spendingLimit" : 500.0,
-      "depositLimit" : 500.0
+      "cards" : [ ]
     }, {
       "IBAN" : "RO10POOB4354933866366881",
       "balance" : 58.2624,
@@ -950,7 +1011,7 @@
     "email" : "Barbu_Suciu@outlook.ro",
     "accounts" : [ {
       "IBAN" : "RO65POOB8944016386845896",
-      "balance" : 5730.92,
+      "balance" : 2981.96,
       "currency" : "RON",
       "type" : "savings",
       "cards" : [ ]
@@ -969,16 +1030,18 @@
   } ],
   "timestamp" : 380
 }, {
-  "command" : "businessReportReport",
+  "command" : "businessReport",
   "output" : {
     "IBAN" : "RO68POOB1848616931405475",
     "balance" : 210.0,
     "currency" : "USD",
-    "spending limit" : 111.11,
-    "deposit limit" : 111.11,
+    "spending limit" : 111.11111111111111,
+    "deposit limit" : 111.11111111111111,
     "statistics type" : "transaction",
     "managers" : [ ],
-    "employees" : [ ]
+    "employees" : [ ],
+    "total spent" : 0.0,
+    "total deposited" : 0.0
   },
   "timestamp" : 381
 }, {
@@ -991,8 +1054,21 @@
       "timestamp" : 253,
       "description" : "New account created"
     }, {
+      "timestamp" : 272,
+      "description" : "Interest rate income",
+      "amount" : 1.12,
+      "currency" : "USD"
+    }, {
+      "timestamp" : 377,
+      "description" : "Interest rate income",
+      "amount" : 1.1424,
+      "currency" : "USD"
+    }, {
       "timestamp" : 378,
       "description" : "Interest rate of the account changed to 0.35"
+    }, {
+      "timestamp" : 379,
+      "description" : "You do not have a classic account."
     } ]
   },
   "timestamp" : 382
@@ -1009,13 +1085,13 @@
     "email" : "Nicolas_de_Leduc@hotmail.fr",
     "accounts" : [ {
       "IBAN" : "RO90POOB5450777208072365",
-      "balance" : 1126.0,
+      "balance" : 967.0,
       "currency" : "EUR",
       "type" : "savings",
       "cards" : [ ]
     }, {
       "IBAN" : "RO37POOB7013767509830666",
-      "balance" : 0.0,
+      "balance" : 159.0,
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ ]
@@ -1056,13 +1132,13 @@
     "email" : "Christina_Hudson@outlook.us",
     "accounts" : [ {
       "IBAN" : "RO58POOB7344468893732422",
-      "balance" : 1592.94,
+      "balance" : 1569.9444444444443,
       "currency" : "USD",
       "type" : "savings",
       "cards" : [ ]
     }, {
       "IBAN" : "RO69POOB9846198978826791",
-      "balance" : 0.0,
+      "balance" : 23.0,
       "currency" : "USD",
       "type" : "classic",
       "cards" : [ ]
@@ -1073,13 +1149,13 @@
     "email" : "Michael_Miles@hotmail.us",
     "accounts" : [ {
       "IBAN" : "RO58POOB2721178218599590",
-      "balance" : 1233.94,
+      "balance" : 858.9444444444445,
       "currency" : "USD",
       "type" : "savings",
       "cards" : [ ]
     }, {
       "IBAN" : "RO98POOB8412955460158769",
-      "balance" : 0.0,
+      "balance" : 375.0,
       "currency" : "USD",
       "type" : "classic",
       "cards" : [ ]
@@ -1098,18 +1174,16 @@
       "balance" : 210.0,
       "currency" : "USD",
       "type" : "business",
-      "cards" : [ ],
-      "spendingLimit" : 500.0,
-      "depositLimit" : 500.0
+      "cards" : [ ]
     }, {
       "IBAN" : "RO10POOB4354933866366881",
-      "balance" : 874.26,
+      "balance" : 647.2624,
       "currency" : "USD",
       "type" : "savings",
       "cards" : [ ]
     }, {
       "IBAN" : "RO33POOB9999273999620457",
-      "balance" : 0.0,
+      "balance" : 227.0,
       "currency" : "USD",
       "type" : "classic",
       "cards" : [ ]
@@ -1120,7 +1194,7 @@
     "email" : "Barbu_Suciu@outlook.ro",
     "accounts" : [ {
       "IBAN" : "RO65POOB8944016386845896",
-      "balance" : 5730.92,
+      "balance" : 2981.96,
       "currency" : "RON",
       "type" : "savings",
       "cards" : [ ]
@@ -1163,13 +1237,13 @@
     "email" : "Nicolas_de_Leduc@hotmail.fr",
     "accounts" : [ {
       "IBAN" : "RO90POOB5450777208072365",
-      "balance" : 1126.0,
+      "balance" : 967.0,
       "currency" : "EUR",
       "type" : "savings",
       "cards" : [ ]
     }, {
       "IBAN" : "RO37POOB7013767509830666",
-      "balance" : 0.0,
+      "balance" : 159.0,
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ ]
@@ -1210,13 +1284,13 @@
     "email" : "Christina_Hudson@outlook.us",
     "accounts" : [ {
       "IBAN" : "RO58POOB7344468893732422",
-      "balance" : 1592.94,
+      "balance" : 1569.9444444444443,
       "currency" : "USD",
       "type" : "savings",
       "cards" : [ ]
     }, {
       "IBAN" : "RO69POOB9846198978826791",
-      "balance" : 0.0,
+      "balance" : 23.0,
       "currency" : "USD",
       "type" : "classic",
       "cards" : [ ]
@@ -1227,13 +1301,13 @@
     "email" : "Michael_Miles@hotmail.us",
     "accounts" : [ {
       "IBAN" : "RO58POOB2721178218599590",
-      "balance" : 1233.94,
+      "balance" : 858.9444444444445,
       "currency" : "USD",
       "type" : "savings",
       "cards" : [ ]
     }, {
       "IBAN" : "RO98POOB8412955460158769",
-      "balance" : 0.0,
+      "balance" : 375.0,
       "currency" : "USD",
       "type" : "classic",
       "cards" : [ ]
@@ -1252,18 +1326,16 @@
       "balance" : 210.0,
       "currency" : "USD",
       "type" : "business",
-      "cards" : [ ],
-      "spendingLimit" : 500.0,
-      "depositLimit" : 500.0
+      "cards" : [ ]
     }, {
       "IBAN" : "RO10POOB4354933866366881",
-      "balance" : 874.26,
+      "balance" : 647.2624,
       "currency" : "USD",
       "type" : "savings",
       "cards" : [ ]
     }, {
       "IBAN" : "RO33POOB9999273999620457",
-      "balance" : 0.0,
+      "balance" : 227.0,
       "currency" : "USD",
       "type" : "classic",
       "cards" : [ ]
@@ -1274,7 +1346,7 @@
     "email" : "Barbu_Suciu@outlook.ro",
     "accounts" : [ {
       "IBAN" : "RO65POOB8944016386845896",
-      "balance" : 5730.92,
+      "balance" : 2981.96,
       "currency" : "RON",
       "type" : "savings",
       "cards" : [ ]
@@ -1359,24 +1431,16 @@
     "email" : "Nicolas_de_Leduc@hotmail.fr",
     "accounts" : [ {
       "IBAN" : "RO90POOB5450777208072365",
-      "balance" : 1126.0,
+      "balance" : 967.0,
       "currency" : "EUR",
       "type" : "savings",
       "cards" : [ ]
     }, {
       "IBAN" : "RO37POOB7013767509830666",
-      "balance" : 0.0,
+      "balance" : 159.0,
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ ]
-    }, {
-      "IBAN" : "RO68POOB1848616931405475",
-      "balance" : 20.62,
-      "currency" : "USD",
-      "type" : "business",
-      "cards" : [ ],
-      "spendingLimit" : 850.5,
-      "depositLimit" : 500.0
     } ]
   }, {
     "firstName" : "Gregoire",
@@ -1387,28 +1451,12 @@
     "firstName" : "Nicoleta",
     "lastName" : "Popa",
     "email" : "Nicoleta_Popa@hotmail.ro",
-    "accounts" : [ {
-      "IBAN" : "RO68POOB1848616931405475",
-      "balance" : 20.62,
-      "currency" : "USD",
-      "type" : "business",
-      "cards" : [ ],
-      "spendingLimit" : 850.5,
-      "depositLimit" : 500.0
-    } ]
+    "accounts" : [ ]
   }, {
     "firstName" : "John",
     "lastName" : "Shields",
     "email" : "John_Shields@outlook.us",
-    "accounts" : [ {
-      "IBAN" : "RO68POOB1848616931405475",
-      "balance" : 20.62,
-      "currency" : "USD",
-      "type" : "business",
-      "cards" : [ ],
-      "spendingLimit" : 850.5,
-      "depositLimit" : 500.0
-    } ]
+    "accounts" : [ ]
   }, {
     "firstName" : "Michael",
     "lastName" : "Ashley",
@@ -1430,13 +1478,13 @@
     "email" : "Christina_Hudson@outlook.us",
     "accounts" : [ {
       "IBAN" : "RO58POOB7344468893732422",
-      "balance" : 1771.94,
+      "balance" : 1748.9444444444443,
       "currency" : "USD",
       "type" : "savings",
       "cards" : [ ]
     }, {
       "IBAN" : "RO69POOB9846198978826791",
-      "balance" : 0.0,
+      "balance" : 23.0,
       "currency" : "USD",
       "type" : "classic",
       "cards" : [ ]
@@ -1447,13 +1495,13 @@
     "email" : "Michael_Miles@hotmail.us",
     "accounts" : [ {
       "IBAN" : "RO58POOB2721178218599590",
-      "balance" : 1233.94,
+      "balance" : 858.9444444444445,
       "currency" : "USD",
       "type" : "savings",
       "cards" : [ ]
     }, {
       "IBAN" : "RO98POOB8412955460158769",
-      "balance" : 0.0,
+      "balance" : 375.0,
       "currency" : "USD",
       "type" : "classic",
       "cards" : [ ]
@@ -1462,36 +1510,26 @@
     "firstName" : "Kelly",
     "lastName" : "Webb",
     "email" : "Kelly_Webb@hotmail.us",
-    "accounts" : [ {
-      "IBAN" : "RO68POOB1848616931405475",
-      "balance" : 20.62,
-      "currency" : "USD",
-      "type" : "business",
-      "cards" : [ ],
-      "spendingLimit" : 850.5,
-      "depositLimit" : 500.0
-    } ]
+    "accounts" : [ ]
   }, {
     "firstName" : "Kevin",
     "lastName" : "Edwards",
     "email" : "Kevin_Edwards@outlook.us",
     "accounts" : [ {
       "IBAN" : "RO68POOB1848616931405475",
-      "balance" : 20.62,
+      "balance" : 20.621999999999986,
       "currency" : "USD",
       "type" : "business",
-      "cards" : [ ],
-      "spendingLimit" : 850.5,
-      "depositLimit" : 500.0
+      "cards" : [ ]
     }, {
       "IBAN" : "RO10POOB4354933866366881",
-      "balance" : 874.26,
+      "balance" : 647.2624,
       "currency" : "USD",
       "type" : "savings",
       "cards" : [ ]
     }, {
       "IBAN" : "RO33POOB9999273999620457",
-      "balance" : 0.0,
+      "balance" : 227.0,
       "currency" : "USD",
       "type" : "classic",
       "cards" : [ ]
@@ -1502,7 +1540,7 @@
     "email" : "Barbu_Suciu@outlook.ro",
     "accounts" : [ {
       "IBAN" : "RO65POOB8944016386845896",
-      "balance" : 5730.92,
+      "balance" : 2981.96,
       "currency" : "RON",
       "type" : "savings",
       "cards" : [ ]
@@ -1518,14 +1556,6 @@
       "currency" : "RON",
       "type" : "savings",
       "cards" : [ ]
-    }, {
-      "IBAN" : "RO68POOB1848616931405475",
-      "balance" : 20.62,
-      "currency" : "USD",
-      "type" : "business",
-      "cards" : [ ],
-      "spendingLimit" : 850.5,
-      "depositLimit" : 500.0
     } ]
   }, {
     "firstName" : "Floarea",
@@ -1537,24 +1567,9 @@
       "currency" : "RON",
       "type" : "savings",
       "cards" : [ ]
-    }, {
-      "IBAN" : "RO68POOB1848616931405475",
-      "balance" : 20.62,
-      "currency" : "USD",
-      "type" : "business",
-      "cards" : [ ],
-      "spendingLimit" : 850.5,
-      "depositLimit" : 500.0
     } ]
   } ],
   "timestamp" : 463
-}, {
-  "command" : "sendMoney",
-  "output" : {
-    "timestamp" : 528,
-    "description" : "User not found"
-  },
-  "timestamp" : 528
 }, {
   "command" : "payOnline",
   "output" : {
@@ -1605,98 +1620,62 @@
   },
   "timestamp" : 535
 }, {
-  "command" : "businessReportReport",
+  "command" : "businessReport",
   "output" : {
     "IBAN" : "RO68POOB1848616931405475",
-    "balance" : 7230.62,
+    "balance" : 5599.366,
     "currency" : "USD",
     "spending limit" : 189.0,
-    "deposit limit" : 111.11,
+    "deposit limit" : 1300.0,
     "statistics type" : "commerciant",
     "managers" : [ {
-      "firstName" : "Michael",
-      "lastName" : "Ashley",
-      "email" : "Michael_Ashley@yahoo.us",
-      "accounts" : [ ],
-      "name" : "AshleyMichael",
+      "username" : "Ashley Michael",
       "spent" : 0.0,
       "deposited" : 1274.0
     }, {
-      "firstName" : "George",
-      "lastName" : "Popa",
-      "email" : "George_Popa@gmail.ro",
-      "accounts" : [ ],
-      "name" : "PopaGeorge",
+      "username" : "Popa George",
       "spent" : 0.0,
       "deposited" : 1875.0
     }, {
-      "firstName" : "Gregoire",
-      "lastName" : "Chretien",
-      "email" : "Gregoire_Chretien@gmail.fr",
-      "accounts" : [ ],
-      "name" : "ChretienGregoire",
+      "username" : "Chretien Gregoire",
       "spent" : 0.0,
       "deposited" : 1302.0
     }, {
-      "firstName" : "Christina",
-      "lastName" : "Hudson",
-      "email" : "Christina_Hudson@outlook.us",
-      "accounts" : [ ],
-      "name" : "HudsonChristina",
+      "username" : "Hudson Christina",
       "spent" : 0.0,
       "deposited" : 1153.0
     }, {
-      "firstName" : "Norbert",
-      "lastName" : "Dochioiu",
-      "email" : "Norbert_Dochioiu@gmail.ro",
-      "accounts" : [ ],
-      "name" : "DochioiuNorbert",
+      "username" : "Dochioiu Norbert",
       "spent" : 0.0,
       "deposited" : 1606.0
     } ],
     "employees" : [ {
-      "firstName" : "Nicolas",
-      "lastName" : "de Leduc",
-      "email" : "Nicolas_de_Leduc@hotmail.fr",
-      "accounts" : [ ],
+      "username" : "de Leduc Nicolas",
       "spent" : 0.0,
       "deposited" : 0.0
     }, {
-      "firstName" : "Barbu",
-      "lastName" : "Suciu",
-      "email" : "Barbu_Suciu@outlook.ro",
-      "accounts" : [ ],
+      "username" : "Suciu Barbu",
       "spent" : 0.0,
       "deposited" : 0.0
     }, {
-      "firstName" : "Nicoleta",
-      "lastName" : "Popa",
-      "email" : "Nicoleta_Popa@hotmail.ro",
-      "accounts" : [ ],
+      "username" : "Popa Nicoleta",
       "spent" : 0.0,
       "deposited" : 0.0
     }, {
-      "firstName" : "Floarea",
-      "lastName" : "Dobre",
-      "email" : "Floarea_Dobre@hotmail.ro",
-      "accounts" : [ ],
+      "username" : "Dobre Floarea",
       "spent" : 0.0,
       "deposited" : 0.0
     }, {
-      "firstName" : "John",
-      "lastName" : "Shields",
-      "email" : "John_Shields@outlook.us",
-      "accounts" : [ ],
+      "username" : "Shields John",
       "spent" : 0.0,
       "deposited" : 0.0
     }, {
-      "firstName" : "Kelly",
-      "lastName" : "Webb",
-      "email" : "Kelly_Webb@hotmail.us",
-      "accounts" : [ ],
+      "username" : "Webb Kelly",
       "spent" : 0.0,
       "deposited" : 0.0
-    } ]
+    } ],
+    "total spent" : 0.0,
+    "total deposited" : 7210.0
   },
   "timestamp" : 536
 }, {
@@ -1712,127 +1691,63 @@
     "email" : "Nicolas_de_Leduc@hotmail.fr",
     "accounts" : [ {
       "IBAN" : "RO90POOB5450777208072365",
-      "balance" : 1126.0,
+      "balance" : 967.0,
       "currency" : "EUR",
       "type" : "savings",
       "cards" : [ ]
     }, {
       "IBAN" : "RO37POOB7013767509830666",
-      "balance" : 0.0,
+      "balance" : 159.0,
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ ]
-    }, {
-      "IBAN" : "RO68POOB1848616931405475",
-      "balance" : 7230.62,
-      "currency" : "USD",
-      "type" : "business",
-      "cards" : [ ],
-      "spendingLimit" : 850.5,
-      "depositLimit" : 500.0
     } ]
   }, {
     "firstName" : "Gregoire",
     "lastName" : "Chretien",
     "email" : "Gregoire_Chretien@gmail.fr",
-    "accounts" : [ {
-      "IBAN" : "RO68POOB1848616931405475",
-      "balance" : 7230.62,
-      "currency" : "USD",
-      "type" : "business",
-      "cards" : [ ],
-      "spendingLimit" : 850.5,
-      "depositLimit" : 500.0
-    } ]
+    "accounts" : [ ]
   }, {
     "firstName" : "Nicoleta",
     "lastName" : "Popa",
     "email" : "Nicoleta_Popa@hotmail.ro",
-    "accounts" : [ {
-      "IBAN" : "RO68POOB1848616931405475",
-      "balance" : 7230.62,
-      "currency" : "USD",
-      "type" : "business",
-      "cards" : [ ],
-      "spendingLimit" : 850.5,
-      "depositLimit" : 500.0
-    } ]
+    "accounts" : [ ]
   }, {
     "firstName" : "John",
     "lastName" : "Shields",
     "email" : "John_Shields@outlook.us",
-    "accounts" : [ {
-      "IBAN" : "RO68POOB1848616931405475",
-      "balance" : 7230.62,
-      "currency" : "USD",
-      "type" : "business",
-      "cards" : [ ],
-      "spendingLimit" : 850.5,
-      "depositLimit" : 500.0
-    } ]
+    "accounts" : [ ]
   }, {
     "firstName" : "Michael",
     "lastName" : "Ashley",
     "email" : "Michael_Ashley@yahoo.us",
-    "accounts" : [ {
-      "IBAN" : "RO68POOB1848616931405475",
-      "balance" : 7230.62,
-      "currency" : "USD",
-      "type" : "business",
-      "cards" : [ ],
-      "spendingLimit" : 850.5,
-      "depositLimit" : 500.0
-    } ]
+    "accounts" : [ ]
   }, {
     "firstName" : "George",
     "lastName" : "Popa",
     "email" : "George_Popa@gmail.ro",
-    "accounts" : [ {
-      "IBAN" : "RO68POOB1848616931405475",
-      "balance" : 7230.62,
-      "currency" : "USD",
-      "type" : "business",
-      "cards" : [ ],
-      "spendingLimit" : 850.5,
-      "depositLimit" : 500.0
-    } ]
+    "accounts" : [ ]
   }, {
     "firstName" : "Norbert",
     "lastName" : "Dochioiu",
     "email" : "Norbert_Dochioiu@gmail.ro",
-    "accounts" : [ {
-      "IBAN" : "RO68POOB1848616931405475",
-      "balance" : 7230.62,
-      "currency" : "USD",
-      "type" : "business",
-      "cards" : [ ],
-      "spendingLimit" : 850.5,
-      "depositLimit" : 500.0
-    } ]
+    "accounts" : [ ]
   }, {
     "firstName" : "Christina",
     "lastName" : "Hudson",
     "email" : "Christina_Hudson@outlook.us",
     "accounts" : [ {
       "IBAN" : "RO58POOB7344468893732422",
-      "balance" : 1771.94,
+      "balance" : 1748.9444444444443,
       "currency" : "USD",
       "type" : "savings",
       "cards" : [ ]
     }, {
       "IBAN" : "RO69POOB9846198978826791",
-      "balance" : 0.0,
+      "balance" : 23.0,
       "currency" : "USD",
       "type" : "classic",
       "cards" : [ ]
-    }, {
-      "IBAN" : "RO68POOB1848616931405475",
-      "balance" : 7230.62,
-      "currency" : "USD",
-      "type" : "business",
-      "cards" : [ ],
-      "spendingLimit" : 850.5,
-      "depositLimit" : 500.0
     } ]
   }, {
     "firstName" : "Michael",
@@ -1840,13 +1755,13 @@
     "email" : "Michael_Miles@hotmail.us",
     "accounts" : [ {
       "IBAN" : "RO58POOB2721178218599590",
-      "balance" : 1233.94,
+      "balance" : 858.9444444444445,
       "currency" : "USD",
       "type" : "savings",
       "cards" : [ ]
     }, {
       "IBAN" : "RO98POOB8412955460158769",
-      "balance" : 0.0,
+      "balance" : 375.0,
       "currency" : "USD",
       "type" : "classic",
       "cards" : [ ]
@@ -1855,36 +1770,26 @@
     "firstName" : "Kelly",
     "lastName" : "Webb",
     "email" : "Kelly_Webb@hotmail.us",
-    "accounts" : [ {
-      "IBAN" : "RO68POOB1848616931405475",
-      "balance" : 7230.62,
-      "currency" : "USD",
-      "type" : "business",
-      "cards" : [ ],
-      "spendingLimit" : 850.5,
-      "depositLimit" : 500.0
-    } ]
+    "accounts" : [ ]
   }, {
     "firstName" : "Kevin",
     "lastName" : "Edwards",
     "email" : "Kevin_Edwards@outlook.us",
     "accounts" : [ {
       "IBAN" : "RO68POOB1848616931405475",
-      "balance" : 7230.62,
+      "balance" : 5599.366,
       "currency" : "USD",
       "type" : "business",
-      "cards" : [ ],
-      "spendingLimit" : 850.5,
-      "depositLimit" : 500.0
+      "cards" : [ ]
     }, {
       "IBAN" : "RO10POOB4354933866366881",
-      "balance" : 874.26,
+      "balance" : 647.2624,
       "currency" : "USD",
       "type" : "savings",
       "cards" : [ ]
     }, {
       "IBAN" : "RO33POOB9999273999620457",
-      "balance" : 0.0,
+      "balance" : 227.0,
       "currency" : "USD",
       "type" : "classic",
       "cards" : [ ]
@@ -1895,7 +1800,7 @@
     "email" : "Barbu_Suciu@outlook.ro",
     "accounts" : [ {
       "IBAN" : "RO65POOB8944016386845896",
-      "balance" : 5730.92,
+      "balance" : 2981.96,
       "currency" : "RON",
       "type" : "savings",
       "cards" : [ ]
@@ -1911,14 +1816,6 @@
       "currency" : "RON",
       "type" : "savings",
       "cards" : [ ]
-    }, {
-      "IBAN" : "RO68POOB1848616931405475",
-      "balance" : 7230.62,
-      "currency" : "USD",
-      "type" : "business",
-      "cards" : [ ],
-      "spendingLimit" : 850.5,
-      "depositLimit" : 500.0
     } ]
   }, {
     "firstName" : "Floarea",
@@ -1930,14 +1827,6 @@
       "currency" : "RON",
       "type" : "savings",
       "cards" : [ ]
-    }, {
-      "IBAN" : "RO68POOB1848616931405475",
-      "balance" : 7230.62,
-      "currency" : "USD",
-      "type" : "business",
-      "cards" : [ ],
-      "spendingLimit" : 850.5,
-      "depositLimit" : 500.0
     } ]
   } ],
   "timestamp" : 537
@@ -2023,7 +1912,16 @@
     "description" : "New account created"
   }, {
     "timestamp" : 195,
-    "description" : "Insufficient funds"
+    "description" : "Savings withdrawal",
+    "savingsAccountIBAN" : "RO58POOB7344468893732422",
+    "classicAccountIBAN" : "RO69POOB9846198978826791",
+    "amount" : 23.0
+  }, {
+    "timestamp" : 195,
+    "description" : "Savings withdrawal",
+    "savingsAccountIBAN" : "RO58POOB7344468893732422",
+    "classicAccountIBAN" : "RO69POOB9846198978826791",
+    "amount" : 23.0
   }, {
     "timestamp" : 208,
     "description" : "Account couldn't be deleted - there are funds remaining"
@@ -2063,7 +1961,16 @@
     "description" : "New account created"
   }, {
     "timestamp" : 197,
-    "description" : "Insufficient funds"
+    "description" : "Savings withdrawal",
+    "savingsAccountIBAN" : "RO90POOB5450777208072365",
+    "classicAccountIBAN" : "RO37POOB7013767509830666",
+    "amount" : 159.0
+  }, {
+    "timestamp" : 197,
+    "description" : "Savings withdrawal",
+    "savingsAccountIBAN" : "RO90POOB5450777208072365",
+    "classicAccountIBAN" : "RO37POOB7013767509830666",
+    "amount" : 159.0
   }, {
     "timestamp" : 201,
     "description" : "Account couldn't be deleted - there are funds remaining"
@@ -2082,127 +1989,63 @@
     "email" : "Nicolas_de_Leduc@hotmail.fr",
     "accounts" : [ {
       "IBAN" : "RO90POOB5450777208072365",
-      "balance" : 1309.0,
+      "balance" : 1150.0,
       "currency" : "EUR",
       "type" : "savings",
       "cards" : [ ]
     }, {
       "IBAN" : "RO37POOB7013767509830666",
-      "balance" : 0.0,
+      "balance" : 159.0,
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ ]
-    }, {
-      "IBAN" : "RO68POOB1848616931405475",
-      "balance" : 7821.62,
-      "currency" : "USD",
-      "type" : "business",
-      "cards" : [ ],
-      "spendingLimit" : 850.5,
-      "depositLimit" : 500.0
     } ]
   }, {
     "firstName" : "Gregoire",
     "lastName" : "Chretien",
     "email" : "Gregoire_Chretien@gmail.fr",
-    "accounts" : [ {
-      "IBAN" : "RO68POOB1848616931405475",
-      "balance" : 7821.62,
-      "currency" : "USD",
-      "type" : "business",
-      "cards" : [ ],
-      "spendingLimit" : 850.5,
-      "depositLimit" : 500.0
-    } ]
+    "accounts" : [ ]
   }, {
     "firstName" : "Nicoleta",
     "lastName" : "Popa",
     "email" : "Nicoleta_Popa@hotmail.ro",
-    "accounts" : [ {
-      "IBAN" : "RO68POOB1848616931405475",
-      "balance" : 7821.62,
-      "currency" : "USD",
-      "type" : "business",
-      "cards" : [ ],
-      "spendingLimit" : 850.5,
-      "depositLimit" : 500.0
-    } ]
+    "accounts" : [ ]
   }, {
     "firstName" : "John",
     "lastName" : "Shields",
     "email" : "John_Shields@outlook.us",
-    "accounts" : [ {
-      "IBAN" : "RO68POOB1848616931405475",
-      "balance" : 7821.62,
-      "currency" : "USD",
-      "type" : "business",
-      "cards" : [ ],
-      "spendingLimit" : 850.5,
-      "depositLimit" : 500.0
-    } ]
+    "accounts" : [ ]
   }, {
     "firstName" : "Michael",
     "lastName" : "Ashley",
     "email" : "Michael_Ashley@yahoo.us",
-    "accounts" : [ {
-      "IBAN" : "RO68POOB1848616931405475",
-      "balance" : 7821.62,
-      "currency" : "USD",
-      "type" : "business",
-      "cards" : [ ],
-      "spendingLimit" : 850.5,
-      "depositLimit" : 500.0
-    } ]
+    "accounts" : [ ]
   }, {
     "firstName" : "George",
     "lastName" : "Popa",
     "email" : "George_Popa@gmail.ro",
-    "accounts" : [ {
-      "IBAN" : "RO68POOB1848616931405475",
-      "balance" : 7821.62,
-      "currency" : "USD",
-      "type" : "business",
-      "cards" : [ ],
-      "spendingLimit" : 850.5,
-      "depositLimit" : 500.0
-    } ]
+    "accounts" : [ ]
   }, {
     "firstName" : "Norbert",
     "lastName" : "Dochioiu",
     "email" : "Norbert_Dochioiu@gmail.ro",
-    "accounts" : [ {
-      "IBAN" : "RO68POOB1848616931405475",
-      "balance" : 7821.62,
-      "currency" : "USD",
-      "type" : "business",
-      "cards" : [ ],
-      "spendingLimit" : 850.5,
-      "depositLimit" : 500.0
-    } ]
+    "accounts" : [ ]
   }, {
     "firstName" : "Christina",
     "lastName" : "Hudson",
     "email" : "Christina_Hudson@outlook.us",
     "accounts" : [ {
       "IBAN" : "RO58POOB7344468893732422",
-      "balance" : 1942.94,
+      "balance" : 1919.9444444444443,
       "currency" : "USD",
       "type" : "savings",
       "cards" : [ ]
     }, {
       "IBAN" : "RO69POOB9846198978826791",
-      "balance" : 0.0,
+      "balance" : 23.0,
       "currency" : "USD",
       "type" : "classic",
       "cards" : [ ]
-    }, {
-      "IBAN" : "RO68POOB1848616931405475",
-      "balance" : 7821.62,
-      "currency" : "USD",
-      "type" : "business",
-      "cards" : [ ],
-      "spendingLimit" : 850.5,
-      "depositLimit" : 500.0
     } ]
   }, {
     "firstName" : "Michael",
@@ -2210,13 +2053,13 @@
     "email" : "Michael_Miles@hotmail.us",
     "accounts" : [ {
       "IBAN" : "RO58POOB2721178218599590",
-      "balance" : 1233.94,
+      "balance" : 858.9444444444445,
       "currency" : "USD",
       "type" : "savings",
       "cards" : [ ]
     }, {
       "IBAN" : "RO98POOB8412955460158769",
-      "balance" : 0.0,
+      "balance" : 375.0,
       "currency" : "USD",
       "type" : "classic",
       "cards" : [ ]
@@ -2225,36 +2068,26 @@
     "firstName" : "Kelly",
     "lastName" : "Webb",
     "email" : "Kelly_Webb@hotmail.us",
-    "accounts" : [ {
-      "IBAN" : "RO68POOB1848616931405475",
-      "balance" : 7821.62,
-      "currency" : "USD",
-      "type" : "business",
-      "cards" : [ ],
-      "spendingLimit" : 850.5,
-      "depositLimit" : 500.0
-    } ]
+    "accounts" : [ ]
   }, {
     "firstName" : "Kevin",
     "lastName" : "Edwards",
     "email" : "Kevin_Edwards@outlook.us",
     "accounts" : [ {
       "IBAN" : "RO68POOB1848616931405475",
-      "balance" : 7821.62,
+      "balance" : 6190.366,
       "currency" : "USD",
       "type" : "business",
-      "cards" : [ ],
-      "spendingLimit" : 850.5,
-      "depositLimit" : 500.0
+      "cards" : [ ]
     }, {
       "IBAN" : "RO10POOB4354933866366881",
-      "balance" : 874.26,
+      "balance" : 647.2624,
       "currency" : "USD",
       "type" : "savings",
       "cards" : [ ]
     }, {
       "IBAN" : "RO33POOB9999273999620457",
-      "balance" : 0.0,
+      "balance" : 227.0,
       "currency" : "USD",
       "type" : "classic",
       "cards" : [ ]
@@ -2265,7 +2098,7 @@
     "email" : "Barbu_Suciu@outlook.ro",
     "accounts" : [ {
       "IBAN" : "RO65POOB8944016386845896",
-      "balance" : 5730.92,
+      "balance" : 2981.96,
       "currency" : "RON",
       "type" : "savings",
       "cards" : [ ]
@@ -2281,14 +2114,6 @@
       "currency" : "RON",
       "type" : "savings",
       "cards" : [ ]
-    }, {
-      "IBAN" : "RO68POOB1848616931405475",
-      "balance" : 7821.62,
-      "currency" : "USD",
-      "type" : "business",
-      "cards" : [ ],
-      "spendingLimit" : 850.5,
-      "depositLimit" : 500.0
     } ]
   }, {
     "firstName" : "Floarea",
@@ -2300,14 +2125,6 @@
       "currency" : "RON",
       "type" : "savings",
       "cards" : [ ]
-    }, {
-      "IBAN" : "RO68POOB1848616931405475",
-      "balance" : 7821.62,
-      "currency" : "USD",
-      "type" : "business",
-      "cards" : [ ],
-      "spendingLimit" : 850.5,
-      "depositLimit" : 500.0
     } ]
   } ],
   "timestamp" : 548

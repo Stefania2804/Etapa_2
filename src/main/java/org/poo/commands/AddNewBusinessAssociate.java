@@ -20,7 +20,6 @@ public class AddNewBusinessAssociate implements Command {
                 for (User user : infoBank.getUsers()) {
                     if (user.getEmail().equals(commandInput.getEmail())) {
                         user.addBusiness((Business) account);
-                        user.addAccounts(account);
                         if (commandInput.getRole().equals("employee")) {
                             Employee employee = new Employee(user);
                             ((Business) account).addEmployee(employee);

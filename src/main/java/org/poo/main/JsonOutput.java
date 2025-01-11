@@ -273,8 +273,10 @@ public abstract class JsonOutput {
                                             final ObjectMapper objectMapper,
                                             final ArrayNode output) {
         ObjectNode commandNode = objectMapper.createObjectNode();
-        commandNode.put("command", "businessReportReport");
+        commandNode.put("command", "businessReport");
         double exchanged = 0.0;
+        double totalSpent = 0.0;
+        double totalDeposited = 0.0;
         ObjectNode outputNode = objectMapper.createObjectNode();
         outputNode.put("IBAN", account.getIban());
         outputNode.put("balance", account.getBalance());
@@ -287,17 +289,43 @@ public abstract class JsonOutput {
         ArrayNode managersArray = objectMapper.createArrayNode();
         ArrayNode employeesArray = objectMapper.createArrayNode();
         for (Manager manager : ((Business) account).getManagers()) {
-                managersArray.add(objectMapper.valueToTree(manager));
+            ObjectNode managerNode = objectMapper.createObjectNode();
+            managerNode.put("username", manager.getName());
+            managerNode.put("spent", manager.getSpent());
+            managerNode.put("deposited", manager.getDeposited());
+            managersArray.add(managerNode);
+            totalSpent = totalSpent + manager.getSpent();
+            totalDeposited = totalDeposited + manager.getDeposited();
         }
         for (Employee employee : ((Business) account).getEmployees()) {
-            employeesArray.add(objectMapper.valueToTree(employee));
+            ObjectNode employeeNode = objectMapper.createObjectNode();
+            employeeNode.put("username", employee.getName());
+            employeeNode.put("spent", employee.getSpent());
+            employeeNode.put("deposited", employee.getDeposited());
+            employeesArray.add(employeeNode);
+            totalSpent = totalSpent + employee.getSpent();
+            totalDeposited = totalDeposited + employee.getDeposited();
         }
         outputNode.set("managers", managersArray);
         outputNode.set("employees", employeesArray);
-
+        outputNode.put("total spent", totalSpent);
+        outputNode.put("total deposited", totalDeposited);
         commandNode.set("output", outputNode);
         commandNode.put("timestamp", commandInput.getTimestamp());
 
+        output.add(commandNode);
+    }
+    public static void spendingLimitError(final CommandInput commandInput,
+                                         final ObjectMapper objectMapper,
+                                         final ArrayNode output) {
+        ObjectNode commandNode = objectMapper.createObjectNode();
+        commandNode.put("command", commandInput.getCommand());
+        ObjectNode outputNode = objectMapper.createObjectNode();
+        outputNode.put("timestamp", commandInput.getTimestamp());
+        outputNode.put("description", "You must be owner in order to change spending limit.");
+
+        commandNode.set("output", outputNode);
+        commandNode.put("timestamp", commandInput.getTimestamp());
         output.add(commandNode);
     }
 }

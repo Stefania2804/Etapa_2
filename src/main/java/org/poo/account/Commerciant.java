@@ -40,6 +40,17 @@ public class Commerciant {
         payOnlineTimestamps = new ArrayList<>();
         moneySpent = 0.0;
     }
+    public Commerciant (Commerciant commerciant) {
+        this.amount = 0.0;
+        this.name = commerciant.getName();
+        nrOfTransactions = 0;
+        this.cashBackType = commerciant.getCashBackType();
+        this.type = commerciant.getType();
+        this.id = commerciant.getId();
+        this.account = commerciant.getAccount();
+        payOnlineTimestamps = new ArrayList<>();
+        moneySpent = 0.0;
+    }
 
     public List<Integer> getPayOnlineTimestamps() {
         return payOnlineTimestamps;

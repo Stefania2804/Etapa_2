@@ -28,6 +28,7 @@ public final class AddInterestCommand implements Command {
                         Transaction transaction = new AddInterestTransaction(commandInput.getTimestamp(), "Interest rate income",
                                 account.getCurrency(), amount);
                         user.addTransaction(transaction);
+                        account.addTransaction(transaction);
                     } else {
                         JsonOutput.interestRateError(commandInput, objectMapper, output);
                     }

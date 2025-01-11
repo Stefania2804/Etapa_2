@@ -6,7 +6,7 @@ import org.poo.account.Account;
 import org.poo.account.card.Card;
 import org.poo.bank.InfoBank;
 import org.poo.visitor.User;
-import org.poo.errorTransactions.ErrorPaymentTransaction;
+import org.poo.errortransactions.ErrorPaymentTransaction;
 import org.poo.fileio.CommandInput;
 import org.poo.main.JsonOutput;
 import org.poo.strategy.CashWithdrawal;

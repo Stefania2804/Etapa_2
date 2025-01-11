@@ -7,10 +7,9 @@ import org.poo.account.Business;
 import org.poo.bank.InfoBank;
 import org.poo.fileio.CommandInput;
 import org.poo.main.JsonOutput;
-import org.poo.visitor.Owner;
 import org.poo.visitor.User;
 
-public class ChangeSpendingLimit implements Command {
+public class ChangeDepositLimit implements Command {
     public void execute(final CommandInput commandInput,
                         final InfoBank infoBank,
                         final ObjectMapper objectMapper,
@@ -23,7 +22,7 @@ public class ChangeSpendingLimit implements Command {
                             && ((Business) account).getOwner().getEmail().equals(commandInput.getEmail())) {
                         ownerSucces = true;
                         double exchangedToRon = infoBank.exchange(account.getCurrency(), "RON", commandInput.getAmount());
-                        ((Business) account).setSpendingLimit(exchangedToRon);
+                        ((Business) account).setDepositLimit(exchangedToRon);
                     }
                 }
             }
