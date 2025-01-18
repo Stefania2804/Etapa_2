@@ -286,7 +286,7 @@
   "command" : "changeSpendingLimit",
   "output" : {
     "timestamp" : 350,
-    "description" : "You must be owner in order to change spending limit."
+    "description" : "This is not a business account"
   },
   "timestamp" : 350
 }, {
@@ -459,52 +459,10 @@
 }, {
   "command" : "payOnline",
   "output" : {
-    "timestamp" : 400,
-    "description" : "Card not found"
-  },
-  "timestamp" : 400
-}, {
-  "command" : "payOnline",
-  "output" : {
     "timestamp" : 403,
     "description" : "Card not found"
   },
   "timestamp" : 403
-}, {
-  "command" : "payOnline",
-  "output" : {
-    "timestamp" : 406,
-    "description" : "Card not found"
-  },
-  "timestamp" : 406
-}, {
-  "command" : "payOnline",
-  "output" : {
-    "timestamp" : 409,
-    "description" : "Card not found"
-  },
-  "timestamp" : 409
-}, {
-  "command" : "payOnline",
-  "output" : {
-    "timestamp" : 412,
-    "description" : "Card not found"
-  },
-  "timestamp" : 412
-}, {
-  "command" : "payOnline",
-  "output" : {
-    "timestamp" : 415,
-    "description" : "Card not found"
-  },
-  "timestamp" : 415
-}, {
-  "command" : "payOnline",
-  "output" : {
-    "timestamp" : 418,
-    "description" : "Card not found"
-  },
-  "timestamp" : 418
 }, {
   "command" : "payOnline",
   "output" : {
@@ -562,11 +520,11 @@
     "email" : "April_Johnson@yahoo.au",
     "accounts" : [ {
       "IBAN" : "RO90POOB5450777208072365",
-      "balance" : 2268.6666666666665,
+      "balance" : 2237.1666666666665,
       "currency" : "AUD",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "7004757825892043",
+        "cardNumber" : "1851641428290185",
         "status" : "active"
       } ]
     } ]
@@ -722,7 +680,7 @@
     "email" : "Richard_Kuhn@protonmail.ch",
     "accounts" : [ {
       "IBAN" : "RO69POOB9846198978826791",
-      "balance" : 1739.0,
+      "balance" : 1637.1585934065934,
       "currency" : "CHF",
       "type" : "classic",
       "cards" : [ {
@@ -806,11 +764,11 @@
     "email" : "Fabrizio_Rubbia@protonmail.it",
     "accounts" : [ {
       "IBAN" : "RO38POOB0964823730995794",
-      "balance" : 1181.0,
+      "balance" : 1180.955,
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "8686098479595515",
+        "cardNumber" : "5069598921863529",
         "status" : "active"
       } ]
     } ]
@@ -855,47 +813,12 @@
   "command" : "businessReport",
   "output" : {
     "IBAN" : "RO53POOB7122855990652257",
-    "balance" : 899.0,
+    "balance" : 1297.0,
     "currency" : "EUR",
-    "spending limit" : 356.99999999999994,
+    "spending limit" : 357.0,
     "deposit limit" : 100.0,
     "statistics type" : "commerciant",
-    "managers" : [ {
-      "username" : "Zavala Donna",
-      "spent" : 0.0,
-      "deposited" : 303.0
-    }, {
-      "username" : "Turnbull Ruth",
-      "spent" : 0.0,
-      "deposited" : 274.0
-    }, {
-      "username" : "Tapia Vinicio",
-      "spent" : 0.0,
-      "deposited" : 322.0
-    } ],
-    "employees" : [ {
-      "username" : "Johnson MD Anthony",
-      "spent" : 0.0,
-      "deposited" : 0.0
-    }, {
-      "username" : "del Andres Lisandro",
-      "spent" : 0.0,
-      "deposited" : 0.0
-    }, {
-      "username" : "van de Veen-Verhoeven Nick",
-      "spent" : 0.0,
-      "deposited" : 0.0
-    }, {
-      "username" : "Boyer Bernadette",
-      "spent" : 0.0,
-      "deposited" : 0.0
-    }, {
-      "username" : "Picard Alain",
-      "spent" : 0.0,
-      "deposited" : 0.0
-    } ],
-    "total spent" : 0.0,
-    "total deposited" : 899.0
+    "commerciants" : [ ]
   },
   "timestamp" : 447
 }, {
@@ -934,11 +857,11 @@
     "email" : "April_Johnson@yahoo.au",
     "accounts" : [ {
       "IBAN" : "RO90POOB5450777208072365",
-      "balance" : 2268.6666666666665,
+      "balance" : 2237.1666666666665,
       "currency" : "AUD",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "7004757825892043",
+        "cardNumber" : "1851641428290185",
         "status" : "active"
       } ]
     } ]
@@ -957,11 +880,11 @@
       } ]
     }, {
       "IBAN" : "RO53POOB7122855990652257",
-      "balance" : 899.0,
+      "balance" : 1297.0,
       "currency" : "EUR",
       "type" : "business",
       "cards" : [ {
-        "cardNumber" : "5069598921863529",
+        "cardNumber" : "9281102140265301",
         "status" : "active"
       } ]
     } ]
@@ -1097,7 +1020,7 @@
     "email" : "Richard_Kuhn@protonmail.ch",
     "accounts" : [ {
       "IBAN" : "RO69POOB9846198978826791",
-      "balance" : 1739.0,
+      "balance" : 1637.1585934065934,
       "currency" : "CHF",
       "type" : "classic",
       "cards" : [ {
@@ -1181,11 +1104,11 @@
     "email" : "Fabrizio_Rubbia@protonmail.it",
     "accounts" : [ {
       "IBAN" : "RO38POOB0964823730995794",
-      "balance" : 1181.0,
+      "balance" : 1180.955,
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "8686098479595515",
+        "cardNumber" : "5069598921863529",
         "status" : "active"
       } ]
     } ]
@@ -1241,11 +1164,11 @@
     "email" : "April_Johnson@yahoo.au",
     "accounts" : [ {
       "IBAN" : "RO90POOB5450777208072365",
-      "balance" : 2268.6666666666665,
+      "balance" : 2237.1666666666665,
       "currency" : "AUD",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "7004757825892043",
+        "cardNumber" : "1851641428290185",
         "status" : "active"
       } ]
     } ]
@@ -1264,11 +1187,11 @@
       } ]
     }, {
       "IBAN" : "RO53POOB7122855990652257",
-      "balance" : 899.0,
+      "balance" : 1297.0,
       "currency" : "EUR",
       "type" : "business",
       "cards" : [ {
-        "cardNumber" : "5069598921863529",
+        "cardNumber" : "9281102140265301",
         "status" : "active"
       } ]
     } ]
@@ -1404,7 +1327,7 @@
     "email" : "Richard_Kuhn@protonmail.ch",
     "accounts" : [ {
       "IBAN" : "RO69POOB9846198978826791",
-      "balance" : 1739.0,
+      "balance" : 1637.1585934065934,
       "currency" : "CHF",
       "type" : "classic",
       "cards" : [ {
@@ -1488,11 +1411,11 @@
     "email" : "Fabrizio_Rubbia@protonmail.it",
     "accounts" : [ {
       "IBAN" : "RO38POOB0964823730995794",
-      "balance" : 1181.0,
+      "balance" : 1180.955,
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "8686098479595515",
+        "cardNumber" : "5069598921863529",
         "status" : "active"
       } ]
     }, {
@@ -1501,7 +1424,7 @@
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "1851641428290185",
+        "cardNumber" : "8221841196640096",
         "status" : "active"
       } ]
     } ]
@@ -1557,11 +1480,11 @@
     "email" : "April_Johnson@yahoo.au",
     "accounts" : [ {
       "IBAN" : "RO90POOB5450777208072365",
-      "balance" : 2268.6666666666665,
+      "balance" : 2237.1666666666665,
       "currency" : "AUD",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "7004757825892043",
+        "cardNumber" : "1851641428290185",
         "status" : "active"
       } ]
     } ]
@@ -1580,11 +1503,11 @@
       } ]
     }, {
       "IBAN" : "RO53POOB7122855990652257",
-      "balance" : 899.0,
+      "balance" : 1297.0,
       "currency" : "EUR",
       "type" : "business",
       "cards" : [ {
-        "cardNumber" : "5069598921863529",
+        "cardNumber" : "9281102140265301",
         "status" : "active"
       } ]
     } ]
@@ -1720,7 +1643,7 @@
     "email" : "Richard_Kuhn@protonmail.ch",
     "accounts" : [ {
       "IBAN" : "RO69POOB9846198978826791",
-      "balance" : 1739.0,
+      "balance" : 1637.1585934065934,
       "currency" : "CHF",
       "type" : "classic",
       "cards" : [ {
@@ -1804,11 +1727,11 @@
     "email" : "Fabrizio_Rubbia@protonmail.it",
     "accounts" : [ {
       "IBAN" : "RO38POOB0964823730995794",
-      "balance" : 1181.0,
+      "balance" : 1180.955,
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "8686098479595515",
+        "cardNumber" : "5069598921863529",
         "status" : "active"
       } ]
     }, {
@@ -1817,7 +1740,7 @@
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "1851641428290185",
+        "cardNumber" : "8221841196640096",
         "status" : "active"
       } ]
     }, {
@@ -1826,7 +1749,7 @@
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "9281102140265301",
+        "cardNumber" : "6052309891235892",
         "status" : "active"
       } ]
     } ]
@@ -1882,11 +1805,11 @@
     "email" : "April_Johnson@yahoo.au",
     "accounts" : [ {
       "IBAN" : "RO90POOB5450777208072365",
-      "balance" : 2268.6666666666665,
+      "balance" : 2237.1666666666665,
       "currency" : "AUD",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "7004757825892043",
+        "cardNumber" : "1851641428290185",
         "status" : "active"
       } ]
     } ]
@@ -1905,11 +1828,11 @@
       } ]
     }, {
       "IBAN" : "RO53POOB7122855990652257",
-      "balance" : 899.0,
+      "balance" : 1297.0,
       "currency" : "EUR",
       "type" : "business",
       "cards" : [ {
-        "cardNumber" : "5069598921863529",
+        "cardNumber" : "9281102140265301",
         "status" : "active"
       } ]
     } ]
@@ -2045,7 +1968,7 @@
     "email" : "Richard_Kuhn@protonmail.ch",
     "accounts" : [ {
       "IBAN" : "RO69POOB9846198978826791",
-      "balance" : 1739.0,
+      "balance" : 1637.1585934065934,
       "currency" : "CHF",
       "type" : "classic",
       "cards" : [ {
@@ -2129,11 +2052,11 @@
     "email" : "Fabrizio_Rubbia@protonmail.it",
     "accounts" : [ {
       "IBAN" : "RO38POOB0964823730995794",
-      "balance" : 1181.0,
+      "balance" : 1180.955,
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "8686098479595515",
+        "cardNumber" : "5069598921863529",
         "status" : "active"
       } ]
     }, {
@@ -2142,7 +2065,7 @@
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "1851641428290185",
+        "cardNumber" : "8221841196640096",
         "status" : "active"
       } ]
     }, {
@@ -2151,7 +2074,7 @@
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "9281102140265301",
+        "cardNumber" : "6052309891235892",
         "status" : "active"
       } ]
     }, {
@@ -2160,7 +2083,7 @@
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "8221841196640096",
+        "cardNumber" : "3892114815135845",
         "status" : "active"
       } ]
     } ]
@@ -2209,11 +2132,11 @@
     "email" : "April_Johnson@yahoo.au",
     "accounts" : [ {
       "IBAN" : "RO90POOB5450777208072365",
-      "balance" : 2268.6666666666665,
+      "balance" : 2237.1666666666665,
       "currency" : "AUD",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "7004757825892043",
+        "cardNumber" : "1851641428290185",
         "status" : "active"
       } ]
     } ]
@@ -2232,11 +2155,11 @@
       } ]
     }, {
       "IBAN" : "RO53POOB7122855990652257",
-      "balance" : 899.0,
+      "balance" : 1297.0,
       "currency" : "EUR",
       "type" : "business",
       "cards" : [ {
-        "cardNumber" : "5069598921863529",
+        "cardNumber" : "9281102140265301",
         "status" : "active"
       } ]
     } ]
@@ -2372,7 +2295,7 @@
     "email" : "Richard_Kuhn@protonmail.ch",
     "accounts" : [ {
       "IBAN" : "RO69POOB9846198978826791",
-      "balance" : 1739.0,
+      "balance" : 1637.1585934065934,
       "currency" : "CHF",
       "type" : "classic",
       "cards" : [ {
@@ -2456,11 +2379,11 @@
     "email" : "Fabrizio_Rubbia@protonmail.it",
     "accounts" : [ {
       "IBAN" : "RO38POOB0964823730995794",
-      "balance" : 1181.0,
+      "balance" : 1076.33,
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "8686098479595515",
+        "cardNumber" : "6825942525318055",
         "status" : "active"
       } ]
     }, {
@@ -2469,7 +2392,7 @@
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "1851641428290185",
+        "cardNumber" : "8221841196640096",
         "status" : "active"
       } ]
     }, {
@@ -2478,7 +2401,7 @@
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "9281102140265301",
+        "cardNumber" : "6052309891235892",
         "status" : "active"
       } ]
     }, {
@@ -2487,7 +2410,7 @@
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "8221841196640096",
+        "cardNumber" : "3892114815135845",
         "status" : "active"
       } ]
     }, {
@@ -2496,7 +2419,7 @@
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "6052309891235892",
+        "cardNumber" : "9224211293357459",
         "status" : "active"
       } ]
     } ]
@@ -2552,11 +2475,11 @@
     "email" : "April_Johnson@yahoo.au",
     "accounts" : [ {
       "IBAN" : "RO90POOB5450777208072365",
-      "balance" : 2268.6666666666665,
+      "balance" : 2237.1666666666665,
       "currency" : "AUD",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "7004757825892043",
+        "cardNumber" : "1851641428290185",
         "status" : "active"
       } ]
     } ]
@@ -2575,11 +2498,11 @@
       } ]
     }, {
       "IBAN" : "RO53POOB7122855990652257",
-      "balance" : 899.0,
+      "balance" : 1297.0,
       "currency" : "EUR",
       "type" : "business",
       "cards" : [ {
-        "cardNumber" : "5069598921863529",
+        "cardNumber" : "9281102140265301",
         "status" : "active"
       } ]
     } ]
@@ -2715,7 +2638,7 @@
     "email" : "Richard_Kuhn@protonmail.ch",
     "accounts" : [ {
       "IBAN" : "RO69POOB9846198978826791",
-      "balance" : 1739.0,
+      "balance" : 1637.1585934065934,
       "currency" : "CHF",
       "type" : "classic",
       "cards" : [ {
@@ -2799,11 +2722,11 @@
     "email" : "Fabrizio_Rubbia@protonmail.it",
     "accounts" : [ {
       "IBAN" : "RO38POOB0964823730995794",
-      "balance" : 1181.0,
+      "balance" : 1076.33,
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "8686098479595515",
+        "cardNumber" : "6825942525318055",
         "status" : "active"
       } ]
     }, {
@@ -2812,7 +2735,7 @@
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "1851641428290185",
+        "cardNumber" : "8221841196640096",
         "status" : "active"
       } ]
     }, {
@@ -2821,7 +2744,7 @@
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "9281102140265301",
+        "cardNumber" : "6052309891235892",
         "status" : "active"
       } ]
     }, {
@@ -2830,7 +2753,7 @@
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "8221841196640096",
+        "cardNumber" : "3892114815135845",
         "status" : "active"
       } ]
     }, {
@@ -2839,7 +2762,7 @@
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "6052309891235892",
+        "cardNumber" : "9224211293357459",
         "status" : "active"
       } ]
     }, {
@@ -2848,7 +2771,7 @@
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "3892114815135845",
+        "cardNumber" : "1388131156990910",
         "status" : "active"
       } ]
     } ]
@@ -2917,11 +2840,11 @@
     "email" : "April_Johnson@yahoo.au",
     "accounts" : [ {
       "IBAN" : "RO90POOB5450777208072365",
-      "balance" : 2384.0,
+      "balance" : 2352.5,
       "currency" : "AUD",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "7004757825892043",
+        "cardNumber" : "1851641428290185",
         "status" : "active"
       } ]
     }, {
@@ -2946,11 +2869,11 @@
       } ]
     }, {
       "IBAN" : "RO53POOB7122855990652257",
-      "balance" : 899.0,
+      "balance" : 1297.0,
       "currency" : "EUR",
       "type" : "business",
       "cards" : [ {
-        "cardNumber" : "5069598921863529",
+        "cardNumber" : "9281102140265301",
         "status" : "active"
       } ]
     } ]
@@ -3104,7 +3027,7 @@
     "email" : "Richard_Kuhn@protonmail.ch",
     "accounts" : [ {
       "IBAN" : "RO69POOB9846198978826791",
-      "balance" : 1739.0,
+      "balance" : 1637.1585934065934,
       "currency" : "CHF",
       "type" : "classic",
       "cards" : [ {
@@ -3194,11 +3117,11 @@
     "email" : "Fabrizio_Rubbia@protonmail.it",
     "accounts" : [ {
       "IBAN" : "RO38POOB0964823730995794",
-      "balance" : 1181.0,
+      "balance" : 1076.33,
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "8686098479595515",
+        "cardNumber" : "6825942525318055",
         "status" : "active"
       } ]
     }, {
@@ -3207,7 +3130,7 @@
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "1851641428290185",
+        "cardNumber" : "8221841196640096",
         "status" : "active"
       } ]
     }, {
@@ -3216,7 +3139,7 @@
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "9281102140265301",
+        "cardNumber" : "6052309891235892",
         "status" : "active"
       } ]
     }, {
@@ -3225,7 +3148,7 @@
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "8221841196640096",
+        "cardNumber" : "3892114815135845",
         "status" : "active"
       } ]
     }, {
@@ -3234,7 +3157,7 @@
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "6052309891235892",
+        "cardNumber" : "9224211293357459",
         "status" : "active"
       } ]
     }, {
@@ -3243,7 +3166,7 @@
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "3892114815135845",
+        "cardNumber" : "1388131156990910",
         "status" : "active"
       } ]
     } ]
@@ -3292,11 +3215,11 @@
     "email" : "April_Johnson@yahoo.au",
     "accounts" : [ {
       "IBAN" : "RO90POOB5450777208072365",
-      "balance" : 2384.0,
+      "balance" : 2352.5,
       "currency" : "AUD",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "7004757825892043",
+        "cardNumber" : "1851641428290185",
         "status" : "active"
       } ]
     }, {
@@ -3321,11 +3244,11 @@
       } ]
     }, {
       "IBAN" : "RO53POOB7122855990652257",
-      "balance" : 899.0,
+      "balance" : 1297.0,
       "currency" : "EUR",
       "type" : "business",
       "cards" : [ {
-        "cardNumber" : "5069598921863529",
+        "cardNumber" : "9281102140265301",
         "status" : "active"
       } ]
     } ]
@@ -3479,7 +3402,7 @@
     "email" : "Richard_Kuhn@protonmail.ch",
     "accounts" : [ {
       "IBAN" : "RO69POOB9846198978826791",
-      "balance" : 1739.0,
+      "balance" : 1637.1585934065934,
       "currency" : "CHF",
       "type" : "classic",
       "cards" : [ {
@@ -3569,11 +3492,11 @@
     "email" : "Fabrizio_Rubbia@protonmail.it",
     "accounts" : [ {
       "IBAN" : "RO38POOB0964823730995794",
-      "balance" : 1181.0,
+      "balance" : 1076.33,
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "8686098479595515",
+        "cardNumber" : "6825942525318055",
         "status" : "active"
       } ]
     }, {
@@ -3582,7 +3505,7 @@
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "1851641428290185",
+        "cardNumber" : "8221841196640096",
         "status" : "active"
       } ]
     }, {
@@ -3591,7 +3514,7 @@
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "9281102140265301",
+        "cardNumber" : "6052309891235892",
         "status" : "active"
       } ]
     }, {
@@ -3600,7 +3523,7 @@
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "8221841196640096",
+        "cardNumber" : "3892114815135845",
         "status" : "active"
       } ]
     }, {
@@ -3609,7 +3532,7 @@
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "6052309891235892",
+        "cardNumber" : "9224211293357459",
         "status" : "active"
       } ]
     }, {
@@ -3618,152 +3541,12 @@
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "3892114815135845",
+        "cardNumber" : "1388131156990910",
         "status" : "active"
       } ]
     } ]
   } ],
   "timestamp" : 531
-}, {
-  "command" : "payOnline",
-  "output" : {
-    "timestamp" : 543,
-    "description" : "Card not found"
-  },
-  "timestamp" : 543
-}, {
-  "command" : "payOnline",
-  "output" : {
-    "timestamp" : 545,
-    "description" : "Card not found"
-  },
-  "timestamp" : 545
-}, {
-  "command" : "payOnline",
-  "output" : {
-    "timestamp" : 547,
-    "description" : "Card not found"
-  },
-  "timestamp" : 547
-}, {
-  "command" : "payOnline",
-  "output" : {
-    "timestamp" : 549,
-    "description" : "Card not found"
-  },
-  "timestamp" : 549
-}, {
-  "command" : "payOnline",
-  "output" : {
-    "timestamp" : 551,
-    "description" : "Card not found"
-  },
-  "timestamp" : 551
-}, {
-  "command" : "payOnline",
-  "output" : {
-    "timestamp" : 553,
-    "description" : "Card not found"
-  },
-  "timestamp" : 553
-}, {
-  "command" : "payOnline",
-  "output" : {
-    "timestamp" : 555,
-    "description" : "Card not found"
-  },
-  "timestamp" : 555
-}, {
-  "command" : "payOnline",
-  "output" : {
-    "timestamp" : 557,
-    "description" : "Card not found"
-  },
-  "timestamp" : 557
-}, {
-  "command" : "payOnline",
-  "output" : {
-    "timestamp" : 559,
-    "description" : "Card not found"
-  },
-  "timestamp" : 559
-}, {
-  "command" : "payOnline",
-  "output" : {
-    "timestamp" : 561,
-    "description" : "Card not found"
-  },
-  "timestamp" : 561
-}, {
-  "command" : "payOnline",
-  "output" : {
-    "timestamp" : 563,
-    "description" : "Card not found"
-  },
-  "timestamp" : 563
-}, {
-  "command" : "payOnline",
-  "output" : {
-    "timestamp" : 565,
-    "description" : "Card not found"
-  },
-  "timestamp" : 565
-}, {
-  "command" : "payOnline",
-  "output" : {
-    "timestamp" : 567,
-    "description" : "Card not found"
-  },
-  "timestamp" : 567
-}, {
-  "command" : "payOnline",
-  "output" : {
-    "timestamp" : 569,
-    "description" : "Card not found"
-  },
-  "timestamp" : 569
-}, {
-  "command" : "payOnline",
-  "output" : {
-    "timestamp" : 571,
-    "description" : "Card not found"
-  },
-  "timestamp" : 571
-}, {
-  "command" : "payOnline",
-  "output" : {
-    "timestamp" : 573,
-    "description" : "Card not found"
-  },
-  "timestamp" : 573
-}, {
-  "command" : "payOnline",
-  "output" : {
-    "timestamp" : 575,
-    "description" : "Card not found"
-  },
-  "timestamp" : 575
-}, {
-  "command" : "payOnline",
-  "output" : {
-    "timestamp" : 577,
-    "description" : "Card not found"
-  },
-  "timestamp" : 577
-}, {
-  "command" : "payOnline",
-  "output" : {
-    "timestamp" : 579,
-    "description" : "Card not found"
-  },
-  "timestamp" : 579
-}, {
-  "command" : "payOnline",
-  "output" : {
-    "timestamp" : 581,
-    "description" : "Card not found"
-  },
-  "timestamp" : 581
 }, {
   "command" : "printUsers",
   "output" : [ {
@@ -3800,11 +3583,11 @@
     "email" : "April_Johnson@yahoo.au",
     "accounts" : [ {
       "IBAN" : "RO90POOB5450777208072365",
-      "balance" : 2384.0,
+      "balance" : 2352.5,
       "currency" : "AUD",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "7004757825892043",
+        "cardNumber" : "1851641428290185",
         "status" : "active"
       } ]
     }, {
@@ -3829,11 +3612,11 @@
       } ]
     }, {
       "IBAN" : "RO53POOB7122855990652257",
-      "balance" : 899.0,
+      "balance" : 2.0799460525972107,
       "currency" : "EUR",
       "type" : "business",
       "cards" : [ {
-        "cardNumber" : "5069598921863529",
+        "cardNumber" : "9281102140265301",
         "status" : "active"
       } ]
     } ]
@@ -3987,7 +3770,7 @@
     "email" : "Richard_Kuhn@protonmail.ch",
     "accounts" : [ {
       "IBAN" : "RO69POOB9846198978826791",
-      "balance" : 1739.0,
+      "balance" : 1637.1585934065934,
       "currency" : "CHF",
       "type" : "classic",
       "cards" : [ {
@@ -4062,7 +3845,7 @@
       "currency" : "NZD",
       "type" : "business",
       "cards" : [ {
-        "cardNumber" : "9224211293357459",
+        "cardNumber" : "0755790623339451",
         "status" : "active"
       } ]
     } ]
@@ -4086,11 +3869,11 @@
     "email" : "Fabrizio_Rubbia@protonmail.it",
     "accounts" : [ {
       "IBAN" : "RO38POOB0964823730995794",
-      "balance" : 1181.0,
+      "balance" : 1076.33,
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "8686098479595515",
+        "cardNumber" : "6825942525318055",
         "status" : "active"
       } ]
     }, {
@@ -4099,7 +3882,7 @@
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "1851641428290185",
+        "cardNumber" : "8221841196640096",
         "status" : "active"
       } ]
     }, {
@@ -4108,7 +3891,7 @@
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "9281102140265301",
+        "cardNumber" : "6052309891235892",
         "status" : "active"
       } ]
     }, {
@@ -4117,7 +3900,7 @@
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "8221841196640096",
+        "cardNumber" : "3892114815135845",
         "status" : "active"
       } ]
     }, {
@@ -4126,7 +3909,7 @@
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "6052309891235892",
+        "cardNumber" : "9224211293357459",
         "status" : "active"
       } ]
     }, {
@@ -4135,7 +3918,7 @@
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "3892114815135845",
+        "cardNumber" : "1388131156990910",
         "status" : "active"
       } ]
     } ]
@@ -4150,30 +3933,7 @@
     "spending limit" : 177.7777777777778,
     "deposit limit" : 177.7777777777778,
     "statistics type" : "commerciant",
-    "managers" : [ ],
-    "employees" : [ {
-      "username" : "Zavala Donna",
-      "spent" : 0.0,
-      "deposited" : 0.0
-    }, {
-      "username" : "Ardelean Eusebiu",
-      "spent" : 0.0,
-      "deposited" : 0.0
-    }, {
-      "username" : "Tapia Vinicio",
-      "spent" : 0.0,
-      "deposited" : 0.0
-    }, {
-      "username" : "Picard Alain",
-      "spent" : 0.0,
-      "deposited" : 0.0
-    }, {
-      "username" : "Mazilescu Simion",
-      "spent" : 0.0,
-      "deposited" : 0.0
-    } ],
-    "total spent" : 0.0,
-    "total deposited" : 0.0
+    "commerciants" : [ ]
   },
   "timestamp" : 601
 }, {
@@ -4204,6 +3964,13 @@
     "description" : "Card not found"
   },
   "timestamp" : 615
+}, {
+  "command" : "payOnline",
+  "output" : {
+    "timestamp" : 619,
+    "description" : "Card not found"
+  },
+  "timestamp" : 619
 }, {
   "command" : "payOnline",
   "output" : {
@@ -4247,11 +4014,11 @@
     "email" : "April_Johnson@yahoo.au",
     "accounts" : [ {
       "IBAN" : "RO90POOB5450777208072365",
-      "balance" : 2384.0,
+      "balance" : 2352.5,
       "currency" : "AUD",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "7004757825892043",
+        "cardNumber" : "1851641428290185",
         "status" : "active"
       } ]
     }, {
@@ -4276,11 +4043,11 @@
       } ]
     }, {
       "IBAN" : "RO53POOB7122855990652257",
-      "balance" : 899.0,
+      "balance" : 2.0799460525972107,
       "currency" : "EUR",
       "type" : "business",
       "cards" : [ {
-        "cardNumber" : "5069598921863529",
+        "cardNumber" : "9281102140265301",
         "status" : "active"
       } ]
     }, {
@@ -4289,7 +4056,7 @@
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "0755790623339451",
+        "cardNumber" : "4766425843993312",
         "status" : "active"
       } ]
     } ]
@@ -4400,7 +4167,7 @@
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "2394479558596255",
+        "cardNumber" : "1733018068262537",
         "status" : "active"
       } ]
     } ]
@@ -4452,7 +4219,7 @@
     "email" : "Richard_Kuhn@protonmail.ch",
     "accounts" : [ {
       "IBAN" : "RO69POOB9846198978826791",
-      "balance" : 1739.0,
+      "balance" : 1637.1585934065934,
       "currency" : "CHF",
       "type" : "classic",
       "cards" : [ {
@@ -4507,7 +4274,7 @@
       "currency" : "USD",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "1388131156990910",
+        "cardNumber" : "7644059707106503",
         "status" : "active"
       } ]
     }, {
@@ -4516,7 +4283,7 @@
       "currency" : "USD",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "7644059707106503",
+        "cardNumber" : "6988686155235949",
         "status" : "active"
       } ]
     } ]
@@ -4545,7 +4312,7 @@
       "currency" : "NZD",
       "type" : "business",
       "cards" : [ {
-        "cardNumber" : "9224211293357459",
+        "cardNumber" : "0755790623339451",
         "status" : "active"
       } ]
     } ]
@@ -4568,7 +4335,7 @@
       "currency" : "USD",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "6825942525318055",
+        "cardNumber" : "2394479558596255",
         "status" : "active"
       } ]
     } ]
@@ -4578,11 +4345,11 @@
     "email" : "Fabrizio_Rubbia@protonmail.it",
     "accounts" : [ {
       "IBAN" : "RO38POOB0964823730995794",
-      "balance" : 1181.0,
+      "balance" : 1076.33,
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "8686098479595515",
+        "cardNumber" : "6825942525318055",
         "status" : "active"
       } ]
     }, {
@@ -4591,7 +4358,7 @@
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "1851641428290185",
+        "cardNumber" : "8221841196640096",
         "status" : "active"
       } ]
     }, {
@@ -4600,7 +4367,7 @@
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "9281102140265301",
+        "cardNumber" : "6052309891235892",
         "status" : "active"
       } ]
     }, {
@@ -4609,7 +4376,7 @@
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "8221841196640096",
+        "cardNumber" : "3892114815135845",
         "status" : "active"
       } ]
     }, {
@@ -4618,7 +4385,7 @@
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "6052309891235892",
+        "cardNumber" : "9224211293357459",
         "status" : "active"
       } ]
     }, {
@@ -4627,7 +4394,7 @@
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ {
-        "cardNumber" : "3892114815135845",
+        "cardNumber" : "1388131156990910",
         "status" : "active"
       } ]
     } ]
@@ -4637,9 +4404,9 @@
   "command" : "businessReport",
   "output" : {
     "IBAN" : "RO53POOB7122855990652257",
-    "balance" : 899.0,
+    "balance" : 2.0799460525972107,
     "currency" : "EUR",
-    "spending limit" : 356.99999999999994,
+    "spending limit" : 357.0,
     "deposit limit" : 100.0,
     "statistics type" : "transaction",
     "managers" : [ {
@@ -4657,26 +4424,22 @@
     } ],
     "employees" : [ {
       "username" : "Johnson MD Anthony",
-      "spent" : 0.0,
+      "spent" : 43.45515,
       "deposited" : 0.0
     }, {
       "username" : "del Andres Lisandro",
-      "spent" : 0.0,
+      "spent" : 13.277571428571427,
       "deposited" : 0.0
     }, {
       "username" : "van de Veen-Verhoeven Nick",
-      "spent" : 0.0,
-      "deposited" : 0.0
-    }, {
-      "username" : "Boyer Bernadette",
-      "spent" : 0.0,
+      "spent" : 5.112,
       "deposited" : 0.0
     }, {
       "username" : "Picard Alain",
-      "spent" : 0.0,
+      "spent" : 226.41054545454548,
       "deposited" : 0.0
     } ],
-    "total spent" : 0.0,
+    "total spent" : 288.2552668831169,
     "total deposited" : 899.0
   },
   "timestamp" : 630

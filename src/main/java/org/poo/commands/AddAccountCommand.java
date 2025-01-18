@@ -3,11 +3,12 @@ package org.poo.commands;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ArrayNode;
 import org.poo.account.Account;
-import org.poo.account.Business;
-import org.poo.account.Classic;
-import org.poo.account.Savings;
+import org.poo.account.BusinessAccount;
+import org.poo.account.ClassicAccount;
+import org.poo.account.SavingsAccount;
 import org.poo.fileio.CommandInput;
 import org.poo.bank.InfoBank;
+import org.poo.main.Constants;
 import org.poo.visitor.Owner;
 import org.poo.visitor.User;
 import org.poo.transactions.NewAccTransaction;
@@ -44,65 +45,75 @@ public final class AddAccountCommand implements Command {
                                 }
                             }
                         }
-                        Account classic = new Classic(iban, 0.0, currency, type, plan);
-                        user.addClassic((Classic) classic);
+                        Account classic = new ClassicAccount(iban, 0.0, currency, type, plan);
+                        user.addClassic((ClassicAccount) classic);
                         user.addAccounts(classic);
                         infoBank.addAccount(classic);
                         classic.addTransaction(transaction);
                         break;
                     case "savings":
-                        String plan_savings = null;
+                        String planSavings = null;
                         if (user.getAccounts() != null && !user.getAccounts().isEmpty()) {
-                            plan_savings = user.getAccounts().get(0).getPlan();
+                            planSavings = user.getAccounts().get(0).getPlan();
                         } else {
                             if (user.getOccupation() != null) {
                                 if (user.getOccupation().equals("student")) {
-                                    plan_savings = "student";
+                                    planSavings = "student";
                                 } else {
-                                    plan_savings = "standard";
+                                    planSavings = "standard";
                                 }
                             }
                         }
-                        Account savings = new Savings(iban, 0.0, currency, type,
-                                commandInput.getInterestRate(), plan_savings);
-                        user.addSavings((Savings) savings);
+                        Account savings = new SavingsAccount(iban, 0.0, currency, type,
+                                commandInput.getInterestRate(), planSavings);
+                        user.addSavings((SavingsAccount) savings);
                         user.addAccounts(savings);
                         infoBank.addAccount(savings);
                         savings.addTransaction(transaction);
                         break;
                     case "business":
-                        String plan_business = null;
+                        String planBusiness = null;
                         if (user.getAccounts() != null && !user.getAccounts().isEmpty()) {
                             if (user.getAccounts().get(0).getType().equals("business")
-                                    && user.getEmail().equals(((Business)user.getAccounts().get(0)).getOwner())) {
-                                plan_business = user.getAccounts().get(0).getPlan();
-                            } else if (!user.getAccounts().get(0).getType().equals("business")){
-                                plan_business = user.getAccounts().get(0).getPlan();
+                                    && user.getEmail().equals(((BusinessAccount) user.getAccounts().
+                                    get(0)).getOwner().getEmail())) {
+                                planBusiness = user.getAccounts().get(0).getPlan();
+                            } else if (!user.getAccounts().get(0).getType().equals("business")) {
+                                planBusiness = user.getAccounts().get(0).getPlan();
                             } else {
                                 if (user.getOccupation() != null) {
                                     if (user.getOccupation().equals("student")) {
-                                        plan_business = "student";
+                                        planBusiness = "student";
                                     } else {
-                                        plan_business = "standard";
+                                        planBusiness = "standard";
                                     }
                                 }
                             }
                         } else {
                             if (user.getOccupation() != null) {
                                 if (user.getOccupation().equals("student")) {
-                                    plan_business = "student";
+                                    planBusiness = "student";
                                 } else {
-                                    plan_business = "standard";
+                                    planBusiness = "standard";
                                 }
                             }
                         }
-                        Account business = new Business(iban, 0.0, currency, type, plan_business);
-                        user.addBusiness((Business) business);
+                        Account business = new BusinessAccount(iban, 0.0,
+                                currency, type, planBusiness);
+                        user.addBusiness((BusinessAccount) business);
                         user.addAccounts(business);
                         infoBank.addAccount(business);
                         business.addTransaction(transaction);
                         Owner owner = new Owner(user);
-                        ((Business) business).setOwner(owner);
+                        ((BusinessAccount) business).setOwner(owner);
+                        double exchangedSpendingLimit = infoBank.exchange("RON",
+                                commandInput.getCurrency(),
+                                Constants.SPENDINGLIMIT.getValue());
+                        double exchangedDepositLimit = infoBank.exchange("RON",
+                                commandInput.getCurrency(),
+                                Constants.DEPOSITLIMIT.getValue());
+                        ((BusinessAccount) business).setDepositLimit(exchangedDepositLimit);
+                        ((BusinessAccount) business).setSpendingLimit(exchangedSpendingLimit);
                         break;
                     default:
                         break;

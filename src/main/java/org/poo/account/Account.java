@@ -5,12 +5,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import org.poo.account.card.Card;
 import org.poo.transactions.Transaction;
-import org.poo.visitor.Employee;
-import org.poo.visitor.Manager;
-import org.poo.visitor.Owner;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
 @JsonPropertyOrder({"IBAN", "balance", "currency", "type", "cards"})
@@ -171,45 +167,66 @@ public class Account {
     public void setMinBalance(final double minBalance) {
         this.minBalance = minBalance;
     }
-
+    /**
+     * Getter pentru planul contului.
+     *
+     */
     public String getPlan() {
         return plan;
     }
-
-    public void setPlan(String plan) {
+    /**
+     * Setter pentru planul contului.
+     *
+     */
+    public void setPlan(final String plan) {
         this.plan = plan;
     }
-
+    /**
+     * Getter pentru statusul casback-ului Food(primit/neprimit).
+     *
+     */
     public boolean isReceivedFood() {
         return receivedFood;
     }
-
-    public void setReceivedFood(boolean receivedFood) {
+    /**
+     * Setter pentru statusul cashback-ului Food.
+     *
+     */
+    public void setReceivedFood(final boolean receivedFood) {
         this.receivedFood = receivedFood;
     }
-
+    /**
+     * Getter pentru statusul casback-ului Clothes(primit/neprimit).
+     *
+     */
     public boolean isReceivedClothes() {
         return receivedClothes;
     }
-
-    public void setReceivedClothes(boolean receivedClothes) {
+    /**
+     * Setter pentru statusul cashback-ului Clothes.
+     *
+     */
+    public void setReceivedClothes(final boolean receivedClothes) {
         this.receivedClothes = receivedClothes;
     }
-
+    /**
+     * Getter pentru statusul casback-ului Tech(primit/neprimit).
+     *
+     */
     public boolean isReceivedTech() {
         return receivedTech;
     }
-
-    public void setReceivedTech(boolean receivedTech) {
+    /**
+     * Setter pentru statusul cashback-ului Tech.
+     *
+     */
+    public void setReceivedTech(final boolean receivedTech) {
         this.receivedTech = receivedTech;
     }
-
-
     /**
      * Adauga un card in lista de carduri.
      *
      */
-
     public void addCard(final Card card) {
         cards.add(card);
     }

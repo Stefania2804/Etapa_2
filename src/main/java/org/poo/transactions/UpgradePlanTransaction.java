@@ -3,11 +3,9 @@ package org.poo.transactions;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
-import java.util.List;
-
 @JsonPropertyOrder({"timestamp", "description", "accountIBAN",
-        "newPlanType",})
-public class UpgradePlanTransaction extends Transaction {
+        "newPlanType"})
+public final class UpgradePlanTransaction extends Transaction {
     @JsonProperty("accountIBAN")
     private String iban;
     @JsonProperty("newPlanType")

@@ -9,6 +9,9 @@ import org.poo.bank.InfoBank;
 import org.poo.visitor.User;
 
 public final class SplitPaymentCommand implements Command {
+    /**
+     * functia de primire a unei plati distribuite.
+     */
     public void execute(final CommandInput commandInput,
                         final InfoBank infoBank,
                         final ObjectMapper objectMapper,

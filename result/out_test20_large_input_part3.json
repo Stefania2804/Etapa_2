@@ -2097,7 +2097,7 @@
   "command" : "changeDepositLimit",
   "output" : {
     "timestamp" : 794,
-    "description" : "You must be owner in order to change spending limit."
+    "description" : "You must be owner in order to change deposit limit."
   },
   "timestamp" : 794
 }, {
@@ -2265,17 +2265,9 @@
       "spent" : 0.0,
       "deposited" : 923.0
     }, {
-      "username" : "del Ripoll Nicodemo",
-      "spent" : 0.0,
-      "deposited" : 0.0
-    }, {
       "username" : "du Mendes Thibault",
       "spent" : 0.0,
       "deposited" : 451.0
-    }, {
-      "username" : "Charette Gregoire",
-      "spent" : 0.0,
-      "deposited" : 0.0
     } ],
     "employees" : [ {
       "username" : "Manuel Baez Anaya Victor",
@@ -2331,70 +2323,7 @@
     "spending limit" : 122.22222222222223,
     "deposit limit" : 211.0,
     "statistics type" : "commerciant",
-    "managers" : [ {
-      "username" : "Arana Trillo Mamen",
-      "spent" : 0.0,
-      "deposited" : 3337.0
-    }, {
-      "username" : "Sheppard Heather",
-      "spent" : 0.0,
-      "deposited" : 923.0
-    }, {
-      "username" : "del Ripoll Nicodemo",
-      "spent" : 0.0,
-      "deposited" : 0.0
-    }, {
-      "username" : "du Mendes Thibault",
-      "spent" : 0.0,
-      "deposited" : 451.0
-    }, {
-      "username" : "Charette Gregoire",
-      "spent" : 0.0,
-      "deposited" : 0.0
-    } ],
-    "employees" : [ {
-      "username" : "Manuel Baez Anaya Victor",
-      "spent" : 0.0,
-      "deposited" : 0.0
-    }, {
-      "username" : "Charette Gregoire",
-      "spent" : 0.0,
-      "deposited" : 0.0
-    }, {
-      "username" : "Barer-Gehringer Juan",
-      "spent" : 0.0,
-      "deposited" : 0.0
-    }, {
-      "username" : "Camiscione-Rugger Emilio",
-      "spent" : 0.0,
-      "deposited" : 0.0
-    }, {
-      "username" : "del Ripoll Nicodemo",
-      "spent" : 0.0,
-      "deposited" : 0.0
-    }, {
-      "username" : "Farrell Heather",
-      "spent" : 0.0,
-      "deposited" : 0.0
-    }, {
-      "username" : "Kaiser Hulda",
-      "spent" : 0.0,
-      "deposited" : 0.0
-    }, {
-      "username" : "Stone Elizabeth",
-      "spent" : 0.0,
-      "deposited" : 0.0
-    }, {
-      "username" : "Villa Dorothy",
-      "spent" : 0.0,
-      "deposited" : 0.0
-    }, {
-      "username" : "Carey Frank",
-      "spent" : 0.0,
-      "deposited" : 0.0
-    } ],
-    "total spent" : 0.0,
-    "total deposited" : 4711.0
+    "commerciants" : [ ]
   },
   "timestamp" : 840
 }, {
@@ -2536,7 +2465,7 @@
     "email" : "Jennifer_Gould@mail.com.ca",
     "accounts" : [ {
       "IBAN" : "RO58POOB7344468893732422",
-      "balance" : 3294.2824285714287,
+      "balance" : 3294.3814285714284,
       "currency" : "CAD",
       "type" : "classic",
       "cards" : [ {
@@ -3081,7 +3010,7 @@
     "email" : "Thibault_du_Mendes@zoho.fr",
     "accounts" : [ {
       "IBAN" : "RO01POOB9893132718323396",
-      "balance" : 121.11250000000007,
+      "balance" : 121.11249999999995,
       "currency" : "EUR",
       "type" : "savings",
       "cards" : [ {
@@ -3095,7 +3024,7 @@
   "command" : "spendingsReport",
   "output" : {
     "IBAN" : "RO58POOB7344468893732422",
-    "balance" : 3294.2824285714287,
+    "balance" : 3294.3814285714284,
     "currency" : "CAD",
     "transactions" : [ {
       "timestamp" : 620,
@@ -3106,6 +3035,21 @@
     "commerciants" : [ {
       "commerciant" : "Apple",
       "total" : 0.018571428571428572
+    }, {
+      "commerciant" : "Burger King",
+      "total" : 0.0
+    }, {
+      "commerciant" : "H&M",
+      "total" : 0.0
+    }, {
+      "commerciant" : "KFC",
+      "total" : 0.0
+    }, {
+      "commerciant" : "McDonalds",
+      "total" : 0.0
+    }, {
+      "commerciant" : "Microsoft",
+      "total" : 0.0
     } ]
   },
   "timestamp" : 881

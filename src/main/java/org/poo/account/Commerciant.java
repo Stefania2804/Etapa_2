@@ -2,7 +2,6 @@ package org.poo.account;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -25,7 +24,10 @@ public class Commerciant {
     private String type;
     @JsonIgnore
     private double moneySpent;
-
+    @JsonIgnore
+    private double spentBusiness;
+    @JsonIgnore
+    private List<Client> clients;
     public Commerciant(final double amount, final String name,
                        final String cashBackType,
                        final String type, final int id,
@@ -39,92 +41,188 @@ public class Commerciant {
         this.account = account;
         payOnlineTimestamps = new ArrayList<>();
         moneySpent = 0.0;
+        spentBusiness = 0.0;
+        clients = new ArrayList<>();
     }
-    public Commerciant (Commerciant commerciant) {
-        this.amount = 0.0;
-        this.name = commerciant.getName();
+    public Commerciant(final Commerciant commerciant) {
+        amount = 0.0;
+        name = commerciant.getName();
         nrOfTransactions = 0;
-        this.cashBackType = commerciant.getCashBackType();
-        this.type = commerciant.getType();
-        this.id = commerciant.getId();
-        this.account = commerciant.getAccount();
+        cashBackType = commerciant.getCashBackType();
+        type = commerciant.getType();
+        id = commerciant.getId();
+        account = commerciant.getAccount();
         payOnlineTimestamps = new ArrayList<>();
         moneySpent = 0.0;
+        spentBusiness = 0.0;
+        clients = new ArrayList<>();
     }
-
+    /**
+     * Getter pentru timpii platilor online.
+     *
+     */
     public List<Integer> getPayOnlineTimestamps() {
         return payOnlineTimestamps;
     }
-
-    public void setPayOnlineTimestamps(List<Integer> payOnlineTimestamps) {
+    /**
+     * Setter pentru timpii platilor online.
+     *
+     */
+    public void setPayOnlineTimestamps(final List<Integer> payOnlineTimestamps) {
         this.payOnlineTimestamps = payOnlineTimestamps;
     }
-
+    /**
+     * Getter pentru suma incasata pentru raport.
+     *
+     */
     public double getAmount() {
         return amount;
     }
-
+    /**
+     * Setter pentru suma incasata pentru raport.
+     *
+     */
     public void setAmount(final double amount) {
         this.amount = amount;
     }
-
+    /**
+     * Getter pentru nume.
+     *
+     */
     public String getName() {
         return name;
     }
-
+    /**
+     * Setter pentru nume.
+     *
+     */
     public void setName(final String name) {
         this.name = name;
     }
-
+    /**
+     * Getter pentru totalul numarului de tranzactii.
+     *
+     */
     public int getNrOfTransactions() {
         return nrOfTransactions;
     }
-
-    public void setNrOfTransactions(int nrOfTransactions) {
+    /**
+     * Setter pentru numarul de tranzactii.
+     *
+     */
+    public void setNrOfTransactions(final int nrOfTransactions) {
         this.nrOfTransactions = nrOfTransactions;
     }
-
+    /**
+     * Getter pentru tipul comerciantului.
+     *
+     */
     public String getType() {
         return type;
     }
-
-    public void setType(String type) {
+    /**
+     * Setter pentru tipul comerciantului.
+     *
+     */
+    public void setType(final String type) {
         this.type = type;
     }
-
+    /**
+     * Getter pentru tipul de cashback.
+     *
+     */
     public String getCashBackType() {
         return cashBackType;
     }
-
-    public void setCashBackType(String cashBackType) {
+    /**
+     * Setter pentru tipul de cashback.
+     *
+     */
+    public void setCashBackType(final String cashBackType) {
         this.cashBackType = cashBackType;
     }
-
+    /**
+     * Getter pentru iban.
+     *
+     */
     public String getAccount() {
         return account;
     }
-
-    public void setAccount(String account) {
+    /**
+     * Setter pentru iban.
+     *
+     */
+    public void setAccount(final String account) {
         this.account = account;
     }
-
+    /**
+     * Getter pentru id.
+     *
+     */
     public int getId() {
         return id;
     }
-
-    public void setId(int id) {
+    /**
+     * Setter pentru id.
+     *
+     */
+    public void setId(final int id) {
         this.id = id;
     }
-
+    /**
+     * Getter pentru suma incasata pentru cashback.
+     *
+     */
     public double getMoneySpent() {
         return moneySpent;
     }
-
-    public void setMoneySpent(double moneySpent) {
+    /**
+     * Setter pentru suma incasata pentru cashback.
+     *
+     */
+    public void setMoneySpent(final double moneySpent) {
         this.moneySpent = moneySpent;
     }
-
-    public void addTimestamp(int timestamp) {
+    /**
+     * Getter pentru suma incasata pentru raportul de afaceri.
+     *
+     */
+    public double getSpentBusiness() {
+        return spentBusiness;
+    }
+    /**
+     * Setter pentru suma incasata pentru raportul de afaceri.
+     *
+     */
+    public void setSpentBusiness(final double spentBusiness) {
+        this.spentBusiness = spentBusiness;
+    }
+    /**
+     * Getter pentru lista de clienti.
+     *
+     */
+    public List<Client> getClients() {
+        return clients;
+    }
+    /**
+     * Setter pentru lista de clienti.
+     *
+     */
+    public void setClients(final List<Client> clients) {
+        this.clients = clients;
+    }
+    /**
+     * Adaugarea unui client nou.
+     *
+     */
+    public void addClient(final Client client) {
+        clients.add(client);
+    }
+    /**
+     * Adaugarea unui nou timp cd incasare.
+     *
+     */
+    public void addTimestamp(final int timestamp) {
         payOnlineTimestamps.add(timestamp);
     }
 }

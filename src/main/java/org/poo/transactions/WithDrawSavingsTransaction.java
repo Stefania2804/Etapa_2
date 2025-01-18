@@ -5,7 +5,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 @JsonPropertyOrder({"timestamp", "description", "savingsAccountIBAN", "classicAccountIBAN",
         "amount"})
-public class WithDrawSavingsTransaction extends Transaction {
+public final class WithDrawSavingsTransaction extends Transaction {
     @JsonProperty("savingsAccountIBAN")
     private String savingsAccount;
     @JsonProperty("classicAccountIBAN")

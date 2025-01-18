@@ -3,7 +3,7 @@ package org.poo.commands;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ArrayNode;
 import org.poo.account.Account;
-import org.poo.account.Savings;
+import org.poo.account.SavingsAccount;
 import org.poo.visitor.User;
 import org.poo.fileio.CommandInput;
 import org.poo.bank.InfoBank;
@@ -21,11 +21,13 @@ public final class AddInterestCommand implements Command {
         for (User user : infoBank.getUsers()) {
             for (Account account : user.getAccounts()) {
                 if (account.getIban().equals(commandInput.getAccount())) {
-                    if (account.getClass() == Savings.class) {
-                        double amount = account.getBalance() * ((Savings) account).getInterestRate();
+                    if (account.getClass() == SavingsAccount.class) {
+                        double amount = account.getBalance()
+                                * ((SavingsAccount) account).getInterestRate();
                         account.setBalance(account.getBalance() + account.getBalance()
-                                * ((Savings) account).getInterestRate());
-                        Transaction transaction = new AddInterestTransaction(commandInput.getTimestamp(), "Interest rate income",
+                                * ((SavingsAccount) account).getInterestRate());
+                        Transaction transaction = new AddInterestTransaction(
+                                commandInput.getTimestamp(), "Interest rate income",
                                 account.getCurrency(), amount);
                         user.addTransaction(transaction);
                         account.addTransaction(transaction);

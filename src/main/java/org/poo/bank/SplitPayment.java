@@ -2,8 +2,6 @@ package org.poo.bank;
 
 import lombok.Data;
 import org.poo.fileio.CommandInput;
-
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
@@ -31,7 +29,7 @@ public final class SplitPayment {
     }
 
     @Override
-    public boolean equals(Object obj) {
+    public boolean equals(final Object obj) {
         if (this == obj) {
             return true;
         }
@@ -46,7 +44,8 @@ public final class SplitPayment {
                 && accepts == that.accepts
                 && rejects == that.rejects
                 && Objects.equals(currency, that.currency)
-                && (amountForUsers == null ? that.amountForUsers == null : amountForUsers.equals(that.amountForUsers))
+                && (amountForUsers == null ? that.amountForUsers == null
+                : amountForUsers.equals(that.amountForUsers))
                 && Objects.equals(accounts, that.accounts)
                 && Objects.equals(splitPaymentType, that.splitPaymentType);
     }

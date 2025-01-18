@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 @JsonPropertyOrder({"timestamp", "description", "amount"})
-public class CashWithdrawalTransaction extends Transaction {
+public final class CashWithdrawalTransaction extends Transaction {
     @JsonProperty("amount")
     private double amount;
 

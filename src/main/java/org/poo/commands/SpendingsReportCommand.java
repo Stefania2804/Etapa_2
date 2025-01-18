@@ -4,7 +4,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ArrayNode;
 import org.poo.account.Account;
 import org.poo.account.Commerciant;
-import org.poo.account.Savings;
+import org.poo.account.SavingsAccount;
 import org.poo.fileio.CommandInput;
 import org.poo.bank.InfoBank;
 import org.poo.main.JsonOutput;
@@ -27,7 +27,7 @@ public final class SpendingsReportCommand implements Command {
             if (account.getIban().equals(commandInput.getAccount())) {
                 found = 1;
                 accountFound = account;
-                if (account.getClass() == Savings.class) {
+                if (account.getClass() == SavingsAccount.class) {
                     JsonOutput.errorSpendings(commandInput, objectMapper, output);
                     savings = 1;
                     break;

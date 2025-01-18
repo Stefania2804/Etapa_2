@@ -12,7 +12,7 @@ import org.poo.transactions.Transaction;
 
 import java.util.Locale;
 
-public class ExecuteSplitPayment {
+public final class ExecuteSplitPayment {
     /**
      * functia de executare a platii distribuite intre mai multe conturi.
      */
@@ -30,7 +30,7 @@ public class ExecuteSplitPayment {
         String cardError = null;
         double sumPerMember = 0.0;
         double sumPerMemberExchanged = 0.0;
-        if (splitPayment.getAmountForUsers() == null) {
+        if (splitPayment.getSplitPaymentType().equals("equal")) {
             sumPerMember = splitPayment.getAmount() / length;
         }
         if (splitPayment.getRejects() == 0) {
@@ -44,7 +44,8 @@ public class ExecuteSplitPayment {
                         } else {
                             sumPerMemberExchanged = infoBank.exchange(
                                     splitPayment.getCurrency(),
-                                    account.getCurrency(), splitPayment.getAmountForUsers().get(indexSum));
+                                    account.getCurrency(),
+                                    splitPayment.getAmountForUsers().get(indexSum));
                         }
                         if (account.getBalance() >= sumPerMemberExchanged) {
                             cnt++;
@@ -73,10 +74,12 @@ public class ExecuteSplitPayment {
                             } else {
                                 sumPerMemberExchanged = infoBank.exchange(
                                         splitPayment.getCurrency(),
-                                        account.getCurrency(), splitPayment.getAmountForUsers().get(indexSum));
+                                        account.getCurrency(),
+                                        splitPayment.getAmountForUsers().get(indexSum));
                             }
                             account.setBalance(account.getBalance() - sumPerMemberExchanged);
-                            String formattedValue = String.format(Locale.US, "%.2f", sum);
+                            String formattedValue = String.format(
+                                    Locale.US, "%.2f", sum);
                             String description = splitPaymentToString(formattedValue,
                                     splitPayment.getCurrency());
                             Double amount = null;
@@ -121,13 +124,16 @@ public class ExecuteSplitPayment {
                                 transactionErrorSplit = new ErrorSplitPaymentTransaction(
                                         splitPayment.getTimestamp(), description,
                                         splitPayment.getCurrency(), amount,
-                                        splitPayment.getAccounts(), error, splitPayment.getSplitPaymentType(),
+                                        splitPayment.getAccounts(), error,
+                                        splitPayment.getSplitPaymentType(),
                                         splitPayment.getAmountForUsers());
                             } else {
                                 transactionErrorSplit = new ErrorSplitPaymentTransaction(
                                         splitPayment.getTimestamp(), description,
                                         splitPayment.getCurrency(), amount,
-                                        splitPayment.getAccounts(), "One user rejected the payment.", splitPayment.getSplitPaymentType(),
+                                        splitPayment.getAccounts(),
+                                        "One user rejected the payment.",
+                                        splitPayment.getSplitPaymentType(),
                                         splitPayment.getAmountForUsers());
                             }
                             user.addTransaction(transactionErrorSplit);

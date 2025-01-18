@@ -18,7 +18,8 @@ public final class ErrorSplitPaymentTransaction extends SplitPaymentTransaction 
                                         final String error,
                                         final String splitPaymentType,
                                         final List<Double> amountForUsers) {
-        super(timestamp, description, splitPaymentType, currency, amount, amountForUsers, involvedAccounts);
+        super(timestamp, description, splitPaymentType,
+                currency, amount, amountForUsers, involvedAccounts);
         this.error = error;
     }
 }

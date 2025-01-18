@@ -1,8 +1,8 @@
 package org.poo.bank;
 
-public class Payment {
+public final class Payment {
     private double amount;
-    public  Payment (final double amount) {
+    public  Payment(final double amount) {
         this.amount = amount;
     }
 
@@ -10,7 +10,7 @@ public class Payment {
         return amount;
     }
 
-    public void setAmount(double amount) {
+    public void setAmount(final double amount) {
         this.amount = amount;
     }
 }

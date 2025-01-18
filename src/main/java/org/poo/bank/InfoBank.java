@@ -3,9 +3,6 @@ package org.poo.bank;
 import org.poo.account.Account;
 import org.poo.account.Commerciant;
 import org.poo.visitor.User;
-
-import java.math.BigDecimal;
-import java.math.MathContext;
 import java.util.*;
 
 public final class InfoBank {
@@ -53,11 +50,11 @@ public final class InfoBank {
         return commerciants;
     }
 
-    public void setCommerciants(List<Commerciant> commerciants) {
+    public void setCommerciants(final List<Commerciant> commerciants) {
         this.commerciants = commerciants;
     }
 
-    public void setUsers(List<User> users) {
+    public void setUsers(final List<User> users) {
         this.users = users;
     }
 
@@ -105,6 +102,10 @@ public final class InfoBank {
     public void addCommerciant(final Commerciant commerciant) {
         commerciants.add(commerciant);
     }
+    /**
+     * Sterge un cont.
+     *
+     */
 
     public void deleteFromBank(final Account account) {
         accounts.remove(account);
@@ -159,6 +160,10 @@ public final class InfoBank {
                          final String iban) {
         hashMap.put(aliasName, iban);
     }
+    /**
+     * Seteaza planele pe nivele.
+     *
+     */
     public void setPlans() {
         map.put("standard", 1);
         map.put("student", 1);

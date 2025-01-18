@@ -3,9 +3,7 @@ package org.poo.main;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
-import org.poo.account.Account;
-import org.poo.account.Business;
-import org.poo.account.Commerciant;
+import org.poo.account.*;
 import org.poo.bank.InfoBank;
 import org.poo.visitor.Employee;
 import org.poo.visitor.Manager;
@@ -184,7 +182,8 @@ public abstract class JsonOutput {
         }
         for (Commerciant commerciant : account.getCommerciants()) {
             for (Integer time : commerciant.getPayOnlineTimestamps()) {
-                if (time >= commandInput.getStartTimestamp() && time <= commandInput.getEndTimestamp()) {
+                if (time >= commandInput.getStartTimestamp() && time
+                        <= commandInput.getEndTimestamp()) {
                     commerciantsArray.add(objectMapper.valueToTree(commerciant));
                     break;
                 }
@@ -199,7 +198,8 @@ public abstract class JsonOutput {
         output.add(commandNode);
         for (Commerciant commerciant : account.getCommerciants()) {
             for (Integer time : commerciant.getPayOnlineTimestamps()) {
-                if (time >= commandInput.getStartTimestamp() && time <= commandInput.getEndTimestamp()) {
+                if (time >= commandInput.getStartTimestamp() && time
+                        <= commandInput.getEndTimestamp()) {
                     commerciant.setAmount(0.0);
                     break;
                 }
@@ -241,6 +241,9 @@ public abstract class JsonOutput {
         commandNode.put("timestamp", commandInput.getTimestamp());
         output.add(commandNode);
     }
+    /**
+     * Eroare pentru retragere numerar
+     */
     public static void errorCashWithdrawal(final CommandInput commandInput,
                                            final ObjectMapper objectMapper,
                                            final ArrayNode output) {
@@ -254,6 +257,9 @@ public abstract class JsonOutput {
         commandNode.put("timestamp", commandInput.getTimestamp());
         output.add(commandNode);
     }
+    /**
+     * Eroare pentru utilizator negasit.
+     */
     public static void errorUser(final CommandInput commandInput,
                                     final ObjectMapper objectMapper,
                                     final ArrayNode output) {
@@ -267,7 +273,10 @@ public abstract class JsonOutput {
         commandNode.put("timestamp", commandInput.getTimestamp());
         output.add(commandNode);
     }
-    public static void printBusinessReport(final CommandInput commandInput,
+    /**
+     * Printare raport de afaceri.
+     */
+    public static void printBusinessReportTransaction(final CommandInput commandInput,
                                             final InfoBank infoBank,
                                             final Account account,
                                             final ObjectMapper objectMapper,
@@ -281,14 +290,12 @@ public abstract class JsonOutput {
         outputNode.put("IBAN", account.getIban());
         outputNode.put("balance", account.getBalance());
         outputNode.put("currency", account.getCurrency());
-        exchanged = infoBank.exchange("RON", account.getCurrency(),((Business) account).getSpendingLimit());
-        outputNode.put("spending limit", exchanged);
-        exchanged = infoBank.exchange("RON", account.getCurrency(),((Business) account).getDepositLimit());
-        outputNode.put("deposit limit", exchanged);
+        outputNode.put("spending limit", ((BusinessAccount) account).getSpendingLimit());
+        outputNode.put("deposit limit", ((BusinessAccount) account).getDepositLimit());
         outputNode.put("statistics type", commandInput.getType());
         ArrayNode managersArray = objectMapper.createArrayNode();
         ArrayNode employeesArray = objectMapper.createArrayNode();
-        for (Manager manager : ((Business) account).getManagers()) {
+        for (Manager manager : ((BusinessAccount) account).getManagers()) {
             ObjectNode managerNode = objectMapper.createObjectNode();
             managerNode.put("username", manager.getName());
             managerNode.put("spent", manager.getSpent());
@@ -297,7 +304,7 @@ public abstract class JsonOutput {
             totalSpent = totalSpent + manager.getSpent();
             totalDeposited = totalDeposited + manager.getDeposited();
         }
-        for (Employee employee : ((Business) account).getEmployees()) {
+        for (Employee employee : ((BusinessAccount) account).getEmployees()) {
             ObjectNode employeeNode = objectMapper.createObjectNode();
             employeeNode.put("username", employee.getName());
             employeeNode.put("spent", employee.getSpent());
@@ -315,6 +322,9 @@ public abstract class JsonOutput {
 
         output.add(commandNode);
     }
+    /**
+     * Eroare pentru lipsa de autorizatie.
+     */
     public static void spendingLimitError(final CommandInput commandInput,
                                          final ObjectMapper objectMapper,
                                          final ArrayNode output) {
@@ -322,10 +332,102 @@ public abstract class JsonOutput {
         commandNode.put("command", commandInput.getCommand());
         ObjectNode outputNode = objectMapper.createObjectNode();
         outputNode.put("timestamp", commandInput.getTimestamp());
-        outputNode.put("description", "You must be owner in order to change spending limit.");
+        outputNode.put("description", "You must be owner in "
+                + "order to change spending limit.");
 
         commandNode.set("output", outputNode);
         commandNode.put("timestamp", commandInput.getTimestamp());
+        output.add(commandNode);
+    }
+    /**
+     * Afisare eroare schimbare limita depunere.
+     *
+     */
+    public static void depositLimitError(final CommandInput commandInput,
+                                          final ObjectMapper objectMapper,
+                                          final ArrayNode output) {
+        ObjectNode commandNode = objectMapper.createObjectNode();
+        commandNode.put("command", commandInput.getCommand());
+        ObjectNode outputNode = objectMapper.createObjectNode();
+        outputNode.put("timestamp", commandInput.getTimestamp());
+        outputNode.put("description", "You must be owner in order "
+                + "to change deposit limit.");
+
+        commandNode.set("output", outputNode);
+        commandNode.put("timestamp", commandInput.getTimestamp());
+        output.add(commandNode);
+    }
+    /**
+     * Afisare eroare card business.
+     *
+     */
+    public static void errorBusinessCard(final CommandInput commandInput,
+                                          final ObjectMapper objectMapper,
+                                          final ArrayNode output) {
+        ObjectNode commandNode = objectMapper.createObjectNode();
+        commandNode.put("command", commandInput.getCommand());
+        ObjectNode outputNode = objectMapper.createObjectNode();
+        outputNode.put("timestamp", commandInput.getTimestamp());
+        outputNode.put("description", "This is not a business account");
+
+        commandNode.set("output", outputNode);
+        commandNode.put("timestamp", commandInput.getTimestamp());
+        output.add(commandNode);
+    }
+    /**
+     * Printare raport pentru comercianti.
+     */
+    public static void printBusinessReportCommerciant(final CommandInput commandInput,
+                                                      final InfoBank infoBank,
+                                                      final Account account,
+                                                      final ObjectMapper objectMapper,
+                                                      final ArrayNode output) {
+        ObjectNode commandNode = objectMapper.createObjectNode();
+        commandNode.put("command", "businessReport");
+        double exchanged = 0.0;
+        ObjectNode outputNode = objectMapper.createObjectNode();
+        outputNode.put("IBAN", account.getIban());
+        outputNode.put("balance", account.getBalance());
+        outputNode.put("currency", account.getCurrency());
+        outputNode.put("spending limit", ((BusinessAccount) account).getSpendingLimit());
+        outputNode.put("deposit limit", ((BusinessAccount) account).getDepositLimit());
+        outputNode.put("statistics type", commandInput.getType());
+        ArrayNode commerciantsArray = objectMapper.createArrayNode();
+        for (Commerciant commerciant : account.getCommerciants()) {
+            ArrayNode managersArray = objectMapper.createArrayNode();
+            ArrayNode employeesArray = objectMapper.createArrayNode();
+            ObjectNode commerciantNode = objectMapper.createObjectNode();
+            commerciantNode.put("commerciant", commerciant.getName());
+            commerciantNode.put("total received", commerciant.getSpentBusiness());
+            for (Client client : commerciant.getClients()) {
+                for (Manager manager : ((BusinessAccount) account).getManagers()) {
+                    if (manager.getEmail().equals(client.getEmail()) && client.getTimestamp()
+                            >= commandInput.getStartTimestamp()
+                            && client.getTimestamp() <= commandInput.getEndTimestamp()) {
+                        managersArray.add(client.getName());
+                    }
+                }
+            }
+            for (Client client : commerciant.getClients()) {
+                for (Employee employee : ((BusinessAccount) account).getEmployees()) {
+                    if (employee.getEmail().equals(client.getEmail())
+                            && client.getTimestamp() >= commandInput.getStartTimestamp()
+                            && client.getTimestamp() <= commandInput.getEndTimestamp()) {
+                        employeesArray.add(client.getName());
+                    }
+                }
+            }
+            commerciantNode.set("managers", managersArray);
+            commerciantNode.set("employees", employeesArray);
+
+            if (commerciant.getSpentBusiness() != 0) {
+                commerciantsArray.add(commerciantNode);
+            }
+        }
+        outputNode.set("commerciants", commerciantsArray);
+        commandNode.set("output", outputNode);
+        commandNode.put("timestamp", commandInput.getTimestamp());
+
         output.add(commandNode);
     }
 }

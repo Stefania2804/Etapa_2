@@ -8,13 +8,13 @@ import org.poo.fileio.CommandInput;
 
 
 
-public class Manager extends User {
+public final class Manager extends User {
     private String name;
     private double spent;
     private double deposited;
-
     public Manager(final User user) {
-        super(user.getFirstName(), user.getLastName(), user.getEmail(), user.getBirthDate(), user.getOccupation());
+        super(user.getFirstName(), user.getLastName(),
+                user.getEmail(), user.getBirthDate(), user.getOccupation());
         name = toString(user);
         spent = 0.0;
         deposited = 0.0;
@@ -24,7 +24,7 @@ public class Manager extends User {
         return name;
     }
 
-    public void setName(String name) {
+    public void setName(final String name) {
         this.name = name;
     }
 
@@ -32,7 +32,7 @@ public class Manager extends User {
         return spent;
     }
 
-    public void setSpent(double spent) {
+    public void setSpent(final double spent) {
         this.spent = spent;
     }
 
@@ -40,17 +40,18 @@ public class Manager extends User {
         return deposited;
     }
 
-    public void setDeposited(double deposited) {
+    public void setDeposited(final double deposited) {
         this.deposited = deposited;
     }
 
-    @Override
-    public void accept(Visitor v, CommandInput commandInput, InfoBank infoBank, Account account,
-                       ObjectMapper objectMapper, ArrayNode output) {
-        v.visitManager(this, commandInput, infoBank, account, objectMapper, output);
-    }
 
-    public String toString(User user) {
-        return user.getLastName() + " " + user.getFirstName();
+    @Override
+    public void accept(final Visitor v,
+                       final CommandInput commandInput,
+                       final InfoBank infoBank,
+                       final Account account,
+                       final ObjectMapper objectMapper,
+                       final ArrayNode output) {
+        v.visitManager(this, commandInput, infoBank, account, objectMapper, output);
     }
 }

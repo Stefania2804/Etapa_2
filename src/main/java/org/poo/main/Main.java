@@ -89,7 +89,8 @@ public final class Main {
         CommerciantInput[] commerciants = inputData.getCommerciants();
         for (int i = 0; i < users.length; i++) {
             User user = new User(users[i].getFirstName(),
-                    users[i].getLastName(), users[i].getEmail(), users[i].getBirthDate(), users[i].getOccupation());
+                    users[i].getLastName(), users[i].getEmail(),
+                    users[i].getBirthDate(), users[i].getOccupation());
             infoBank.addUser(user);
         }
         for (int i = 0; i < exchangeRates.length; i++) {
@@ -109,7 +110,7 @@ public final class Main {
                         commerciants[i].getCashbackStrategy(),
                         commerciants[i].getType(), commerciants[i].getId(),
                         commerciants[i].getAccount());
-            } else if (commerciants[i].getType().equals("Tech")){
+            } else if (commerciants[i].getType().equals("Tech")) {
                 commerciant = new TechCommerciant(0.0, commerciants[i].getCommerciant(),
                         commerciants[i].getCashbackStrategy(),
                         commerciants[i].getType(), commerciants[i].getId(),

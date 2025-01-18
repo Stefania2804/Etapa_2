@@ -1,7 +1,11 @@
 package org.poo.factory;
 
-public class CashBackFactory {
-    public static CashBack getCashBack(String cashBackType) {
+public final class CashBackFactory {
+    /**
+     * Instantiere cashback.
+     *
+     */
+    public static CashBack getCashBack(final String cashBackType) {
         if (cashBackType.equals("nrOfTransactions")) {
             return new NrOfTransactions();
         } else if (cashBackType.equals("spendingThreshold")) {

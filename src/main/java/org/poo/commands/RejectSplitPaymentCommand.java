@@ -9,7 +9,10 @@ import org.poo.fileio.CommandInput;
 import org.poo.main.JsonOutput;
 import org.poo.visitor.User;
 
-public class RejectSplitPaymentCommand implements Command {
+public final class RejectSplitPaymentCommand implements Command {
+    /**
+     * functia de executare a respingerea unei plati distribuite.
+     */
     public void execute(final CommandInput commandInput, final InfoBank infoBank,
                         final ObjectMapper objectMapper, final ArrayNode output) {
         boolean userFound = false;
@@ -35,7 +38,7 @@ public class RejectSplitPaymentCommand implements Command {
                 user.getSplitPayments().remove(0);
             }
         }
-        if((userFound == false)) {
+        if (!userFound) {
             JsonOutput.errorUser(commandInput, objectMapper, output);
             return;
         }

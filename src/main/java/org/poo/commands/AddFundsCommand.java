@@ -3,7 +3,7 @@ package org.poo.commands;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ArrayNode;
 import org.poo.account.Account;
-import org.poo.account.Business;
+import org.poo.account.BusinessAccount;
 import org.poo.fileio.CommandInput;
 import org.poo.bank.InfoBank;
 import org.poo.visitor.CommandVisitor;
@@ -24,30 +24,32 @@ public final class AddFundsCommand implements Command {
                 if (acc.getType().equals("business")) {
                     boolean employeeFound = false;
                     boolean managerFound = false;
-                    for (Employee employee : ((Business) acc).getEmployees()) {
+                    for (Employee employee : ((BusinessAccount) acc).getEmployees()) {
                         if (commandInput.getEmail().equals(employee.getEmail())) {
                             employeeFound = true;
                             CommandVisitor commandVisitor = new CommandVisitor();
-                            employee.accept(commandVisitor, commandInput, infoBank, acc, objectMapper, output);
+                            employee.accept(commandVisitor, commandInput, infoBank,
+                                    acc, objectMapper, output);
                         }
                     }
-                    if (employeeFound == false) {
-                        for (Manager manager : ((Business) acc).getManagers()) {
+                    if (!employeeFound) {
+                        for (Manager manager : ((BusinessAccount) acc).getManagers()) {
                             if (commandInput.getEmail().equals(manager.getEmail())) {
                                 managerFound = true;
                                 CommandVisitor commandVisitor = new CommandVisitor();
-                                manager.accept(commandVisitor, commandInput, infoBank, acc, objectMapper, output);
+                                manager.accept(commandVisitor, commandInput, infoBank,
+                                        acc, objectMapper, output);
                             }
                         }
-                        if (managerFound == false) {
-                            acc.setBalance(commandInput.getAmount() + acc.getBalance());
+                        if (!managerFound) {
+                            if (commandInput.getEmail().equals(
+                                    ((BusinessAccount) acc).getOwner().getEmail())) {
+                                acc.setBalance(commandInput.getAmount() + acc.getBalance());
+                            }
                         }
                     }
                 } else {
                     acc.setBalance(commandInput.getAmount() + acc.getBalance());
-                    if (acc.getIban().equals("RO00POOB5687892910835215")) {
-                        System.out.println("adaugare fonduri de" + " " + commandInput.getAmount() + " rezulta balanta egala cu " + acc.getBalance());
-                    }
                 }
             }
         }

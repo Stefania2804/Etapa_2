@@ -3,7 +3,7 @@ package org.poo.commands;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ArrayNode;
 import org.poo.account.Account;
-import org.poo.account.Savings;
+import org.poo.account.SavingsAccount;
 import org.poo.fileio.CommandInput;
 import org.poo.bank.InfoBank;
 import org.poo.main.JsonOutput;
@@ -22,8 +22,8 @@ public final class ChangeInterestRateCommand implements Command {
         for (User user : infoBank.getUsers()) {
             for (Account account : user.getAccounts()) {
                 if (account.getIban().equals(commandInput.getAccount())) {
-                    if (account.getClass() == Savings.class) {
-                        ((Savings) account).setInterestRate(commandInput.getInterestRate());
+                    if (account.getClass() == SavingsAccount.class) {
+                        ((SavingsAccount) account).setInterestRate(commandInput.getInterestRate());
                         String description = changeToString(commandInput.getInterestRate());
                         Transaction transaction = new ChangeIrTransaction(
                                 commandInput.getTimestamp(), description);

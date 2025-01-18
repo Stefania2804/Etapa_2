@@ -893,6 +893,13 @@
     "currency" : "RON",
     "involvedAccounts" : [ "RO69POOB6209498372540635", "RO58POOB2721178218599590", "RO65POOB8944016386845896", "RO58POOB7344468893732422" ],
     "amount" : 355.75
+  }, {
+    "timestamp" : 248,
+    "description" : "Cinema tickets for a weekend outing",
+    "senderIBAN" : "RO65POOB8944016386845896",
+    "receiverIBAN" : "RO75POOB9251835314648427",
+    "amount" : "2760.0 RON",
+    "transferType" : "sent"
   } ],
   "timestamp" : 250
 }, {
@@ -1628,54 +1635,7 @@
     "spending limit" : 189.0,
     "deposit limit" : 1300.0,
     "statistics type" : "commerciant",
-    "managers" : [ {
-      "username" : "Ashley Michael",
-      "spent" : 0.0,
-      "deposited" : 1274.0
-    }, {
-      "username" : "Popa George",
-      "spent" : 0.0,
-      "deposited" : 1875.0
-    }, {
-      "username" : "Chretien Gregoire",
-      "spent" : 0.0,
-      "deposited" : 1302.0
-    }, {
-      "username" : "Hudson Christina",
-      "spent" : 0.0,
-      "deposited" : 1153.0
-    }, {
-      "username" : "Dochioiu Norbert",
-      "spent" : 0.0,
-      "deposited" : 1606.0
-    } ],
-    "employees" : [ {
-      "username" : "de Leduc Nicolas",
-      "spent" : 0.0,
-      "deposited" : 0.0
-    }, {
-      "username" : "Suciu Barbu",
-      "spent" : 0.0,
-      "deposited" : 0.0
-    }, {
-      "username" : "Popa Nicoleta",
-      "spent" : 0.0,
-      "deposited" : 0.0
-    }, {
-      "username" : "Dobre Floarea",
-      "spent" : 0.0,
-      "deposited" : 0.0
-    }, {
-      "username" : "Shields John",
-      "spent" : 0.0,
-      "deposited" : 0.0
-    }, {
-      "username" : "Webb Kelly",
-      "spent" : 0.0,
-      "deposited" : 0.0
-    } ],
-    "total spent" : 0.0,
-    "total deposited" : 7210.0
+    "commerciants" : [ ]
   },
   "timestamp" : 536
 }, {
@@ -1871,6 +1831,13 @@
     "currency" : "RON",
     "involvedAccounts" : [ "RO69POOB6209498372540635", "RO58POOB2721178218599590", "RO65POOB8944016386845896", "RO58POOB7344468893732422" ],
     "amount" : 355.75
+  }, {
+    "timestamp" : 248,
+    "description" : "Cinema tickets for a weekend outing",
+    "senderIBAN" : "RO65POOB8944016386845896",
+    "receiverIBAN" : "RO75POOB9251835314648427",
+    "amount" : "2760.0 RON",
+    "transferType" : "sent"
   }, {
     "timestamp" : 251,
     "description" : "You do not have a classic account."
